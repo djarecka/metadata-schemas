@@ -431,7 +431,7 @@ This document has the following sections:
 <table><tbody>
     <tr>
       <th>BICAN Field Name</th>
-      <td>dissociated cell barcode name</td>
+      <td>dissociated cell source barcode name</td>
     </tr>
     <tr>
       <th>Data Type</th>
