@@ -2,7 +2,7 @@
 
 Document Status: _Endorsed BICAN Standard_
 
-Version: 1.1
+Version: 1.1.1
 
 Owners: Kimberly Smith; na.hong@yale.edu; Wenjin.J.Zheng@uth.tmc.edu
 
@@ -875,6 +875,27 @@ This document has the following sections:
 <table><tbody>
     <tr>
       <th>BICAN Field Name</th>
+      <td>fastq file alignment status</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Categorical Variable</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The QC status of the fastq file alignment process result.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>834a0e66-fd81-4d9c-b379-146372c3a629</td>
+    </tr>    
+</tbody></table>
+<br>
+
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
       <td>library pool tube internal label</td>
     </tr>
     <tr>
@@ -1235,6 +1256,12 @@ This document has the following sections:
 ## Appendix
 
 ## Changelog
+
+### Version 1.1.1
+
+#### Changed
+
+- 1.1.1 Changed fastq file alignment status value set (Pass to Pass-Flag)
 
 ### Version 1.1
 
