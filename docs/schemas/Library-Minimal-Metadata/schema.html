@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Minimal Metadata</title>
+<style>
+
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    color: #202124;
+    line-height: 1.6;
+}
+h1 { font-size: 1.9em; border-bottom: 3px solid #1a73e8; padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: #1a73e8; margin-top: 40px; border-bottom: 1px solid #dadce0; padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: #444; margin-top: 28px; }
+p  { margin: 8px 0 14px; }
+a  { color: #1a73e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { background: #f8f9fa; border: 1px solid #dadce0; border-radius: 6px;
+        padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+.meta span { font-size: 0.88em; color: #5f6368; }
+.meta span b { color: #202124; }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
+th { background: #1a73e8; color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid #e8eaed; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #f1f3f4; }
+td:first-child { white-space: nowrap; }
+
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+       background: #f0f4ff; color: #1557b0; padding: 1px 5px; border-radius: 3px;
+       font-size: 0.88em; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
+         font-size: 0.78em; font-weight: 600; white-space: nowrap; }
+.req  { background: #fce8e6; color: #c5221f; }
+.opt  { background: #e8f0fe; color: #1557b0; }
+.type { background: #e6f4ea; color: #137333; font-family: monospace; }
+
+.field-card { border: 1px solid #dadce0; border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: #fff; }
+.field-card h3 { margin-top: 0; }
+.field-card .props tr td:first-child { color: #5f6368; font-size: 0.85em;
+                                        width: 140px; border-bottom: none; }
+.field-card .props tr td:last-child  { border-bottom: none; }
+.field-card .props { background: #f8f9fa; border-radius: 4px; }
+
+.enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
+.enum-list li { background: #f0f4ff; color: #1557b0; padding: 2px 10px;
+                border-radius: 12px; font-family: monospace; font-size: 0.85em; }
+
+.group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
+               color: #5f6368; margin-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<h1>Library Minimal Metadata</h1>
+<h2 id="properties">Properties</h2>
+<p class="group-label">amplified cdna</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#amplified-cdna-label"><code>amplified cDNA label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>amplified cdna name</td><td>Name of a collection of cDNA molecules derived and amplified from an input barcoded_cell_sample.  These cDNA molecules represent the gene expression of each cel…</td></tr>
+<tr><td><a href="#amplified-cdna-amplified-quantity-ng"><code>amplified cDNA amplified quantity ng</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>amplified quantity ng</td><td>Amount of cDNA produced after cDNA amplification measured in nanograms</td></tr>
+<tr><td><a href="#amplified-cdna-pcr-cycles"><code>amplified cDNA PCR cycles</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>cDNA amplification cycles</td><td>Number of PCR cycles used during cDNA amplification for this cDNA.</td></tr>
+<tr><td><a href="#cdna-amplification-process-date"><code>cDNA amplification process date</code></a></td><td><span class="badge type">Date</span></td><td><span class="badge opt">optional</span></td><td>cDNA amplification date</td><td>Date of cDNA amplification.</td></tr>
+<tr><td><a href="#amplified-cdna-rna-amplification-pass-fail"><code>amplified cDNA RNA amplification pass-fail</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge opt">optional</span></td><td>cDNA amplification pass-fail result</td><td>Pass or Fail result based on qualitative assessment of cDNA yield and size.</td></tr>
+<tr><td><a href="#amplified-cdna-percent-cdna-longer-than-400bp"><code>amplified cDNA percent cDNA longer than 400bp</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>cDNA amplification percent cDNA greater than 400bp</td><td>QC metric to measure mRNA degradation of cDNA.  Higher % is higher quality starting material.  Over 400bp is used as a universal cutoff for intact (full length)…</td></tr>
+<tr><td><a href="#cdna-amplification-set"><code>cDNA amplification set</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>cDNA amplification set, containing multiple amplified_cDNA_names that were processed at the same time.</td></tr>
+</tbody></table>
+<p class="group-label">barcoded cell sample</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#barcoded-cell-sample-port-well"><code>barcoded cell sample port well</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>10x chip port well</td><td>Specific position of the loaded port of the 10x chip.  An Enriched or Dissociated Cell Sample is loaded into a port on a chip (creating a Barcoded Cell Sample).…</td></tr>
+<tr><td><a href="#barcoded-cell-input-quantity-count"><code>barcoded cell input quantity count</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Number of enriched or dissociated cells/nuclei going into the barcoding process.</td></tr>
+<tr><td><a href="#barcoded-cell-sample-label"><code>barcoded cell sample label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>barcoded cell sample name</td><td>Name of a collection of barcoded cells.  Input will be either dissociated_cell_sample or enriched_cell_sample.  Cell barcodes are only guaranteed to be unique w…</td></tr>
+<tr><td><a href="#expected-cell-capture"><code>expected cell capture</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing.  This is a derived number from &#x27;Barcoded cell inpu…</td></tr>
+<tr><td><a href="#study-sets"><code>study sets</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Intended cohort or dataset that the Barcoded Cell Sample initially belongs to.  This Study helps to group together samples that are meant to be analyzed togethe…</td></tr>
+</tbody></table>
+<p class="group-label">dissociated cell sample</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#dissociated-cell-sample-cell-prep-type"><code>dissociated cell sample cell prep type</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge req">required</span></td><td>cell prep type</td><td>The type of cell preparation. For example: Cells, Nuclei. This is a property of dissociated_cell_sample.</td></tr>
+<tr><td><a href="#dissociated-cell-sample-label"><code>dissociated cell sample label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>dissociated cell sample name</td><td>Name of a collection of dissociated cells or nuclei derived from dissociation of a tissue sample.</td></tr>
+<tr><td><a href="#dissociated-cell-source-barcode-name"><code>dissociated cell source barcode name</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Name of oligo used in cell plexing.  The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample.  The olig…</td></tr>
+<tr><td><a href="#dissociated-cell-source-barcode-name"><code>dissociated cell source barcode name</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Name of oligo used in cell plexing. The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample. The oligo …</td></tr>
+<tr><td><a href="#dissociated-cell-sample-preparation-date"><code>dissociated cell sample preparation date</code></a></td><td><span class="badge type">Date</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Date of dissociated cell sample creation.</td></tr>
+<tr><td><a href="#patched-cell-structure"><code>patched cell structure</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Ontological structure assigned to a single patched cell. This is typically assigned and confirmed after imaging.</td></tr>
+</tbody></table>
+<p class="group-label">enriched cell sample</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#enriched-cell-sample-container-name"><code>enriched cell sample container name</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Name of container (strip or tube or plate) of the enriched_cell_prep.  This container could contain 1 or more enriched_cell_samples.</td></tr>
+<tr><td><a href="#enriched-cell-sample-name"><code>enriched cell sample name</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Name of collection of enriched cells or nuclei after enrichment process (usually via FACS using the Enrichment Plan) applied to dissociated_cell_sample.</td></tr>
+<tr><td><a href="#enrichment-population"><code>enrichment population</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample with desired mix of cell populations.  This…</td></tr>
+<tr><td><a href="#enriched-cell-source-barcode-name"><code>enriched cell source barcode name</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 10x load (Barcoding Cell step) [aka 1st r…</td></tr>
+<tr><td><a href="#enriched-cell-sample-preparation-date"><code>enriched cell sample preparation date</code></a></td><td><span class="badge type">Date</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Date of enriched cell sample creation.</td></tr>
+<tr><td><a href="#histone-modification-marker"><code>histone modification marker</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Histone modification marker antibodies (eg H3K27ac, H3K27me3, H3K9me3) used in conjunction with an Enriched Cell Source Barcode in order to combine multiple Enr…</td></tr>
+</tbody></table>
+<p class="group-label">library</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#library-avg-size-bp"><code>library avg size bp</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Average size of the library in terms of base pairs.  This is used to calculate the molarity before pooling and sequencing.</td></tr>
+<tr><td><a href="#library-method"><code>library method</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge req">required</span></td><td>library chemistry method</td><td>Standardized nomenclature to describe the library method used.  This specifies the alignment method required for the library.  For example, 10xV3.1 (for RNASeq …</td></tr>
+<tr><td><a href="#library-concentration-nm"><code>library concentration nm</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Concentration of library in terms of nM (nMol/L).  Number of molecules is needed for accurate pooling of the libraries and for generating the number of target r…</td></tr>
+<tr><td><a href="#library-creation-date"><code>library creation date</code></a></td><td><span class="badge type">Date</span></td><td><span class="badge opt">optional</span></td><td>library construction date</td><td>Date of library construction</td></tr>
+<tr><td><a href="#library-input-ng"><code>library input ng</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Amount of cDNA going into library construction in nanograms.</td></tr>
+<tr><td><a href="#library-label"><code>library label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>library name</td><td>Name of a library, which is a collection of fragmented and barcode-indexed DNA molecules for sequencing.  An index or barcode is typically introduced to enable …</td></tr>
+<tr><td><a href="#library-prep-pass-fail"><code>library prep pass-fail</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge opt">optional</span></td><td>library prep pass-fail result</td><td>Pass or Fail result based on qualitative assessment of library yield and size.</td></tr>
+<tr><td><a href="#library-prep-set"><code>library prep set</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Library set, containing multiple library_names that were processed at the same time.</td></tr>
+<tr><td><a href="#library-quantification-fmol"><code>library quantification fmol</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Amount of library generated in terms of femtomoles</td></tr>
+<tr><td><a href="#library-quantification-ng"><code>library quantification ng</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Amount of library generated in terms of nanograms</td></tr>
+<tr><td><a href="#r1/r2-index-name"><code>R1/R2 index name</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>—</td><td>Name of the pair of library indexes used for sequencing.  Indexes allow libraries to be pooled together for sequencing.  Sequencing output (fastq) are demultipl…</td></tr>
+</tbody></table>
+<p class="group-label">library aliquot</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#library-aliquot-label"><code>library aliquot label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>library aliquot name</td><td>One library in the library pool.  Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow for sequencing together then separating th…</td></tr>
+<tr><td><a href="#fastq-file-alignment-status"><code>fastq file alignment status</code></a></td><td><span class="badge type">ValueSet</span></td><td><span class="badge req">required</span></td><td>library aliquot QC result</td><td>The QC status of the fastq file alignment process result.</td></tr>
+</tbody></table>
+<p class="group-label">library pool</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#library-pool-tube-internal-label"><code>library pool tube internal label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>libray pool tube local name</td><td>Library Pool Tube local name.  Label of the tube containing the library pool, which is made up of multiple library_aliquots.  This is a Library Lab local tube n…</td></tr>
+<tr><td><a href="#embargo-date"><code>embargo date</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>date until which data much be embargoed</td></tr>
+<tr><td><a href="#seqcore-library-pool-tube-barcode"><code>SeqCore library pool tube barcode</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>—</td><td>Library Pool tube name as provided by the SeqCore (often a barcode).  This tube is provided from the SeqCore and is part of the SeqCore tracking system.</td></tr>
+<tr><td><a href="#library-pool-label"><code>library pool label</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge req">required</span></td><td>local pool name</td><td>Library lab&#x27;s library pool name.  For some labs this may be the same as &quot;Libray pool tube local name&quot;.   Other labs distinguish between the local tube label of …</td></tr>
+<tr><td><a href="#library-pool-tube-avg-size-bp"><code>library pool tube avg size bp</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>library pool avg size bp</td><td>Average insert size of library pool, measured in base pairs.</td></tr>
+<tr><td><a href="#library-pool-fmol"><code>library pool fmol</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Amount of library pool in the tube as measured in femtamoles (fmol)</td></tr>
+<tr><td><a href="#loading-concentration-pm"><code>loading concentration pM</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Sequencer Loading Concentration as measured in pM (pmol/L).  This is a value used by the SeqCore.</td></tr>
+<tr><td><a href="#length-of-read-2-(for-paired-end-runs)"><code>length of Read 2 (for Paired End Runs)</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge req">required</span></td><td>—</td><td>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is spe…</td></tr>
+<tr><td><a href="#length-of-index-1-(i7-primer)"><code>length of Index 1 (i7 Primer)</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge req">required</span></td><td>—</td><td>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is spe…</td></tr>
+<tr><td><a href="#length-of-index-2-(i5-primer)"><code>length of Index 2 (i5 Primer)</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge req">required</span></td><td>—</td><td>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is spe…</td></tr>
+<tr><td><a href="#length-of-read-1"><code>length of Read 1</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge req">required</span></td><td>—</td><td>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycleis  needed for sequencing the library pool.  The sequencing cycle needed is spe…</td></tr>
+<tr><td><a href="#library-pool-tube-contents-nm"><code>library pool tube contents nM</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>library pool concentration (nM)</td><td>Library pool concentration as measured in nanomolarity (nMol/L)</td></tr>
+<tr><td><a href="#library-pool-tube-volume-ul"><code>library pool tube volume ul</code></a></td><td><span class="badge type">Integer</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Library pool volume as measured in ul</td></tr>
+<tr><td><a href="#phix-spike-in-percent"><code>PhiX spike in percent</code></a></td><td><span class="badge type">Float</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>PhiX spike-in percent desired to be added to the library pool for sequencing.  PhiX is used to increase complexity of the sample being sequenced, to reduce sequ…</td></tr>
+<tr><td><a href="#custom-primers"><code>custom primers</code></a></td><td><span class="badge type">Boolean</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Custom sequencing primers if needed, indicate with reads require them (R1/R2/i7/i5)</td></tr>
+<tr><td><a href="#library-pool-construction-date"><code>library pool construction date</code></a></td><td><span class="badge type">Date</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Date of library pool construction.</td></tr>
+<tr><td><a href="#flowcell"><code>flowcell</code></a></td><td><span class="badge type">Text</span></td><td><span class="badge opt">optional</span></td><td>—</td><td></td></tr>
+</tbody></table>
+<p class="group-label">tissue sample</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#tissue-sample-label"><code>tissue sample label</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>tissue name|tissue sample label</td><td>Identifier name for final intact piece of tissue before cell or nuclei prep.  This piece of tissue will be used in dissociation and has an ROI associated with i…</td></tr>
+</tbody></table>
+<h2 id="property-details">Property Details</h2>
+<h3>amplified cdna</h3>
+<div class="field-card" id="amplified-cdna-label">
+<h3><code>amplified cDNA label</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e2606a11-114e-472f-9e05-33f9b6fc3089</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>amplified cdna name</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Name of a collection of cDNA molecules derived and amplified from an input barcoded_cell_sample.  These cDNA molecules represent the gene expression of each cell, with all cDNA molecules from a given cell retaining that cell&#x27;s unique barcode from the cell barcoding step.  This is a necessary step for GEX methods but is not used for ATAC methods.</p>
+</div>
+<div class="field-card" id="amplified-cdna-amplified-quantity-ng">
+<h3><code>amplified cDNA amplified quantity ng</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0db79d05-8612-4896-b9d3-eb1558841449</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+<tr><td>Aliases</td><td>amplified quantity ng</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Amount of cDNA produced after cDNA amplification measured in nanograms</p>
+</div>
+<div class="field-card" id="amplified-cdna-pcr-cycles">
+<h3><code>amplified cDNA PCR cycles</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3827634c-3f8f-4760-b358-86ce4b030238</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Aliases</td><td>cDNA amplification cycles</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Number of PCR cycles used during cDNA amplification for this cDNA.</p>
+</div>
+<div class="field-card" id="cdna-amplification-process-date">
+<h3><code>cDNA amplification process date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6cc333e7-9b98-497f-b7b1-eae904db2400</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Date</span></td></tr>
+<tr><td>Aliases</td><td>cDNA amplification date</td></tr>
+</table>
+<p>Date of cDNA amplification.</p>
+</div>
+<div class="field-card" id="amplified-cdna-rna-amplification-pass-fail">
+<h3><code>amplified cDNA RNA amplification pass-fail</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>bc62bdb2-7dc8-4404-bb84-ce0bbcae59e5</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Aliases</td><td>cDNA amplification pass-fail result</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Pass or Fail result based on qualitative assessment of cDNA yield and size.</p>
+</div>
+<div class="field-card" id="amplified-cdna-percent-cdna-longer-than-400bp">
+<h3><code>amplified cDNA percent cDNA longer than 400bp</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>8d150467-f69e-461c-b54c-bcfd22f581e5</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+<tr><td>Aliases</td><td>cDNA amplification percent cDNA greater than 400bp</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>QC metric to measure mRNA degradation of cDNA.  Higher % is higher quality starting material.  Over 400bp is used as a universal cutoff for intact (full length) vs degraded cDNA and is a common output from Bioanalyzer and Fragment Analyzer elecropheragrams.</p>
+</div>
+<div class="field-card" id="cdna-amplification-set">
+<h3><code>cDNA amplification set</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>42e98a88-50b3-4ea2-871b-2142f6a0dfdd</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>cDNA amplification set, containing multiple amplified_cDNA_names that were processed at the same time.</p>
+</div>
+<h3>barcoded cell sample</h3>
+<div class="field-card" id="barcoded-cell-sample-port-well">
+<h3><code>barcoded cell sample port well</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>aca38100-d245-4be4-9be3-ba27192779fe</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>10x chip port well</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Specific position of the loaded port of the 10x chip.  An Enriched or Dissociated Cell Sample is loaded into a port on a chip (creating a Barcoded Cell Sample).  Can be left null for non-10x methods.</p>
+</div>
+<div class="field-card" id="barcoded-cell-input-quantity-count">
+<h3><code>barcoded cell input quantity count</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>aa534269-7c9b-4b63-b990-eea8cda56d0e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Number of enriched or dissociated cells/nuclei going into the barcoding process.</p>
+</div>
+<div class="field-card" id="barcoded-cell-sample-label">
+<h3><code>barcoded cell sample label</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4c0e6380-e53f-4173-a474-d41e836fefe3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>barcoded cell sample name</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Name of a collection of barcoded cells.  Input will be either dissociated_cell_sample or enriched_cell_sample.  Cell barcodes are only guaranteed to be unique within this one collection. One dissociated_cell_sample or enriched_cell_sample can lead to multiple barcoded_cell_samples.</p>
+</div>
+<div class="field-card" id="expected-cell-capture">
+<h3><code>expected cell capture</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f10e928d-5a2b-4943-af18-d8fe5d05528d</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing.  This is a derived number from &#x27;Barcoded cell input quantity count&#x27; that is dependent on the &quot;capture rate&quot; of the barcoding method.  It is usually a calculated fraction of the &#x27;Barcoded cell input quantity count&#x27; going into the barcoding method.</p>
+</div>
+<div class="field-card" id="study-sets">
+<h3><code>study sets</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>8877f8f0-3939-4062-84c9-414bdcdd04ca</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Intended cohort or dataset that the Barcoded Cell Sample initially belongs to.  This Study helps to group together samples that are meant to be analyzed together.  Multiple Studies can be assigned to a Barcoded Cell Sample.  These studies are more granular than the grant or PI and can be used to group together samples from related ROIs.</p>
+</div>
+<h3>dissociated cell sample</h3>
+<div class="field-card" id="dissociated-cell-sample-cell-prep-type">
+<h3><code>dissociated cell sample cell prep type</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>baae4ac3-f959-4594-b943-3a82ec19bd34</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Aliases</td><td>cell prep type</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>The type of cell preparation. For example: Cells, Nuclei. This is a property of dissociated_cell_sample.</p>
+</div>
+<div class="field-card" id="dissociated-cell-sample-label">
+<h3><code>dissociated cell sample label</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>65e2c7da-9eb4-45b2-8ccb-d69ef9785ee2</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>dissociated cell sample name</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Name of a collection of dissociated cells or nuclei derived from dissociation of a tissue sample.</p>
+</div>
+<div class="field-card" id="dissociated-cell-source-barcode-name">
+<h3><code>dissociated cell source barcode name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>184abbaf-baff-4b5f-b51e-dd38de6006af</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>?</td></tr>
+</table>
+<p>Name of oligo used in cell plexing.  The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample.  The oligo name is associated with a sequence in a lookup table.  This sequence will be needed to during analysis, after alignment, to associate reads with parent dissociated cell sample.</p>
+</div>
+<div class="field-card" id="dissociated-cell-source-barcode-name">
+<h3><code>dissociated cell source barcode name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0c8628d0-809b-458c-b4b3-686131dceef8</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Name of oligo used in cell plexing. The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample. The oligo name is associated with a sequence in a lookup table. This sequence will be needed to during analysis, after alignment, to associate reads with parent dissociated cell sample.</p>
+</div>
+<div class="field-card" id="dissociated-cell-sample-preparation-date">
+<h3><code>dissociated cell sample preparation date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c508b63d-a1b4-42de-9b22-9c4736deac6e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Date</span></td></tr>
+</table>
+<p>Date of dissociated cell sample creation.</p>
+</div>
+<div class="field-card" id="patched-cell-structure">
+<h3><code>patched cell structure</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7636b4c8-12f6-4b33-bdc6-c2f1a3b1c953</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+</table>
+<p>Ontological structure assigned to a single patched cell. This is typically assigned and confirmed after imaging.</p>
+</div>
+<h3>enriched cell sample</h3>
+<div class="field-card" id="enriched-cell-sample-container-name">
+<h3><code>enriched cell sample container name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5ace37aa-85d6-4493-909e-8fc221ec2609</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>?</td></tr>
+</table>
+<p>Name of container (strip or tube or plate) of the enriched_cell_prep.  This container could contain 1 or more enriched_cell_samples.</p>
+</div>
+<div class="field-card" id="enriched-cell-sample-name">
+<h3><code>enriched cell sample name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>bb3fc701-23a7-45c1-890d-7471730e0ec1</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Name of collection of enriched cells or nuclei after enrichment process (usually via FACS using the Enrichment Plan) applied to dissociated_cell_sample.</p>
+</div>
+<div class="field-card" id="enrichment-population">
+<h3><code>enrichment population</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>875f1c70-f5aa-45e3-94b9-5e482f6c4830</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample with desired mix of cell populations.  This plan can also be used to describe &#x27;No FACS&#x27; where no enrichment was performed.  This is a property of enriched_cell_prep_container.</p>
+</div>
+<div class="field-card" id="enriched-cell-source-barcode-name">
+<h3><code>enriched cell source barcode name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>bdd5e2bf-c6fa-43e6-a5ac-6878fcf814d6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Subsets</td><td>alignment</td></tr>
+</table>
+<p>Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 10x load (Barcoding Cell step) [aka 1st round barcodes]</p>
+</div>
+<div class="field-card" id="enriched-cell-sample-preparation-date">
+<h3><code>enriched cell sample preparation date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e2fd2d84-3999-4cc4-8f41-e0e2a708f407</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Date</span></td></tr>
+</table>
+<p>Date of enriched cell sample creation.</p>
+</div>
+<div class="field-card" id="histone-modification-marker">
+<h3><code>histone modification marker</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a2ef2228-e438-4260-95e5-22eb3b35b5a9</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+</table>
+<p>Histone modification marker antibodies (eg H3K27ac, H3K27me3, H3K9me3) used in conjunction with an Enriched Cell Source Barcode in order to combine multiple Enriched Cell Populations before Barcoded Cell Sample step for 10xMultiome method. Each of the Histone antibodies captures an essential part of the epigenome.</p>
+</div>
+<h3>library</h3>
+<div class="field-card" id="library-avg-size-bp">
+<h3><code>library avg size bp</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f851eba9-56d1-4472-9d0c-d7f8bc33000a</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Average size of the library in terms of base pairs.  This is used to calculate the molarity before pooling and sequencing.</p>
+</div>
+<div class="field-card" id="library-method">
+<h3><code>library method</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7b60d59e-fdd7-4b27-a2d4-cae9b69103a6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Aliases</td><td>library chemistry method</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Standardized nomenclature to describe the library method used.  This specifies the alignment method required for the library.  For example, 10xV3.1 (for RNASeq single assay), 10xMult-GEX (for RNASeq multiome assay), and 10xMult-ATAC (for ATACSeq multiome assay)</p>
+</div>
+<div class="field-card" id="library-concentration-nm">
+<h3><code>library concentration nm</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>90805b3f-f380-4f23-b159-e7eaa0c8f052</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+</table>
+<p>Concentration of library in terms of nM (nMol/L).  Number of molecules is needed for accurate pooling of the libraries and for generating the number of target reads/cell in sequencing.</p>
+</div>
+<div class="field-card" id="library-creation-date">
+<h3><code>library creation date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9c2f575d-1b64-451d-894f-656861afe07a</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Date</span></td></tr>
+<tr><td>Aliases</td><td>library construction date</td></tr>
+</table>
+<p>Date of library construction</p>
+</div>
+<div class="field-card" id="library-input-ng">
+<h3><code>library input ng</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e4d31d97-722d-4771-a0e4-e6062190f2c1</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Amount of cDNA going into library construction in nanograms.</p>
+</div>
+<div class="field-card" id="library-label">
+<h3><code>library label</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f717e254-3630-4342-be7b-4d56376e7afe</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>library name</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Name of a library, which is a collection of fragmented and barcode-indexed DNA molecules for sequencing.  An index or barcode is typically introduced to enable identification of library origin to allow libraries to be pooled together for sequencing.</p>
+</div>
+<div class="field-card" id="library-prep-pass-fail">
+<h3><code>library prep pass-fail</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6817ede2-7ead-402d-9dbc-131aca627c6c</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Aliases</td><td>library prep pass-fail result</td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Pass or Fail result based on qualitative assessment of library yield and size.</p>
+</div>
+<div class="field-card" id="library-prep-set">
+<h3><code>library prep set</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b124ffa9-9134-4a61-a30d-bb191b2fc7fa</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Library set, containing multiple library_names that were processed at the same time.</p>
+</div>
+<div class="field-card" id="library-quantification-fmol">
+<h3><code>library quantification fmol</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4c09ada7-c116-48bc-8fb1-0dcf5c4b939a</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis</td></tr>
+</table>
+<p>Amount of library generated in terms of femtomoles</p>
+</div>
+<div class="field-card" id="library-quantification-ng">
+<h3><code>library quantification ng</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>318b2d3a-dae7-4c63-bfbb-93862b92f63e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+</table>
+<p>Amount of library generated in terms of nanograms</p>
+</div>
+<div class="field-card" id="r1/r2-index-name">
+<h3><code>R1/R2 index name</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c94b5d8a-e92d-47af-8c0e-ea3b58be4d06</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Name of the pair of library indexes used for sequencing.  Indexes allow libraries to be pooled together for sequencing.  Sequencing output (fastq) are demultiplexed by using the indexes for each library.  The name will be associated with the sequences of i7, i5, and i5as, which are needed by SeqCores for demultiplexing.  The required direction of the sequence (sense or antisense) of the index can differ depending on sequencing instruments.</p>
+</div>
+<h3>library aliquot</h3>
+<div class="field-card" id="library-aliquot-label">
+<h3><code>library aliquot label</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>34191bad-d167-4335-8224-ade897d3728e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>library aliquot name</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>One library in the library pool.  Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow for sequencing together then separating the sequencing output by originating library aliquot through the process of demultiplexing.  The resulting demultiplexed fastq files will include the library_aliquot_name.</p>
+</div>
+<div class="field-card" id="fastq-file-alignment-status">
+<h3><code>fastq file alignment status</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>834a0e66-fd81-4d9c-b379-146372c3a629</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">ValueSet</span></td></tr>
+<tr><td>Aliases</td><td>library aliquot QC result</td></tr>
+<tr><td>Subsets</td><td>alignment</td></tr>
+</table>
+<p>The QC status of the fastq file alignment process result.</p>
+</div>
+<h3>library pool</h3>
+<div class="field-card" id="library-pool-tube-internal-label">
+<h3><code>library pool tube internal label</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f1fdea98-7849-4def-a62f-a04cbbf98922</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>libray pool tube local name</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Library Pool Tube local name.  Label of the tube containing the library pool, which is made up of multiple library_aliquots.  This is a Library Lab local tube name, before the pool is aliquoted to the Seq Core provided tube &#x27;Library Pool Tube Name&#x27;.</p>
+</div>
+<div class="field-card" id="embargo-date">
+<h3><code>embargo date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e7bc38d8-7315-40be-b8b7-923bf770ff38</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>tracking</td></tr>
+</table>
+<p>date until which data much be embargoed</p>
+</div>
+<div class="field-card" id="seqcore-library-pool-tube-barcode">
+<h3><code>SeqCore library pool tube barcode</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>da02a0ee-9abf-45ef-abb1-981f1aaba6b2</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Library Pool tube name as provided by the SeqCore (often a barcode).  This tube is provided from the SeqCore and is part of the SeqCore tracking system.</p>
+</div>
+<div class="field-card" id="library-pool-label">
+<h3><code>library pool label</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>29e0578b-6427-4c93-b29b-bde27fbadeec</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+<tr><td>Aliases</td><td>local pool name</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Library lab&#x27;s library pool name.  For some labs this may be the same as &quot;Libray pool tube local name&quot;.   Other labs distinguish between the local tube label of the library pool and the library pool name provided to SeqCore for tracking.  Local Pool Name is used to communicate sequencing status between SeqCore and Library Labs.</p>
+</div>
+<div class="field-card" id="library-pool-tube-avg-size-bp">
+<h3><code>library pool tube avg size bp</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cf1b7c96-cdc1-4eed-8e76-ac44fbd151f7</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Aliases</td><td>library pool avg size bp</td></tr>
+<tr><td>Subsets</td><td>tracking</td></tr>
+</table>
+<p>Average insert size of library pool, measured in base pairs.</p>
+</div>
+<div class="field-card" id="library-pool-fmol">
+<h3><code>library pool fmol</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>af1a6f3f-aca9-4452-b86e-f3c70c3600b6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+</table>
+<p>Amount of library pool in the tube as measured in femtamoles (fmol)</p>
+</div>
+<div class="field-card" id="loading-concentration-pm">
+<h3><code>loading concentration pM</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a1a1b046-549d-4e94-9b3c-5fac2a31fdd6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+</table>
+<p>Sequencer Loading Concentration as measured in pM (pmol/L).  This is a value used by the SeqCore.</p>
+</div>
+<div class="field-card" id="length-of-read-2-(for-paired-end-runs)">
+<h3><code>length of Read 2 (for Paired End Runs)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0b9a9cbc-b8dd-42a2-a567-aafd9370db30</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</p>
+</div>
+<div class="field-card" id="length-of-index-1-(i7-primer)">
+<h3><code>length of Index 1 (i7 Primer)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0b94df0d-d96e-4d49-a498-b3eb83afc5f8</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</p>
+</div>
+<div class="field-card" id="length-of-index-2-(i5-primer)">
+<h3><code>length of Index 2 (i5 Primer)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a61c1d55-b880-499c-ba4a-30311fdca62f</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</p>
+</div>
+<div class="field-card" id="length-of-read-1">
+<h3><code>length of Read 1</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f22ac08a-bb81-4524-91f0-0e1e1a032335</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>analysis, tracking, alignment</td></tr>
+</table>
+<p>Separate field to replace the combined field &quot;Sequencing cycle&quot;. Sequencing Cycleis  needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</p>
+</div>
+<div class="field-card" id="library-pool-tube-contents-nm">
+<h3><code>library pool tube contents nM</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>32f2d02b-7300-4554-aa93-6de6e456eda7</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+<tr><td>Aliases</td><td>library pool concentration (nM)</td></tr>
+<tr><td>Subsets</td><td>tracking</td></tr>
+</table>
+<p>Library pool concentration as measured in nanomolarity (nMol/L)</p>
+</div>
+<div class="field-card" id="library-pool-tube-volume-ul">
+<h3><code>library pool tube volume ul</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b1b923ac-c218-4db4-a3b1-45a219612567</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Integer</span></td></tr>
+<tr><td>Subsets</td><td>tracking</td></tr>
+</table>
+<p>Library pool volume as measured in ul</p>
+</div>
+<div class="field-card" id="phix-spike-in-percent">
+<h3><code>PhiX spike in percent</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b5ab26ad-d523-406e-a85b-e77f2f4b06b5</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Float</span></td></tr>
+</table>
+<p>PhiX spike-in percent desired to be added to the library pool for sequencing.  PhiX is used to increase complexity of the sample being sequenced, to reduce sequencing artifacts maintain sequencing quality on the instruments.  This is an optional instruction to the SeqCore.</p>
+</div>
+<div class="field-card" id="custom-primers">
+<h3><code>custom primers</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>76c905d5-ef4a-421a-bd59-b541c5c1d45d</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Boolean</span></td></tr>
+<tr><td>Subsets</td><td>tracking, alignment</td></tr>
+</table>
+<p>Custom sequencing primers if needed, indicate with reads require them (R1/R2/i7/i5)</p>
+</div>
+<div class="field-card" id="library-pool-construction-date">
+<h3><code>library pool construction date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ef950ca1-2a62-4fce-a826-6c27d94d3be3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Date</span></td></tr>
+</table>
+<p>Date of library pool construction.</p>
+</div>
+<div class="field-card" id="flowcell">
+<h3><code>flowcell</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4c8d7ac8-d3e3-4177-a93d-18ec2302c392</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">Text</span></td></tr>
+</table>
+<p></p>
+</div>
+<h3>tissue sample</h3>
+<div class="field-card" id="tissue-sample-label">
+<h3><code>tissue sample label</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2e4ca2fc-2d77-4d19-af45-d0fb7bbc2269</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>tissue name|tissue sample label</td></tr>
+<tr><td>Subsets</td><td>analysis, tracking</td></tr>
+</table>
+<p>Identifier name for final intact piece of tissue before cell or nuclei prep.  This piece of tissue will be used in dissociation and has an ROI associated with it.</p>
+</div>
+</body>
+</html>

@@ -1286,6 +1286,107 @@ This document has the following sections:
 
 ## Appendix
 
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### amplified cdna
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `amplified cDNA label` | Text | no | Name of a collection of cDNA molecules derived and amplified from an input barcoded_cell_sample.  These cDNA molecules r… |
+| `amplified cDNA amplified quantity ng` | Float | no | Amount of cDNA produced after cDNA amplification measured in nanograms |
+| `amplified cDNA PCR cycles` | Integer | no | Number of PCR cycles used during cDNA amplification for this cDNA. |
+| `cDNA amplification process date` | Date | no | Date of cDNA amplification. |
+| `amplified cDNA RNA amplification pass-fail` | ValueSet | no | Pass or Fail result based on qualitative assessment of cDNA yield and size. |
+| `amplified cDNA percent cDNA longer than 400bp` | Float | no | QC metric to measure mRNA degradation of cDNA.  Higher % is higher quality starting material.  Over 400bp is used as a u… |
+| `cDNA amplification set` | Text | no | cDNA amplification set, containing multiple amplified_cDNA_names that were processed at the same time. |
+
+### barcoded cell sample
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `barcoded cell sample port well` | Text | no | Specific position of the loaded port of the 10x chip.  An Enriched or Dissociated Cell Sample is loaded into a port on a… |
+| `barcoded cell input quantity count` | Integer | no | Number of enriched or dissociated cells/nuclei going into the barcoding process. |
+| `barcoded cell sample label` | Text | yes | Name of a collection of barcoded cells.  Input will be either dissociated_cell_sample or enriched_cell_sample.  Cell bar… |
+| `expected cell capture` | Integer | no | Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing.  This is a… |
+| `study sets` | Text | no | Intended cohort or dataset that the Barcoded Cell Sample initially belongs to.  This Study helps to group together sampl… |
+
+### dissociated cell sample
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `dissociated cell sample cell prep type` | ValueSet | yes | The type of cell preparation. For example: Cells, Nuclei. This is a property of dissociated_cell_sample. |
+| `dissociated cell sample label` | Text | no | Name of a collection of dissociated cells or nuclei derived from dissociation of a tissue sample. |
+| `dissociated cell source barcode name` | Text | no | Name of oligo used in cell plexing.  The oligo will tag allow separate dissociated cell samples to be combined downstrea… |
+| `dissociated cell source barcode name` | ValueSet | no | Name of oligo used in cell plexing. The oligo will tag allow separate dissociated cell samples to be combined downstream… |
+| `dissociated cell sample preparation date` | Date | no | Date of dissociated cell sample creation. |
+| `patched cell structure` | ValueSet | no | Ontological structure assigned to a single patched cell. This is typically assigned and confirmed after imaging. |
+
+### enriched cell sample
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `enriched cell sample container name` | Text | no | Name of container (strip or tube or plate) of the enriched_cell_prep.  This container could contain 1 or more enriched_c… |
+| `enriched cell sample name` | Text | no | Name of collection of enriched cells or nuclei after enrichment process (usually via FACS using the Enrichment Plan) app… |
+| `enrichment population` | Text | no | Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample wit… |
+| `enriched cell source barcode name` | ValueSet | no | Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 1… |
+| `enriched cell sample preparation date` | Date | no | Date of enriched cell sample creation. |
+| `histone modification marker` | Text | no | Histone modification marker antibodies (eg H3K27ac, H3K27me3, H3K9me3) used in conjunction with an Enriched Cell Source … |
+
+### library
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `library avg size bp` | Integer | no | Average size of the library in terms of base pairs.  This is used to calculate the molarity before pooling and sequencin… |
+| `library method` | ValueSet | yes | Standardized nomenclature to describe the library method used.  This specifies the alignment method required for the lib… |
+| `library concentration nm` | Float | no | Concentration of library in terms of nM (nMol/L).  Number of molecules is needed for accurate pooling of the libraries a… |
+| `library creation date` | Date | no | Date of library construction |
+| `library input ng` | Integer | no | Amount of cDNA going into library construction in nanograms. |
+| `library label` | Text | no | Name of a library, which is a collection of fragmented and barcode-indexed DNA molecules for sequencing.  An index or ba… |
+| `library prep pass-fail` | ValueSet | no | Pass or Fail result based on qualitative assessment of library yield and size. |
+| `library prep set` | Text | no | Library set, containing multiple library_names that were processed at the same time. |
+| `library quantification fmol` | Integer | no | Amount of library generated in terms of femtomoles |
+| `library quantification ng` | Integer | no | Amount of library generated in terms of nanograms |
+| `R1/R2 index name` | Text | yes | Name of the pair of library indexes used for sequencing.  Indexes allow libraries to be pooled together for sequencing. … |
+
+### library aliquot
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `library aliquot label` | Text | yes | One library in the library pool.  Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow fo… |
+| `fastq file alignment status` | ValueSet | yes | The QC status of the fastq file alignment process result. |
+
+### library pool
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `library pool tube internal label` | Text | yes | Library Pool Tube local name.  Label of the tube containing the library pool, which is made up of multiple library_aliqu… |
+| `embargo date` | Text | no | date until which data much be embargoed |
+| `SeqCore library pool tube barcode` | Text | yes | Library Pool tube name as provided by the SeqCore (often a barcode).  This tube is provided from the SeqCore and is part… |
+| `library pool label` | Text | yes | Library lab's library pool name.  For some labs this may be the same as "Libray pool tube local name".   Other labs dist… |
+| `library pool tube avg size bp` | Integer | no | Average insert size of library pool, measured in base pairs. |
+| `library pool fmol` | Float | no | Amount of library pool in the tube as measured in femtamoles (fmol) |
+| `loading concentration pM` | Float | no | Sequencer Loading Concentration as measured in pM (pmol/L).  This is a value used by the SeqCore. |
+| `length of Read 2 (for Paired End Runs)` | Integer | yes | Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library p… |
+| `length of Index 1 (i7 Primer)` | Integer | yes | Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library p… |
+| `length of Index 2 (i5 Primer)` | Integer | yes | Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library p… |
+| `length of Read 1` | Integer | yes | Separate field to replace the combined field "Sequencing cycle". Sequencing Cycleis  needed for sequencing the library p… |
+| `library pool tube contents nM` | Float | no | Library pool concentration as measured in nanomolarity (nMol/L) |
+| `library pool tube volume ul` | Integer | no | Library pool volume as measured in ul |
+| `PhiX spike in percent` | Float | no | PhiX spike-in percent desired to be added to the library pool for sequencing.  PhiX is used to increase complexity of th… |
+| `custom primers` | Boolean | no | Custom sequencing primers if needed, indicate with reads require them (R1/R2/i7/i5) |
+| `library pool construction date` | Date | no | Date of library pool construction. |
+| `flowcell` | Text | no |  |
+
+### tissue sample
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `tissue sample label` | text | yes | Identifier name for final intact piece of tissue before cell or nuclei prep.  This piece of tissue will be used in disso… |
+
+<!-- schema-properties-end -->
+
 ## Changelog
 
 ### Version 1.2.1

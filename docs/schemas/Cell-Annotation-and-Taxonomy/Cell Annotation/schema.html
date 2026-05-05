@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cell Annotation Schema</title>
+<style>
+
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    color: #202124;
+    line-height: 1.6;
+}
+h1 { font-size: 1.9em; border-bottom: 3px solid #1a73e8; padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: #1a73e8; margin-top: 40px; border-bottom: 1px solid #dadce0; padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: #444; margin-top: 28px; }
+p  { margin: 8px 0 14px; }
+a  { color: #1a73e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { background: #f8f9fa; border: 1px solid #dadce0; border-radius: 6px;
+        padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+.meta span { font-size: 0.88em; color: #5f6368; }
+.meta span b { color: #202124; }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
+th { background: #1a73e8; color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid #e8eaed; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #f1f3f4; }
+td:first-child { white-space: nowrap; }
+
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+       background: #f0f4ff; color: #1557b0; padding: 1px 5px; border-radius: 3px;
+       font-size: 0.88em; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
+         font-size: 0.78em; font-weight: 600; white-space: nowrap; }
+.req  { background: #fce8e6; color: #c5221f; }
+.opt  { background: #e8f0fe; color: #1557b0; }
+.type { background: #e6f4ea; color: #137333; font-family: monospace; }
+
+.field-card { border: 1px solid #dadce0; border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: #fff; }
+.field-card h3 { margin-top: 0; }
+.field-card .props tr td:first-child { color: #5f6368; font-size: 0.85em;
+                                        width: 140px; border-bottom: none; }
+.field-card .props tr td:last-child  { border-bottom: none; }
+.field-card .props { background: #f8f9fa; border-radius: 4px; }
+
+.enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
+.enum-list li { background: #f0f4ff; color: #1557b0; padding: 2px 10px;
+                border-radius: 12px; font-family: monospace; font-size: 0.85em; }
+
+.group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
+               color: #5f6368; margin-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<h1>Cell Annotation Schema</h1>
+<div class="meta">
+  <span><b>Document Status:</b> Approved BICAN Standard</span>
+  <span><b>Version:</b> 1.0</span>
+  <span><b>Owner:</b> @UCDNJJ, @jeremymiller</span>
+  <span><b>Date:</b> 10-03-2025</span>
+</div>
+<h2 id="properties">Properties</h2>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#matrix_file_id"><code>matrix_file_id</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`.</td></tr>
+<tr><td><a href="#dataset_title"><code>dataset_title</code></a></td><td><span class="badge type">string</span></td><td><span class="badge req">required</span></td><td>—</td><td>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal ganglion cells&#x27;.</td></tr>
+<tr><td><a href="#dataset_description"><code>dataset_description</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>description</td><td>The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atl…</td></tr>
+<tr><td><a href="#cellannotation_schema_version"><code>cellannotation_schema_version</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the version of the schema used for cell anno…</td></tr>
+<tr><td><a href="#cellannotation_timestamp"><code>cellannotation_timestamp</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also could be the same as `development_date`…</td></tr>
+<tr><td><a href="#cellannotation_version"><code>cellannotation_version</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>The CAP taxonomy annotation version; required by CAP.</td></tr>
+<tr><td><a href="#cellannotation_url"><code>cellannotation_url</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>A persistent URL of all cell annotations published (per dataset).</td></tr>
+<tr><td><a href="#author_list"><code>author_list</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>taxonomy users</td><td>A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet.</td></tr>
+<tr><td><a href="#author_name"><code>author_name</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>taxonomy author, point person name</td><td>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also seperated by `cell_set` with &quot;cell_set_alias…</td></tr>
+<tr><td><a href="#author_contact"><code>author_contact</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>point person email</td><td>A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet.</td></tr>
+<tr><td><a href="#orcid"><code>orcid</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>point person ORCID</td><td>A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet.</td></tr>
+<tr><td><a href="#labelsets"><code>labelsets</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>—</td><td>A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, class, neurotransmitter, etc.). Specifical…</td></tr>
+<tr><td><a href="#annotations"><code>annotations</code></a></td><td><span class="badge type">array</span></td><td><span class="badge req">required</span></td><td>—</td><td>A list of the annotations.</td></tr>
+</tbody></table>
+<h2 id="property-details">Property Details</h2>
+<div class="field-card" id="matrix_file_id">
+<h3><code>matrix_file_id</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5d625688-96da-4c65-97b9-211cbcad4aea</code></td></tr>
+<tr><td>Subsets</td><td>annotations, tooling</td></tr>
+</table>
+<p>The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`.</p>
+</div>
+<div class="field-card" id="dataset_title">
+<h3><code>dataset_title</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5aab17df-0830-44d4-bcd8-f954695867d0</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Example</td><td><code>&#x27;Human retina cell atlas - retinal ganglion cells&#x27;</code></td></tr>
+</table>
+<p>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal ganglion cells&#x27;.</p>
+</div>
+<div class="field-card" id="dataset_description">
+<h3><code>dataset_description</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1b5ff66c-0e00-4a29-8ccf-65dbf59d79da</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Aliases</td><td>description</td></tr>
+<tr><td>Example</td><td><code>&#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;</code></td></tr>
+</table>
+<p>The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;.</p>
+</div>
+<div class="field-card" id="cellannotation_schema_version">
+<h3><code>cellannotation_schema_version</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>195cbdbf-d486-4d54-9c1d-83edf0a44ec5</code></td></tr>
+<tr><td>Subsets</td><td>tooling</td></tr>
+</table>
+<p>The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the version of the schema used for cell annotations.</p>
+</div>
+<div class="field-card" id="cellannotation_timestamp">
+<h3><code>cellannotation_timestamp</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>37da06ba-9c15-405f-b5d6-f8d2bf5fc3a3</code></td></tr>
+<tr><td>Subsets</td><td>tooling</td></tr>
+</table>
+<p>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also could be the same as `development_date`.</p>
+</div>
+<div class="field-card" id="cellannotation_version">
+<h3><code>cellannotation_version</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>439f52e8-e2e6-406c-850c-434d448c8b6d</code></td></tr>
+<tr><td>Subsets</td><td>tooling</td></tr>
+</table>
+<p>The CAP taxonomy annotation version; required by CAP.</p>
+</div>
+<div class="field-card" id="cellannotation_url">
+<h3><code>cellannotation_url</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e47029df-a5cf-49d0-b8de-76302a1e6fbb</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+</table>
+<p>A persistent URL of all cell annotations published (per dataset).</p>
+</div>
+<div class="field-card" id="author_list">
+<h3><code>author_list</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>15e4be61-b1fb-49a5-9a81-7fed61138256</code></td></tr>
+<tr><td>Aliases</td><td>taxonomy users</td></tr>
+<tr><td>Subsets</td><td>annotations, tooling</td></tr>
+</table>
+<p>A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet.</p>
+</div>
+<div class="field-card" id="author_name">
+<h3><code>author_name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0ea83cdb-cd06-4ef8-84c1-6aec29220759</code></td></tr>
+<tr><td>Aliases</td><td>taxonomy author, point person name</td></tr>
+<tr><td>Subsets</td><td>annotations</td></tr>
+</table>
+<p>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also seperated by `cell_set` with &quot;cell_set_alias_assignee&quot;. This is called `Point person name` in taxonomy Google Sheet.</p>
+</div>
+<div class="field-card" id="author_contact">
+<h3><code>author_contact</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>fa084043-3c8e-47cb-959e-2f3daf2165ec</code></td></tr>
+<tr><td>Aliases</td><td>point person email</td></tr>
+<tr><td>Subsets</td><td>annotations</td></tr>
+</table>
+<p>A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet.</p>
+</div>
+<div class="field-card" id="orcid">
+<h3><code>orcid</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2c96776b-b158-4e0c-ba67-ea7a63efb1e8</code></td></tr>
+<tr><td>Aliases</td><td>point person ORCID</td></tr>
+<tr><td>Subsets</td><td>annotations</td></tr>
+</table>
+<p>A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet.</p>
+</div>
+<div class="field-card" id="labelsets">
+<h3><code>labelsets</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7fa0b7a1-6af7-4f79-8da0-29d7950ea736</code></td></tr>
+<tr><td>Subsets</td><td>annotations</td></tr>
+</table>
+<p>A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, class, neurotransmitter, etc.). Specifically: `name`, `description`, and `rank` (0 most specific) and some information about provenance needed for each labelset. This is equilalent to `Cluster annotation term set` in BKP.</p>
+</div>
+<div class="field-card" id="annotations">
+<h3><code>annotations</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>46e6ec2f-6baf-4df9-bfbd-36463694be93</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">array</span></td></tr>
+</table>
+<p>A list of the annotations.</p>
+</div>
+</body>
+</html>

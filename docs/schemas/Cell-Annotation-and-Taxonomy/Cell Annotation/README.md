@@ -535,6 +535,28 @@ This is designed not to tie-in to a single project (i.e. no tool-specific fields
 | Definition | A list of names of genes whose expression in the cells being annotated is explicitly used as evidence against this cell annotation. Each gene MUST be included in the matrix of the AnnData/Seurat file. |
 | Data Type | string |
 
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `matrix_file_id` | — | no | The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`. |
+| `dataset_title` | string | yes | The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal gan… |
+| `dataset_description` | string | no | The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal… |
+| `cellannotation_schema_version` | — | no | The version of the Cell Annotation Schema (CAS) used, formatted as '[MAJOR].[MINOR].[PATCH]'. This is used to track the … |
+| `cellannotation_timestamp` | — | no | Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also… |
+| `cellannotation_version` | — | no | The CAP taxonomy annotation version; required by CAP. |
+| `cellannotation_url` | string | no | A persistent URL of all cell annotations published (per dataset). |
+| `author_list` | — | no | A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet. |
+| `author_name` | — | no | The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also sepe… |
+| `author_contact` | — | no | A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet. |
+| `orcid` | — | no | A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet. |
+| `labelsets` | — | no | A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, cl… |
+| `annotations` | array | yes | A list of the annotations. |
+
+<!-- schema-properties-end -->
+
 ## Changelog
 
 ### August 7, 2025 -- Version 1.0.0
