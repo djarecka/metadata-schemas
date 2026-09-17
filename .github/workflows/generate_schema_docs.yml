@@ -4,14 +4,18 @@ on:
   pull_request:
     paths:
       - 'docs/schemas/**/*.csv'
+      - 'README.md'
       - 'scripts/generate_schema_html.py'
       - 'scripts/generate_all_schema_docs.sh'
+      - 'scripts/sync_index_intro.py'
   push:
     branches: [main]
     paths:
       - 'docs/schemas/**/*.csv'
+      - 'README.md'
       - 'scripts/generate_schema_html.py'
       - 'scripts/generate_all_schema_docs.sh'
+      - 'scripts/sync_index_intro.py'
   workflow_dispatch:
 
 jobs:
@@ -37,7 +41,7 @@ jobs:
           shopt -s globstar
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/schemas/**/*.html
+          git add docs/schemas/**/*.html index.html
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

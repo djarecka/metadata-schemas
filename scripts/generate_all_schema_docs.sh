@@ -101,4 +101,6 @@ python3 "$SCRIPT" \
 # expects (Proposed BICAN Field Name, LinkML Class, BICAN UUID, Nullable, ...),
 # so it needs its own column-mapping support before it can be wired in here.
 
+python3 "$(dirname "$SCRIPT")/sync_index_intro.py" README.md index.html
+
 echo "Done."
