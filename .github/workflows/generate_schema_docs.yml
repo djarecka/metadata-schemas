@@ -1,0 +1,63 @@
+name: Generate Schema Documentation
+
+on:
+  pull_request:
+    paths:
+      - 'docs/schemas/**/*.csv'
+      - 'scripts/generate_schema_html.py'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/schemas/**/*.csv'
+      - 'scripts/generate_schema_html.py'
+  workflow_dispatch:
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Cell Annotation schema docs
+        run: |
+          python scripts/generate_schema_html.py \
+            "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/Cell-Annotation-Schema.csv" \
+            --title "Cell Annotation Schema" \
+            --status "Approved BICAN Standard" \
+            --version "1.0" \
+            --owner "@UCDNJJ, @jeremymiller" \
+            --date "10-03-2025" \
+            --output "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/schema.html" \
+            --readme "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/README.md"
+
+      # Add more schemas below following the same pattern:
+      #
+      # - name: Generate Donor Metadata schema docs
+      #   run: |
+      #     python scripts/generate_schema_html.py \
+      #       "docs/schemas/Donor-Metadata/donor-metadata.csv" \
+      #       --title "Donor Metadata Schema" \
+      #       --output "docs/schemas/Donor-Metadata/schema.html" \
+      #       --readme "docs/schemas/Donor-Metadata/README.md"
+
+      - name: Commit generated docs
+        run: |
+          shopt -s globstar
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/schemas/**/*.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: regenerate schema HTML docs from CSV"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
