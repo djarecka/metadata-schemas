@@ -1290,6 +1290,8 @@ This document has the following sections:
 ## Schema properties
 *Auto-generated from CSV. Do not edit this section manually.*
 
+**Related LinkML model:** [Library Generation Model](https://brain-bican.github.io/models/index_library_generation/)
+
 ### amplified cdna
 
 | Property | Type | Required | Description |

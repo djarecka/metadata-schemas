@@ -201,6 +201,8 @@ def build_html(
     owner: str = "",
     date: str = "",
     home_link: str | None = None,
+    related_model_label: str = "",
+    related_model_url: str = "",
 ) -> str:
     out: list[str] = []
 
@@ -235,6 +237,12 @@ def build_html(
 
     if description:
         w(f'<p>{e(description)}</p>\n')
+
+    if related_model_label and related_model_url:
+        w(
+            f'<p><strong>Related LinkML model:</strong> '
+            f'<a href="{e(related_model_url)}">{e(related_model_label)}</a></p>\n'
+        )
 
     ordered_keys, groups = group_rows(rows)
 
@@ -354,7 +362,13 @@ def readme_markers(section_key: str = "") -> tuple[str, str]:
     return f"<!-- schema-properties-start{suffix} -->", f"<!-- schema-properties-end{suffix} -->"
 
 
-def build_readme_section(rows: list[dict], section_key: str = "", section_title: str = "Schema properties") -> str:
+def build_readme_section(
+    rows: list[dict],
+    section_key: str = "",
+    section_title: str = "Schema properties",
+    related_model_label: str = "",
+    related_model_url: str = "",
+) -> str:
     """Return the Markdown content for a '## <section_title>' section."""
     lines: list[str] = []
     readme_start, readme_end = readme_markers(section_key)
@@ -370,6 +384,8 @@ def build_readme_section(rows: list[dict], section_key: str = "", section_title:
     w(readme_start + "\n")
     w(f"## {section_title}\n")
     w("*Auto-generated from CSV. Do not edit this section manually.*\n")
+    if related_model_label and related_model_url:
+        w(f"\n**Related LinkML model:** [{related_model_label}]({related_model_url})\n")
 
     for cls in ordered_keys:
         if cls:
@@ -462,6 +478,15 @@ def main() -> None:
         help="Heading for the README section (default: 'Schema properties'; "
              "set per-CSV, e.g. 'Person properties', for multi-CSV schemas).",
     )
+    parser.add_argument(
+        "--related-model-label", default="",
+        help="Display name of a corresponding LinkML model in brain-bican/models, e.g. 'Library Generation Model'.",
+    )
+    parser.add_argument(
+        "--related-model-url", default="",
+        help="URL of the corresponding LinkML model's docs page. Both --related-model-label and "
+             "--related-model-url must be set together.",
+    )
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -497,6 +522,8 @@ def main() -> None:
             owner=args.owner,
             date=args.date,
             home_link=relative_root_link(args.output) if args.output else None,
+            related_model_label=args.related_model_label,
+            related_model_url=args.related_model_url,
         )
         if args.output:
             Path(args.output).write_text(content, encoding="utf-8")
@@ -505,7 +532,13 @@ def main() -> None:
             sys.stdout.write(content)
 
     if args.readme:
-        section = build_readme_section(rows, section_key=args.section_key, section_title=args.section_title)
+        section = build_readme_section(
+            rows,
+            section_key=args.section_key,
+            section_title=args.section_title,
+            related_model_label=args.related_model_label,
+            related_model_url=args.related_model_url,
+        )
         update_readme(args.readme, section, section_key=args.section_key)
         print(f"README updated: {args.readme}", file=sys.stderr)
 

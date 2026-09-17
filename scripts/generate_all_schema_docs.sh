@@ -16,7 +16,9 @@ python3 "$SCRIPT" \
   --date "10-03-2025"
 
 python3 "$SCRIPT" \
-  "docs/schemas/Library-Minimal-Metadata"
+  "docs/schemas/Library-Minimal-Metadata" \
+  --related-model-label "Library Generation Model" \
+  --related-model-url "https://brain-bican.github.io/models/index_library_generation/"
 
 python3 "$SCRIPT" \
   "docs/schemas/Donor-Metadata/donor-metadata.csv" \
