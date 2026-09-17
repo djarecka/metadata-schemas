@@ -31,7 +31,7 @@
 * { box-sizing: border-box; }
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
-    max-width: 880px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 0 24px 48px;
     background: var(--bg);
@@ -45,21 +45,28 @@ p.lead { color: var(--text-muted); margin: 0; font-size: 1.05em; }
 h2.section-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.08em;
                     color: var(--text-muted); margin: 0 0 14px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.tree { display: flex; flex-direction: column; gap: 10px; }
 
-.schema-card { display: block; padding: 18px; border: 1px solid var(--border); border-radius: 10px;
-                text-decoration: none; color: var(--text); background: var(--card-bg);
-                transition: border-color 0.15s, transform 0.15s; }
-a.schema-card:hover { border-color: var(--accent); transform: translateY(-1px); }
-.schema-card .name { font-weight: 600; color: var(--accent); display: block; margin-bottom: 4px;
-                      text-decoration: none; }
-.schema-card .name:hover { text-decoration: underline; }
-.schema-card .desc { font-size: 0.88em; color: var(--text-muted); }
-.schema-card .related-link { display: block; margin-top: 10px; padding-top: 10px;
-                              border-top: 1px solid var(--border); font-size: 0.8em; }
+.dir-group { border: 1px solid var(--border); border-radius: 10px; background: var(--card-bg);
+             overflow: hidden; }
+.dir-path { display: block; padding: 8px 16px; font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 0.78em; color: var(--text-muted); background: var(--bg-alt);
+            border-bottom: 1px solid var(--border); }
 
-.pending-card { display: block; padding: 18px; border: 1px dashed var(--border); border-radius: 10px;
-                color: var(--text-muted); background: transparent; font-size: 0.92em; }
+.dir-item { display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+            padding: 12px 16px; text-decoration: none; color: var(--text);
+            border-top: 1px solid var(--border); transition: background 0.1s; }
+.dir-item:first-of-type { border-top: none; }
+.dir-item:hover { background: var(--bg-alt); }
+.dir-item .name { font-weight: 600; color: var(--accent); }
+.dir-item .desc { font-size: 0.82em; color: var(--text-muted); white-space: nowrap; }
+
+.related-row { display: block; padding: 10px 16px; font-size: 0.8em; color: var(--text-muted);
+               border-top: 1px solid var(--border); }
+.related-row a { font-weight: 600; }
+
+.pending-row { display: block; padding: 12px 16px; font-size: 0.85em; color: var(--text-muted);
+               border-top: 1px dashed var(--border); }
 
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border);
          font-size: 0.85em; color: var(--text-muted); }
@@ -76,49 +83,86 @@ footer a:hover { text-decoration: underline; }
 </header>
 
 <h2 class="section-label">Schemas</h2>
-<div class="grid">
-  <a class="schema-card" href="docs/schemas/Cell-Annotation-and-Taxonomy/Cell%20Annotation/schema.html">
-    <span class="name">Cell Annotation</span>
-    <span class="desc">Approved BICAN Standard &middot; v1.0</span>
-  </a>
-  <div class="schema-card">
-    <a class="name" href="docs/schemas/Library-Minimal-Metadata/schema.html">Library Minimal Metadata</a>
-    <span class="desc">Schema reference</span>
-    <a class="related-link" href="https://brain-bican.github.io/models/index_library_generation/">LinkML: Library Generation Model &rarr;</a>
+<div class="tree">
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/</span>
+    <a class="dir-item" href="docs/schemas/Cell-Annotation-and-Taxonomy/Cell%20Annotation/schema.html">
+      <span class="name">Cell Annotation</span>
+      <span class="desc">Approved BICAN Standard &middot; v1.0</span>
+    </a>
   </div>
-  <a class="schema-card" href="docs/schemas/Donor-Metadata/schema.html">
-    <span class="name">Human Donor Metadata</span>
-    <span class="desc">Endorsed BICAN Standard &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Developing-Human-Metadata/schema.html">
-    <span class="name">Developing Human Metadata</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Developing-NHP-Metadata/schema.html">
-    <span class="name">Developing NHP Metadata</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Developing-Tissue-Metadata/schema.html">
-    <span class="name">Developing Tissue Metadata</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Institutional-Certification/schema.html">
-    <span class="name">Institutional Certification</span>
-    <span class="desc">Endorsed BICAN Standard &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-wb-omics-spatial.html">
-    <span class="name">HMBA Macaque &mdash; WB Omics Spatial</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-population.html">
-    <span class="name">HMBA Macaque &mdash; Population</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <a class="schema-card" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-patchseq.html">
-    <span class="name">HMBA Macaque &mdash; Patchseq</span>
-    <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
-  </a>
-  <span class="pending-card">Projects &amp; Data Collections (pending: different CSV format)</span>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Library-Minimal-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Library-Minimal-Metadata/schema.html">
+      <span class="name">Library Minimal Metadata</span>
+      <span class="desc">Schema reference</span>
+    </a>
+    <span class="related-row">Related LinkML model: <a href="https://brain-bican.github.io/models/index_library_generation/">Library Generation Model &rarr;</a></span>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Donor-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Donor-Metadata/schema.html">
+      <span class="name">Human Donor Metadata</span>
+      <span class="desc">Endorsed BICAN Standard &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Developing-Human-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Developing-Human-Metadata/schema.html">
+      <span class="name">Developing Human Metadata</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Developing-NHP-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Developing-NHP-Metadata/schema.html">
+      <span class="name">Developing NHP Metadata</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Developing-Tissue-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Developing-Tissue-Metadata/schema.html">
+      <span class="name">Developing Tissue Metadata</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Institutional-Certification/</span>
+    <a class="dir-item" href="docs/schemas/Institutional-Certification/schema.html">
+      <span class="name">Institutional Certification</span>
+      <span class="desc">Endorsed BICAN Standard &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/Macaque-Donor-and-Tissue-Metadata/</span>
+    <a class="dir-item" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-wb-omics-spatial.html">
+      <span class="name">WB Omics Spatial</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+    <a class="dir-item" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-population.html">
+      <span class="name">Population</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+    <a class="dir-item" href="docs/schemas/Macaque-Donor-and-Tissue-Metadata/schema-patchseq.html">
+      <span class="name">Patchseq</span>
+      <span class="desc">Accepted by MOWG &middot; v1.0.0</span>
+    </a>
+  </div>
+
+  <div class="dir-group">
+    <span class="dir-path">docs/schemas/project-registration-biccn/</span>
+    <span class="pending-row">Projects &amp; Data Collections (pending: different CSV format)</span>
+  </div>
+
 </div>
 
 <footer>Source: <a href="https://github.com/djarecka/metadata-schemas">metadata-schemas</a></footer>
