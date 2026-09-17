@@ -103,57 +103,92 @@ def e(text: str) -> str:
 # ---------------------------------------------------------------------------
 
 CSS = """
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1a1a;
+    --text-muted: #59636e;
+    --border: #d8dee4;
+    --accent: #0969da;
+    --accent-bg: #ddf0ff;
+    --req-bg: #ffe9e6; --req-text: #c5221f;
+    --opt-bg: #e8f0fe; --opt-text: #1557b0;
+    --type-bg: #e6f4ea; --type-text: #137333;
+    --card-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: #30363d;
+        --accent: #4a9eff;
+        --accent-bg: #10243e;
+        --req-bg: #3d1f1c; --req-text: #ff8a80;
+        --opt-bg: #16283f; --opt-text: #8ab4f8;
+        --type-bg: #10321d; --type-text: #7ee787;
+        --card-bg: #161b22;
+    }
+}
 * { box-sizing: border-box; }
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 32px 24px;
-    color: #202124;
+    padding: 0 24px 48px;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
 }
-h1 { font-size: 1.9em; border-bottom: 3px solid #1a73e8; padding-bottom: 10px; }
-h2 { font-size: 1.3em; color: #1a73e8; margin-top: 40px; border-bottom: 1px solid #dadce0; padding-bottom: 6px; }
-h3 { font-size: 1.05em; color: #444; margin-top: 28px; }
+.site-nav { display: flex; align-items: center; gap: 8px; padding: 16px 0;
+            border-bottom: 1px solid var(--border); margin-bottom: 24px;
+            font-size: 0.92em; color: var(--text-muted); }
+.site-nav a { font-weight: 600; }
+
+h1 { font-size: 1.9em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: var(--accent); margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: var(--text-muted); margin-top: 28px; }
 p  { margin: 8px 0 14px; }
-a  { color: #1a73e8; text-decoration: none; }
+a  { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.meta { background: #f8f9fa; border: 1px solid #dadce0; border-radius: 6px;
+.meta { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
         padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
-.meta span { font-size: 0.88em; color: #5f6368; }
-.meta span b { color: #202124; }
+.meta span { font-size: 0.88em; color: var(--text-muted); }
+.meta span b { color: var(--text); }
 
 table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
-th { background: #1a73e8; color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
-td { padding: 8px 12px; border-bottom: 1px solid #e8eaed; vertical-align: top; }
+th { background: var(--accent); color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 tr:last-child td { border-bottom: none; }
-tbody tr:hover { background: #f1f3f4; }
+tbody tr:hover { background: var(--bg-alt); }
 td:first-child { white-space: nowrap; }
 
 code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-       background: #f0f4ff; color: #1557b0; padding: 1px 5px; border-radius: 3px;
+       background: var(--accent-bg); color: var(--accent); padding: 1px 5px; border-radius: 3px;
        font-size: 0.88em; }
 .badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
          font-size: 0.78em; font-weight: 600; white-space: nowrap; }
-.req  { background: #fce8e6; color: #c5221f; }
-.opt  { background: #e8f0fe; color: #1557b0; }
-.type { background: #e6f4ea; color: #137333; font-family: monospace; }
+.req  { background: var(--req-bg); color: var(--req-text); }
+.opt  { background: var(--opt-bg); color: var(--opt-text); }
+.type { background: var(--type-bg); color: var(--type-text); font-family: monospace; }
 
-.field-card { border: 1px solid #dadce0; border-radius: 8px; padding: 18px 20px;
-              margin: 12px 0; background: #fff; }
+.field-card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: var(--card-bg); }
 .field-card h3 { margin-top: 0; }
-.field-card .props tr td:first-child { color: #5f6368; font-size: 0.85em;
+.field-card .props tr td:first-child { color: var(--text-muted); font-size: 0.85em;
                                         width: 140px; border-bottom: none; }
 .field-card .props tr td:last-child  { border-bottom: none; }
-.field-card .props { background: #f8f9fa; border-radius: 4px; }
+.field-card .props { background: var(--bg-alt); border-radius: 4px; }
 
 .enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
-.enum-list li { background: #f0f4ff; color: #1557b0; padding: 2px 10px;
+.enum-list li { background: var(--accent-bg); color: var(--accent); padding: 2px 10px;
                 border-radius: 12px; font-family: monospace; font-size: 0.85em; }
 
 .group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
-               color: #5f6368; margin-bottom: 4px; }
+               color: var(--text-muted); margin-bottom: 4px; }
 """
 
 
@@ -165,6 +200,7 @@ def build_html(
     version: str = "",
     owner: str = "",
     date: str = "",
+    home_link: str | None = None,
 ) -> str:
     out: list[str] = []
 
@@ -182,8 +218,12 @@ def build_html(
 </style>
 </head>
 <body>
-<h1>{e(title)}</h1>
 """)
+
+    if home_link:
+        w(f'<nav class="site-nav"><a href="{e(home_link)}">&larr; All BICAN schemas</a></nav>\n')
+
+    w(f'<h1>{e(title)}</h1>\n')
 
     meta_items = [("Document Status", status), ("Version", version), ("Owner", owner), ("Date", date)]
     active = [(k, v) for k, v in meta_items if v]
@@ -347,6 +387,12 @@ def build_readme_section(rows: list[dict]) -> str:
     return "".join(lines)
 
 
+def relative_root_link(output_path: str) -> str:
+    """Relative path from an output HTML file's directory back to the repo-root index.html."""
+    depth = len(Path(output_path).parent.parts)
+    return ("../" * depth + "index.html") if depth else "index.html"
+
+
 def update_readme(readme_path: str, section_content: str) -> None:
     """Insert or replace the Schema properties section in a README.md file."""
     path = Path(readme_path)
@@ -432,6 +478,7 @@ def main() -> None:
             version=args.version,
             owner=args.owner,
             date=args.date,
+            home_link=relative_root_link(args.output) if args.output else None,
         )
         if args.output:
             Path(args.output).write_text(content, encoding="utf-8")

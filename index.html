@@ -5,28 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BICAN Metadata Schemas</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; color: #1a1a1a; line-height: 1.5; }
-  h1 { font-size: 1.6rem; }
-  p.lead { color: #555; }
-  ul { list-style: none; padding: 0; }
-  li { margin: 0.6rem 0; }
-  a.schema-link { display: block; padding: 0.9rem 1.1rem; border: 1px solid #ddd; border-radius: 8px;
-                  text-decoration: none; color: #0969da; font-weight: 600; }
-  a.schema-link:hover { background: #f6f8fa; }
-  span.pending { display: inline-block; padding: 0.9rem 1.1rem; border: 1px dashed #ccc; border-radius: 8px;
-                 color: #888; width: 100%; box-sizing: border-box; }
-  footer { margin-top: 2.5rem; font-size: 0.85rem; color: #888; }
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1a1a;
+    --text-muted: #59636e;
+    --border: #d8dee4;
+    --accent: #0969da;
+    --accent-bg: #ddf0ff;
+    --card-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: #30363d;
+        --accent: #4a9eff;
+        --accent-bg: #10243e;
+        --card-bg: #161b22;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+header { padding: 40px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+h1 { font-size: 2em; margin: 0 0 8px; }
+p.lead { color: var(--text-muted); margin: 0; font-size: 1.05em; }
+
+h2.section-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.08em;
+                    color: var(--text-muted); margin: 0 0 14px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+
+a.schema-card { display: block; padding: 18px; border: 1px solid var(--border); border-radius: 10px;
+                text-decoration: none; color: var(--text); background: var(--card-bg);
+                transition: border-color 0.15s, transform 0.15s; }
+a.schema-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+a.schema-card .name { font-weight: 600; color: var(--accent); display: block; margin-bottom: 4px; }
+a.schema-card .desc { font-size: 0.88em; color: var(--text-muted); }
+
+.pending-card { display: block; padding: 18px; border: 1px dashed var(--border); border-radius: 10px;
+                color: var(--text-muted); background: transparent; font-size: 0.92em; }
+
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border);
+         font-size: 0.85em; color: var(--text-muted); }
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
+<header>
 <h1>BICAN Metadata Schemas</h1>
-<p class="lead">Generated schema reference pages. Each page is built automatically from the schema's CSV.</p>
-<ul>
-  <li><a class="schema-link" href="docs/schemas/Cell-Annotation-and-Taxonomy/Cell%20Annotation/schema.html">Cell Annotation Schema</a></li>
-  <li><a class="schema-link" href="docs/schemas/Library-Minimal-Metadata/schema.html">Library Minimal Metadata Schema</a></li>
-  <li><span class="pending">More schemas coming soon</span></li>
-</ul>
+<p class="lead">Reference documentation generated automatically from each schema's CSV.</p>
+</header>
+
+<h2 class="section-label">Schemas</h2>
+<div class="grid">
+  <a class="schema-card" href="docs/schemas/Cell-Annotation-and-Taxonomy/Cell%20Annotation/schema.html">
+    <span class="name">Cell Annotation</span>
+    <span class="desc">Approved BICAN Standard &middot; v1.0</span>
+  </a>
+  <a class="schema-card" href="docs/schemas/Library-Minimal-Metadata/schema.html">
+    <span class="name">Library Minimal Metadata</span>
+    <span class="desc">Schema reference</span>
+  </a>
+  <span class="pending-card">More schemas coming soon</span>
+</div>
+
 <footer>Source: <a href="https://github.com/djarecka/metadata-schemas">metadata-schemas</a></footer>
 </body>
 </html>
