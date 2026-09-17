@@ -3189,4 +3189,128 @@ This document has the following sections:
 
 ## Appendix
 
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `subject_id` | — | no | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | — | no | Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is p… |
+| `donor_source` | — | no | The origin of the donor/subject in this experiment. |
+| `ethnicity` | — | no | Population category defined in terms of cultural, religious, tribal or other social similarities. [EFO] |
+| `race` | — | no | An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of … |
+| `secondary_race` | — | no | The non-primary race category of a donor. |
+| `sex` | — | no | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `gender` | — | no | Identification as male/masculine, female/feminine or something else, and association with a (social) role or set of beha… |
+| `sex_orientation` | — | no | The pattern of a person's emotional, romantic, and/or sexual attractions. [NCIT] |
+| `age_at_death` | — | no | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `birth_country_name` | — | no | The name of the country where a subject was born. [NCIT] |
+| `primary_language` | — | no | The alphanumeric code from the ISO 639 standard which denotes the primary lanugage of a subject. The ISO 639 standard in… |
+| `secondary_language` | — | no | The alphanumeric code from the ISO 639 standard which denotes the secondary lanugage of a subject. The ISO 639 standard … |
+| `year_of_death` | — | no | The year wherein the subject or donor has ceased to exist. |
+| `autopsy_report` | — | no | A document assembled by an author for the purpose of providing information regarding the cause of death of a subject for… |
+| `cause_of_death` | — | no | The circumstance or condition that results in the death of a living being. [NCIT] |
+| `cause_of_death_code` | — | no | The ISO code that denotes the circumstance or condition that results in the death of a living being. [NCIT] |
+| `manner_of_death` | — | no | The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (… |
+| `marital_status` | — | no | The marital or partner status of the donor at time of death. |
+| `education_years_number` | — | no | The level of education of a donor given in number of years. |
+| `family_income_range` | — | no | The income of the donor's family given as a range. |
+| `informant_questionnaire_completed` | — | no | The status (completed, not completed) of the document about the subject completed by an informant. |
+| `informant_interview_performed` | — | no | The status (performed, not performed) of the interview event between a clinician and an informant. |
+| `informant_relationship` | — | no | The relationship that an informant bears to a subject/donor. |
+| `informant_relationship_specify` | — | no | The specific relationship that an informant bears to a subject/donor. |
+| `handedness` | — | no | A behavioral quality inhering ina bearer by virtue of the bearer's unequal distribution of fine motor skill between its … |
+| `medical_records_available` | — | no | The status (available, unavailable) of the medical records of the subject/donor. |
+| `medical_records_reviewed` | — | no | The status (reviewed, not reviewed) of the medical records of the subject/donor. |
+| `confirmed_hbcac` | — | no | The donor's Huntington Breast Cancer Action Coalition status. |
+| `consent_status` | — | no | The donor's consent status. |
+| `hemisphere` | — | no | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post_mortem_interval` | — | no | The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is… |
+| `left_hemisphere_preparation` | — | no | The type of preparation method used for the left hemisphere. |
+| `left_hemisphere_preparation_specify` | — | no | Specific details about the type of preparation method used for the left hemisphere. |
+| `right_hemisphere_preparation` | — | no | The type of preparation method used for the right hemisphere. |
+| `right_hemisphere_preparation_specify` | — | no | Specific details about the type of preparation method used for the right hemisphere. |
+| `rin` | — | no | The RNA integrity number value of a specimen. |
+| `rin_tissue_source` | — | no | The tissue sample location or identifier that is used for calculating the RNA integrity number. |
+| `rin_testing_organization` | — | no | The organization that determines the RNA integrity number of a sample/specimen. |
+| `rine` | — | no | A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S … |
+| `rine_tissue_source` | — | no | The tissue sample location or identifier that is used for calculating the RINe number. |
+| `rine_testing_organization` | — | no | The organization that determines the RINe number. |
+| `ph` | — | no | The value of a measurement of acidity or basicity of a tissue, sample, or specimen. |
+| `brain_weight` | — | no | The weight of a brain specimen. |
+| `weighed_type` | — | no | The state of a brain specimen when it is weighed (fresh, frozen, fixed). |
+| `photo_2d_available` | — | no | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `scan_3d_available` | — | no | The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen. |
+| `antemortem_mri_available` | — | no | The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen. |
+| `postmortem_mri_available` | — | no | The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen. |
+| `postmortem_mri_type` | — | no | The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo). |
+| `anatomical_atlas_registration` | — | no | The anatomical atlas structure to which a specimen/tissue is registered. |
+| `non_brain_tissue_available` | — | no | The status (yes, no) of whether non-brain tissue from this organism is available. |
+| `tissue_type` | — | no | The type of tissue (non-brain) that is available from this organism. |
+| `tissue_type_details` | — | no | The details of the non-brain tissue that is available from this organism. |
+| `tissue_source` | — | no | The source of the non-brain tissue that is available from this organism. |
+| `date_of_collection` | — | no | The date that the tissue collection occurred. |
+| `age_at_date_of_collection` | — | no | The age of the donor at the date of tissue collection (years). |
+| `clinical_brain_diagnosis` | — | no | The status (available/unavailable) of the clinical brain diagnosis of the donor. |
+| `clinical_brain_diagnosis_code` | — | no | The code of the donor's clinical brain diagnosis. |
+| `clinical_brain_diagnosis_confidence_level` | — | no | The confidence level of the donor's clinical brain diagnosis. |
+| `genetic_diagnosis` | — | no | The status (available, unavailable) of the genetic diagnosis of the donor. |
+| `genetic_diagnosis_code` | — | no | The code of the donor's genetic diagnosis. |
+| `genetic_diagnosis_confidence_level` | — | no | The confidence level of the donor's genetic diagnosis. |
+| `non_brain_diagnosis` | — | no | The status (available, unavailable) of a non-brain diagnosis of the donor. |
+| `non_brain_diagnosis_code` | — | no | The code of the donor's non-brain diagnosis. |
+| `non_brain_diagnosis_confidence_level` | — | no | The confidence level of the donor's non-brain diagnosis. |
+| `birth_weight_lbs` | — | no | The weight (at birth) of the subject/donor in pounds. |
+| `birth_weight_oz` | — | no | The weight (at birth) of the subject/donor in ounces. |
+| `gestational_age_value_weeks` | — | no | The gestational age of the subject/donor in weeks. |
+| `gestational_age_value_days` | — | no | The gestational age of the subject/donor in days. |
+| `apgar_5_minute_score_available` | — | no | The status (available, unavailable) of a five-minute APGAR score of the donor. |
+| `apgar_5_minute_score` | — | no | The score of the donor's five-minute APGAR. |
+| `apgar_10_minute_score_available` | — | no | The status (available, unavailable) of a ten-minute APGAR score of the donor. |
+| `apgar_10_minute_score` | — | no | The score of the donor's ten-minute APGAR. |
+| `perinatal_neurologic_event_type` | — | no | The perinatal neurologic event of a donor. |
+| `perinatal_neurologic_event_type_specify` | — | no | The specific perinatal neurologic event of a donor. |
+| `family_history_available` | — | no | The status (available, unavailable) of the family history of the subject/donor. |
+| `relative_type` | — | no | The familial relation to the subject/donor. |
+| `relative_type_specify` | — | no | The specific familial relation to the subject/donor. |
+| `condition_type` | — | no | A condition of the donor. |
+| `condition_type_specify` | — | no | A specific type of condition of a donor. |
+| `test_name` | — | no | The name of the test that has been performed. |
+| `test_result` | — | no | The result(s) of the test that has been performed. |
+| `tissue_source` | — | no | The tissue sample location or identifier that is the subject of a test. |
+| `drugs_found` | — | no | A list of drugs found present in a donor. |
+| `drugs_found_specify` | — | no | A list of specific drugs found present in a donor. |
+| `toxicology_result` | — | no | The toxicology result of the donor. |
+| `toxicology_report_level` | — | no | The report level of the toxicology result of the donor. |
+| `toxicology_units` | — | no | The units of the report level of the toxicology result of the donor. |
+| `artifacts` | — | no | The neuropathology artifacts available for a donor. |
+| `artifacts_type` | — | no | The type of neuropathology artifacts available for a donor. |
+| `artifacts_type_specify` | — | no | The specific types of neuropathology artifacts available for a donor. |
+| `neuropathology_diagnosis` | — | no | The neuropathology diagnosis of a donor. |
+| `neuropathology_diagnosis_code` | — | no | The code of the donor's neuropathology diagnosis. |
+| `developmental` | — | no | The type of developmental disorder or disease of a donor. |
+| `developmental_type_specify` | — | no | The specific type of developmental disorder or disease of a donor. |
+| `inflammatory` | — | no | The type of inflammatory disorder or disease of a donor. |
+| `inflammatory_type_specify` | — | no | The specific type of inflammatory disorder or disease of a donor. |
+| `infectious` | — | no | The type of infectious disease of a donor. |
+| `infectious_type_specify` | — | no | The specific type of infectious disease of a donor. |
+| `traumatic` | — | no | The trauma of a donor. |
+| `traumatic_type` | — | no | The type of trauma of a donor. |
+| `traumatic_type_specify` | — | no | The specific type of trauma of a donor. |
+| `vascular` | — | no | The vascular disease of a donor. |
+| `vascular_type` | — | no | The type of vascular disease of a donor. |
+| `vascular_type_specify` | — | no | The specific type of vascular disease of a donor. |
+| `neoplastic` | — | no | The neoplastic status of a donor. |
+| `neoplastic_type` | — | no | The type of neoplastic status of a donor. |
+| `neoplastic_type_specify` | — | no | The specific type of neoplastic status of a donor. |
+| `aging` | — | no | A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as… |
+| `aging_type` | — | no | The type of aging of a donor. |
+| `aging_type_specify` | — | no | The specific type of aging of a donor. |
+| `neurodegenerative` | — | no | A disorder of the central nervous system characterized by gradual and progressive loss of neural tissue and neurologic f… |
+| `neurodegenerative_type` | — | no | The type of neurodegenerative disorder of a donor. |
+| `neurodegenerative_type_specify` | — | no | The specific type of neurodegenerative disorder of a donor. |
+
+<!-- schema-properties-end -->
+
 ## Changelog

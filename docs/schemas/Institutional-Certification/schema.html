@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Institutional Certification Metadata</title>
+<style>
+
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1a1a;
+    --text-muted: #59636e;
+    --border: #d8dee4;
+    --accent: #0969da;
+    --accent-bg: #ddf0ff;
+    --req-bg: #ffe9e6; --req-text: #c5221f;
+    --opt-bg: #e8f0fe; --opt-text: #1557b0;
+    --type-bg: #e6f4ea; --type-text: #137333;
+    --card-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: #30363d;
+        --accent: #4a9eff;
+        --accent-bg: #10243e;
+        --req-bg: #3d1f1c; --req-text: #ff8a80;
+        --opt-bg: #16283f; --opt-text: #8ab4f8;
+        --type-bg: #10321d; --type-text: #7ee787;
+        --card-bg: #161b22;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+.site-nav { display: flex; align-items: center; gap: 8px; padding: 16px 0;
+            border-bottom: 1px solid var(--border); margin-bottom: 24px;
+            font-size: 0.92em; color: var(--text-muted); }
+.site-nav a { font-weight: 600; }
+
+h1 { font-size: 1.9em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: var(--accent); margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: var(--text-muted); margin-top: 28px; }
+p  { margin: 8px 0 14px; }
+a  { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
+        padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+.meta span { font-size: 0.88em; color: var(--text-muted); }
+.meta span b { color: var(--text); }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
+th { background: var(--accent); color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-alt); }
+td:first-child { white-space: nowrap; }
+
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+       background: var(--accent-bg); color: var(--accent); padding: 1px 5px; border-radius: 3px;
+       font-size: 0.88em; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
+         font-size: 0.78em; font-weight: 600; white-space: nowrap; }
+.req  { background: var(--req-bg); color: var(--req-text); }
+.opt  { background: var(--opt-bg); color: var(--opt-text); }
+.type { background: var(--type-bg); color: var(--type-text); font-family: monospace; }
+
+.field-card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: var(--card-bg); }
+.field-card h3 { margin-top: 0; }
+.field-card .props tr td:first-child { color: var(--text-muted); font-size: 0.85em;
+                                        width: 140px; border-bottom: none; }
+.field-card .props tr td:last-child  { border-bottom: none; }
+.field-card .props { background: var(--bg-alt); border-radius: 4px; }
+
+.enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
+.enum-list li { background: var(--accent-bg); color: var(--accent); padding: 2px 10px;
+                border-radius: 12px; font-family: monospace; font-size: 0.85em; }
+
+.group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
+               color: var(--text-muted); margin-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../../../index.html">&larr; All BICAN schemas</a></nav>
+<h1>Institutional Certification Metadata</h1>
+<div class="meta">
+  <span><b>Document Status:</b> Endorsed BICAN Standard</span>
+  <span><b>Version:</b> 1.0.0</span>
+  <span><b>Date:</b> 2024-08-07</span>
+</div>
+<h2 id="properties">Properties</h2>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#local-donor-id"><code>local donor ID</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>donor_local_name | donor local name</td><td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td></tr>
+<tr><td><a href="#access-level"><code>access level</code></a></td><td><span class="badge type">categorical</span></td><td><span class="badge opt">optional</span></td><td>access_level|consent status</td><td>A data item that is used to indicate the level of access of a dataset (unrestricted or controlled).</td></tr>
+<tr><td><a href="#data-use-limitation"><code>data use limitation</code></a></td><td><span class="badge type">categorical</span></td><td><span class="badge opt">optional</span></td><td>data_use_limitation</td><td>A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be …</td></tr>
+<tr><td><a href="#disease-specification"><code>disease specification</code></a></td><td><span class="badge type">categorical</span></td><td><span class="badge opt">optional</span></td><td>disease_specification</td><td>The dataset can be used only for research on a specific disease or related condition.</td></tr>
+<tr><td><a href="#irb-approval-required"><code>IRB approval required</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>irb_approval_required</td><td>A data item that is used to indicate whether or not IRB approval is required.</td></tr>
+<tr><td><a href="#publication-required"><code>publication required</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>publication_required</td><td>A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must chare their results with the larger scientific…</td></tr>
+<tr><td><a href="#collaboration-required"><code>collaboration required</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>collaboration_required</td><td>A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must privide a letter of collaboration with the pri…</td></tr>
+<tr><td><a href="#not-for-profit-use-only"><code>not for profit use only</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>not_for_profit_use_only</td><td>A data item that is used to indicate whether a dataset is designated for non-profit use.</td></tr>
+<tr><td><a href="#methods"><code>methods</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>methods</td><td>The dataset can be used for methods research and development (e.g., development of statistical software or algorithms).</td></tr>
+<tr><td><a href="#genetic-study-only"><code>genetic study only</code></a></td><td><span class="badge type">boolean</span></td><td><span class="badge opt">optional</span></td><td>genetic_study_only</td><td>The dataset can only be used only for genetic studies.</td></tr>
+<tr><td><a href="#ic-form-local-name"><code>IC form local name</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>ic_form_local_name</td><td>The name of IC form as it is used by a local entity.</td></tr>
+<tr><td><a href="#ic-form-effective-date"><code>IC form effective date</code></a></td><td><span class="badge type">datetime</span></td><td><span class="badge opt">optional</span></td><td>ic_form_effective_date</td><td>The data at which the IC form is effective.</td></tr>
+<tr><td><a href="#project-identifier"><code>project identifier</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>project_identifier</td><td>The identifier that uniquely identifies a project.</td></tr>
+<tr><td><a href="#cohort-tag"><code>cohort tag</code></a></td><td><span class="badge type">string</span></td><td><span class="badge opt">optional</span></td><td>cohort_tag</td><td>A data item that indicates a cohort grouping.</td></tr>
+</tbody></table>
+<h2 id="property-details">Property Details</h2>
+<div class="field-card" id="local-donor-id">
+<h3><code>local donor ID</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Aliases</td><td>donor_local_name | donor local name</td></tr>
+</table>
+<p>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</p>
+</div>
+<div class="field-card" id="access-level">
+<h3><code>access level</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9f800e73-0d96-45cf-8e92-303e22e80aaf</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">categorical</span></td></tr>
+<tr><td>Aliases</td><td>access_level|consent status</td></tr>
+</table>
+<p>A data item that is used to indicate the level of access of a dataset (unrestricted or controlled).</p>
+<p><strong>Permissible values:</strong></p>
+<ul class="enum-list">
+<li>unrestricted</li>
+<li>controlled</li>
+</ul>
+</div>
+<div class="field-card" id="data-use-limitation">
+<h3><code>data use limitation</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5a122436-5768-47eb-b028-6e2f6b5f1245</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">categorical</span></td></tr>
+<tr><td>Aliases</td><td>data_use_limitation</td></tr>
+</table>
+<p>A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.</p>
+<p><strong>Permissible values:</strong></p>
+<ul class="enum-list">
+<li>No Restrictions</li>
+<li>General Research Use</li>
+<li>Health/Medical/Biomedical</li>
+<li>Disease-specific</li>
+</ul>
+</div>
+<div class="field-card" id="disease-specification">
+<h3><code>disease specification</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f76579b7-35b8-415f-ad2b-414f9ad555ac</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">categorical</span></td></tr>
+<tr><td>Aliases</td><td>disease_specification</td></tr>
+</table>
+<p>The dataset can be used only for research on a specific disease or related condition.</p>
+<p><strong>Permissible values:</strong></p>
+<ul class="enum-list">
+<li>[disease ValueSet]</li>
+</ul>
+</div>
+<div class="field-card" id="irb-approval-required">
+<h3><code>IRB approval required</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>71a84ad6-44ba-44a3-a936-8267ac43a9d0</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>irb_approval_required</td></tr>
+</table>
+<p>A data item that is used to indicate whether or not IRB approval is required.</p>
+</div>
+<div class="field-card" id="publication-required">
+<h3><code>publication required</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>432f1e56-7e1f-433d-aca4-5ac20afb4638</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>publication_required</td></tr>
+</table>
+<p>A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must chare their results with the larger scientific community.</p>
+</div>
+<div class="field-card" id="collaboration-required">
+<h3><code>collaboration required</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>39ab79f3-6c21-423f-9670-4c5a4e9035ed</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>collaboration_required</td></tr>
+</table>
+<p>A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must privide a letter of collaboration with the primary study investigators.</p>
+</div>
+<div class="field-card" id="not-for-profit-use-only">
+<h3><code>not for profit use only</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>dc4e4bf5-a221-4989-af64-b2f21b0c1dd8</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>not_for_profit_use_only</td></tr>
+</table>
+<p>A data item that is used to indicate whether a dataset is designated for non-profit use.</p>
+</div>
+<div class="field-card" id="methods">
+<h3><code>methods</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c5dfba12-4c1c-451e-b516-df95d5c9efd6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>methods</td></tr>
+</table>
+<p>The dataset can be used for methods research and development (e.g., development of statistical software or algorithms).</p>
+</div>
+<div class="field-card" id="genetic-study-only">
+<h3><code>genetic study only</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0b3acf53-2643-46aa-9f45-f1ad9ecc9564</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">boolean</span></td></tr>
+<tr><td>Aliases</td><td>genetic_study_only</td></tr>
+</table>
+<p>The dataset can only be used only for genetic studies.</p>
+</div>
+<div class="field-card" id="ic-form-local-name">
+<h3><code>IC form local name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a220b50e-7691-4385-ba35-90ce760be3c3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Aliases</td><td>ic_form_local_name</td></tr>
+</table>
+<p>The name of IC form as it is used by a local entity.</p>
+</div>
+<div class="field-card" id="ic-form-effective-date">
+<h3><code>IC form effective date</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6c0696fc-e6ec-45d2-9440-e61463228936</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">datetime</span></td></tr>
+<tr><td>Aliases</td><td>ic_form_effective_date</td></tr>
+</table>
+<p>The data at which the IC form is effective.</p>
+</div>
+<div class="field-card" id="project-identifier">
+<h3><code>project identifier</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>abd4e1df-9c8e-4560-9077-ace8358b26de</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Aliases</td><td>project_identifier</td></tr>
+</table>
+<p>The identifier that uniquely identifies a project.</p>
+</div>
+<div class="field-card" id="cohort-tag">
+<h3><code>cohort tag</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>783ec297-f361-4a23-b78d-801bdb1e3fd3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">string</span></td></tr>
+<tr><td>Aliases</td><td>cohort_tag</td></tr>
+</table>
+<p>A data item that indicates a cohort grouping.</p>
+</div>
+</body>
+</html>

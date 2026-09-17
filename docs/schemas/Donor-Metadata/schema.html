@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Donor Metadata</title>
+<style>
+
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1a1a;
+    --text-muted: #59636e;
+    --border: #d8dee4;
+    --accent: #0969da;
+    --accent-bg: #ddf0ff;
+    --req-bg: #ffe9e6; --req-text: #c5221f;
+    --opt-bg: #e8f0fe; --opt-text: #1557b0;
+    --type-bg: #e6f4ea; --type-text: #137333;
+    --card-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: #30363d;
+        --accent: #4a9eff;
+        --accent-bg: #10243e;
+        --req-bg: #3d1f1c; --req-text: #ff8a80;
+        --opt-bg: #16283f; --opt-text: #8ab4f8;
+        --type-bg: #10321d; --type-text: #7ee787;
+        --card-bg: #161b22;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+.site-nav { display: flex; align-items: center; gap: 8px; padding: 16px 0;
+            border-bottom: 1px solid var(--border); margin-bottom: 24px;
+            font-size: 0.92em; color: var(--text-muted); }
+.site-nav a { font-weight: 600; }
+
+h1 { font-size: 1.9em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: var(--accent); margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: var(--text-muted); margin-top: 28px; }
+p  { margin: 8px 0 14px; }
+a  { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
+        padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+.meta span { font-size: 0.88em; color: var(--text-muted); }
+.meta span b { color: var(--text); }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
+th { background: var(--accent); color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-alt); }
+td:first-child { white-space: nowrap; }
+
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+       background: var(--accent-bg); color: var(--accent); padding: 1px 5px; border-radius: 3px;
+       font-size: 0.88em; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
+         font-size: 0.78em; font-weight: 600; white-space: nowrap; }
+.req  { background: var(--req-bg); color: var(--req-text); }
+.opt  { background: var(--opt-bg); color: var(--opt-text); }
+.type { background: var(--type-bg); color: var(--type-text); font-family: monospace; }
+
+.field-card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: var(--card-bg); }
+.field-card h3 { margin-top: 0; }
+.field-card .props tr td:first-child { color: var(--text-muted); font-size: 0.85em;
+                                        width: 140px; border-bottom: none; }
+.field-card .props tr td:last-child  { border-bottom: none; }
+.field-card .props { background: var(--bg-alt); border-radius: 4px; }
+
+.enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
+.enum-list li { background: var(--accent-bg); color: var(--accent); padding: 2px 10px;
+                border-radius: 12px; font-family: monospace; font-size: 0.85em; }
+
+.group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
+               color: var(--text-muted); margin-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../../../index.html">&larr; All BICAN schemas</a></nav>
+<h1>Human Donor Metadata</h1>
+<div class="meta">
+  <span><b>Document Status:</b> Endorsed BICAN Standard</span>
+  <span><b>Version:</b> 1.0.0</span>
+  <span><b>Date:</b> 2023-04-01</span>
+</div>
+<h2 id="properties">Properties</h2>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#subject_id"><code>subject_id</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Local Donor ID</td><td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry. [Allotrop…</td></tr>
+<tr><td><a href="#repository"><code>repository</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Repository</td><td>Repository&#x27; trailing modifier (qualifier, &#x27;repository&#x27;) of &#x27;xref&#x27; links of &#x27;Format&#x27; concepts. When &#x27;true&#x27;, the link is pointing to the public source-code reposi…</td></tr>
+<tr><td><a href="#donor_source"><code>donor_source</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Donor Source</td><td>The origin of the donor/subject in this experiment.</td></tr>
+<tr><td><a href="#ethnicity"><code>ethnicity</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Ethnicity</td><td>Population category defined in terms of cultural, religious, tribal or other social similarities. [EFO]</td></tr>
+<tr><td><a href="#race"><code>race</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Race</td><td>An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species …</td></tr>
+<tr><td><a href="#secondary_race"><code>secondary_race</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Secondary Race</td><td>The non-primary race category of a donor.</td></tr>
+<tr><td><a href="#sex"><code>sex</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Sex at Birth</td><td>An organismal quality inhering in a bearer by virtue of the bearer&#x27;s ability to undergo sexual reproduction in order to differentiate the individuals or types i…</td></tr>
+<tr><td><a href="#gender"><code>gender</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Gender at Time of Death</td><td>Identification as male/masculine, female/feminine or something else, and association with a (social) role or set of behavioral and cultural traits, clothing, et…</td></tr>
+<tr><td><a href="#sex_orientation"><code>sex_orientation</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Sexual Orientation at Time of Death</td><td>The pattern of a person&#x27;s emotional, romantic, and/or sexual attractions. [NCIT]</td></tr>
+<tr><td><a href="#age_at_death"><code>age_at_death</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Age Value (Years)</td><td>A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO]</td></tr>
+<tr><td><a href="#birth_country_name"><code>birth_country_name</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Birth Country Name</td><td>The name of the country where a subject was born. [NCIT]</td></tr>
+<tr><td><a href="#primary_language"><code>primary_language</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Primary Language Code</td><td>The alphanumeric code from the ISO 639 standard which denotes the primary lanugage of a subject. The ISO 639 standard includes a two letter representation and a…</td></tr>
+<tr><td><a href="#secondary_language"><code>secondary_language</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Secondary Language Code</td><td>The alphanumeric code from the ISO 639 standard which denotes the secondary lanugage of a subject. The ISO 639 standard includes a two letter representation and…</td></tr>
+<tr><td><a href="#year_of_death"><code>year_of_death</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Date of Death</td><td>The year wherein the subject or donor has ceased to exist.</td></tr>
+<tr><td><a href="#autopsy_report"><code>autopsy_report</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Autopsy Report</td><td>A document assembled by an author for the purpose of providing information regarding the cause of death of a subject for the audience. [IAO, modified]</td></tr>
+<tr><td><a href="#cause_of_death"><code>cause_of_death</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Cause of Death</td><td>The circumstance or condition that results in the death of a living being. [NCIT]</td></tr>
+<tr><td><a href="#cause_of_death_code"><code>cause_of_death_code</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Cause of Death Code</td><td>The ISO code that denotes the circumstance or condition that results in the death of a living being. [NCIT]</td></tr>
+<tr><td><a href="#manner_of_death"><code>manner_of_death</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Manner of Death</td><td>The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (natural, accident, suicide, homicide, an…</td></tr>
+<tr><td><a href="#marital_status"><code>marital_status</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Marital or Partner Status ATOD</td><td>The marital or partner status of the donor at time of death.</td></tr>
+<tr><td><a href="#education_years_number"><code>education_years_number</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Education Years Number</td><td>The level of education of a donor given in number of years.</td></tr>
+<tr><td><a href="#family_income_range"><code>family_income_range</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Family Income Range</td><td>The income of the donor&#x27;s family given as a range.</td></tr>
+<tr><td><a href="#informant_questionnaire_completed"><code>informant_questionnaire_completed</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Informant Questionnaire Completed</td><td>The status (completed, not completed) of the document about the subject completed by an informant.</td></tr>
+<tr><td><a href="#informant_interview_performed"><code>informant_interview_performed</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Informant Interview Performed</td><td>The status (performed, not performed) of the interview event between a clinician and an informant.</td></tr>
+<tr><td><a href="#informant_relationship"><code>informant_relationship</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Informant Relationship</td><td>The relationship that an informant bears to a subject/donor.</td></tr>
+<tr><td><a href="#informant_relationship_specify"><code>informant_relationship_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Informant Relationship Specify</td><td>The specific relationship that an informant bears to a subject/donor.</td></tr>
+<tr><td><a href="#handedness"><code>handedness</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Handedness</td><td>A behavioral quality inhering ina bearer by virtue of the bearer&#x27;s unequal distribution of fine motor skill between its left and right hands or feet. [PATO]</td></tr>
+<tr><td><a href="#medical_records_available"><code>medical_records_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Medical Records Available</td><td>The status (available, unavailable) of the medical records of the subject/donor.</td></tr>
+<tr><td><a href="#medical_records_reviewed"><code>medical_records_reviewed</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Medical Records Reviewed</td><td>The status (reviewed, not reviewed) of the medical records of the subject/donor.</td></tr>
+<tr><td><a href="#confirmed_hbcac"><code>confirmed_hbcac</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>HBCAC Confirmation Status</td><td>The donor&#x27;s Huntington Breast Cancer Action Coalition status.</td></tr>
+<tr><td><a href="#consent_status"><code>consent_status</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Consent Status</td><td>The donor&#x27;s consent status.</td></tr>
+<tr><td><a href="#hemisphere"><code>hemisphere</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Hemisphere</td><td>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter. [UBERON]</td></tr>
+<tr><td><a href="#post_mortem_interval"><code>post_mortem_interval</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Post Mortem Interval</td><td>The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</td></tr>
+<tr><td><a href="#left_hemisphere_preparation"><code>left_hemisphere_preparation</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Left Hemisphere Preparation</td><td>The type of preparation method used for the left hemisphere.</td></tr>
+<tr><td><a href="#left_hemisphere_preparation_specify"><code>left_hemisphere_preparation_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Left Hemisphere Preparation Specify</td><td>Specific details about the type of preparation method used for the left hemisphere.</td></tr>
+<tr><td><a href="#right_hemisphere_preparation"><code>right_hemisphere_preparation</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Right Hemisphere Preparation</td><td>The type of preparation method used for the right hemisphere.</td></tr>
+<tr><td><a href="#right_hemisphere_preparation_specify"><code>right_hemisphere_preparation_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Right Hemisphere Preparation Specify</td><td>Specific details about the type of preparation method used for the right hemisphere.</td></tr>
+<tr><td><a href="#rin"><code>rin</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RIN</td><td>The RNA integrity number value of a specimen.</td></tr>
+<tr><td><a href="#rin_tissue_source"><code>rin_tissue_source</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RIN Tissue Source</td><td>The tissue sample location or identifier that is used for calculating the RNA integrity number.</td></tr>
+<tr><td><a href="#rin_testing_organization"><code>rin_testing_organization</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RIN Testing Organization</td><td>The organization that determines the RNA integrity number of a sample/specimen.</td></tr>
+<tr><td><a href="#rine"><code>rine</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RINe</td><td>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</td></tr>
+<tr><td><a href="#rine_tissue_source"><code>rine_tissue_source</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RINe Tissue Source</td><td>The tissue sample location or identifier that is used for calculating the RINe number.</td></tr>
+<tr><td><a href="#rine_testing_organization"><code>rine_testing_organization</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>RINe Testing Organization</td><td>The organization that determines the RINe number.</td></tr>
+<tr><td><a href="#ph"><code>ph</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>pH</td><td>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</td></tr>
+<tr><td><a href="#brain_weight"><code>brain_weight</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Brain Weight Measurement</td><td>The weight of a brain specimen.</td></tr>
+<tr><td><a href="#weighed_type"><code>weighed_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Brain Tissue Weighed Type</td><td>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</td></tr>
+<tr><td><a href="#photo_2d_available"><code>photo_2d_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Photo 2d Available</td><td>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</td></tr>
+<tr><td><a href="#scan_3d_available"><code>scan_3d_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Scan 3d Available</td><td>The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen.</td></tr>
+<tr><td><a href="#antemortem_mri_available"><code>antemortem_mri_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Antemortem MRI Available</td><td>The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen.</td></tr>
+<tr><td><a href="#postmortem_mri_available"><code>postmortem_mri_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Postmortem MRI Available</td><td>The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen.</td></tr>
+<tr><td><a href="#postmortem_mri_type"><code>postmortem_mri_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Postmortem MRI Type</td><td>The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo).</td></tr>
+<tr><td><a href="#anatomical_atlas_registration"><code>anatomical_atlas_registration</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Anatomical Atlas Registration</td><td>The anatomical atlas structure to which a specimen/tissue is registered.</td></tr>
+<tr><td><a href="#non_brain_tissue_available"><code>non_brain_tissue_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Non-Brain Tissue Available</td><td>The status (yes, no) of whether non-brain tissue from this organism is available.</td></tr>
+<tr><td><a href="#tissue_type"><code>tissue_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Tissue Type</td><td>The type of tissue (non-brain) that is available from this organism.</td></tr>
+<tr><td><a href="#tissue_type_details"><code>tissue_type_details</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Tissue Type Details</td><td>The details of the non-brain tissue that is available from this organism.</td></tr>
+<tr><td><a href="#tissue_source"><code>tissue_source</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Tissue Source</td><td>The source of the non-brain tissue that is available from this organism.</td></tr>
+<tr><td><a href="#date_of_collection"><code>date_of_collection</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Date of Collection</td><td>The date that the tissue collection occurred.</td></tr>
+<tr><td><a href="#age_at_date_of_collection"><code>age_at_date_of_collection</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Age at Date of Collection</td><td>The age of the donor at the date of tissue collection (years).</td></tr>
+<tr><td><a href="#clinical_brain_diagnosis"><code>clinical_brain_diagnosis</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Clinical Brain Diagnosis Available</td><td>The status (available/unavailable) of the clinical brain diagnosis of the donor.</td></tr>
+<tr><td><a href="#clinical_brain_diagnosis_code"><code>clinical_brain_diagnosis_code</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Clinical Brain Diagnosis Code</td><td>The code of the donor&#x27;s clinical brain diagnosis.</td></tr>
+<tr><td><a href="#clinical_brain_diagnosis_confidence_level"><code>clinical_brain_diagnosis_confidence_level</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Clinical Brain Diagnosis Confidence Level</td><td>The confidence level of the donor&#x27;s clinical brain diagnosis.</td></tr>
+<tr><td><a href="#genetic_diagnosis"><code>genetic_diagnosis</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Genetic Diagnosis Available</td><td>The status (available, unavailable) of the genetic diagnosis of the donor.</td></tr>
+<tr><td><a href="#genetic_diagnosis_code"><code>genetic_diagnosis_code</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Genetic Diagnosis Code</td><td>The code of the donor&#x27;s genetic diagnosis.</td></tr>
+<tr><td><a href="#genetic_diagnosis_confidence_level"><code>genetic_diagnosis_confidence_level</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Genetic Diagnosis Confidence Level</td><td>The confidence level of the donor&#x27;s genetic diagnosis.</td></tr>
+<tr><td><a href="#non_brain_diagnosis"><code>non_brain_diagnosis</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Non Brain Diagnosis Available</td><td>The status (available, unavailable) of a non-brain diagnosis of the donor.</td></tr>
+<tr><td><a href="#non_brain_diagnosis_code"><code>non_brain_diagnosis_code</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Non Brain Diagnosis Code</td><td>The code of the donor&#x27;s non-brain diagnosis.</td></tr>
+<tr><td><a href="#non_brain_diagnosis_confidence_level"><code>non_brain_diagnosis_confidence_level</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Non Brain Diagnosis Confidence Level</td><td>The confidence level of the donor&#x27;s non-brain diagnosis.</td></tr>
+<tr><td><a href="#birth_weight_lbs"><code>birth_weight_lbs</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Birth Weight Value (lbs)</td><td>The weight (at birth) of the subject/donor in pounds.</td></tr>
+<tr><td><a href="#birth_weight_oz"><code>birth_weight_oz</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Birth Weight Value (oz)</td><td>The weight (at birth) of the subject/donor in ounces.</td></tr>
+<tr><td><a href="#gestational_age_value_weeks"><code>gestational_age_value_weeks</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Gestational Age Value (weeks)</td><td>The gestational age of the subject/donor in weeks.</td></tr>
+<tr><td><a href="#gestational_age_value_days"><code>gestational_age_value_days</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Gestational Age Value (days)</td><td>The gestational age of the subject/donor in days.</td></tr>
+<tr><td><a href="#apgar_5_minute_score_available"><code>apgar_5_minute_score_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>APGAR Five Minute Score Available</td><td>The status (available, unavailable) of a five-minute APGAR score of the donor.</td></tr>
+<tr><td><a href="#apgar_5_minute_score"><code>apgar_5_minute_score</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>APGAR Five Minute Score</td><td>The score of the donor&#x27;s five-minute APGAR.</td></tr>
+<tr><td><a href="#apgar_10_minute_score_available"><code>apgar_10_minute_score_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>APGAR Ten Minute Score Available</td><td>The status (available, unavailable) of a ten-minute APGAR score of the donor.</td></tr>
+<tr><td><a href="#apgar_10_minute_score"><code>apgar_10_minute_score</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>APGAR Ten Minute Score</td><td>The score of the donor&#x27;s ten-minute APGAR.</td></tr>
+<tr><td><a href="#perinatal_neurologic_event_type"><code>perinatal_neurologic_event_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Perinatal Neurologic Event Type</td><td>The perinatal neurologic event of a donor.</td></tr>
+<tr><td><a href="#perinatal_neurologic_event_type_specify"><code>perinatal_neurologic_event_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Perinatal Neurologic Event Type Specify</td><td>The specific perinatal neurologic event of a donor.</td></tr>
+<tr><td><a href="#family_history_available"><code>family_history_available</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Family History Available</td><td>The status (available, unavailable) of the family history of the subject/donor.</td></tr>
+<tr><td><a href="#relative_type"><code>relative_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Relative Type</td><td>The familial relation to the subject/donor.</td></tr>
+<tr><td><a href="#relative_type_specify"><code>relative_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Relative Type Specify</td><td>The specific familial relation to the subject/donor.</td></tr>
+<tr><td><a href="#condition_type"><code>condition_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Condition Type</td><td>A condition of the donor.</td></tr>
+<tr><td><a href="#condition_type_specify"><code>condition_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Condition Type Specify</td><td>A specific type of condition of a donor.</td></tr>
+<tr><td><a href="#test_name"><code>test_name</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Test Name</td><td>The name of the test that has been performed.</td></tr>
+<tr><td><a href="#test_result"><code>test_result</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Result</td><td>The result(s) of the test that has been performed.</td></tr>
+<tr><td><a href="#tissue_source"><code>tissue_source</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Testing Tissue Source</td><td>The tissue sample location or identifier that is the subject of a test.</td></tr>
+<tr><td><a href="#drugs_found"><code>drugs_found</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Drugs Found</td><td>A list of drugs found present in a donor.</td></tr>
+<tr><td><a href="#drugs_found_specify"><code>drugs_found_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Drugs Found Specify</td><td>A list of specific drugs found present in a donor.</td></tr>
+<tr><td><a href="#toxicology_result"><code>toxicology_result</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Toxicology Result</td><td>The toxicology result of the donor.</td></tr>
+<tr><td><a href="#toxicology_report_level"><code>toxicology_report_level</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Toxicology Report level</td><td>The report level of the toxicology result of the donor.</td></tr>
+<tr><td><a href="#toxicology_units"><code>toxicology_units</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Toxicology Units</td><td>The units of the report level of the toxicology result of the donor.</td></tr>
+<tr><td><a href="#artifacts"><code>artifacts</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Artifacts</td><td>The neuropathology artifacts available for a donor.</td></tr>
+<tr><td><a href="#artifacts_type"><code>artifacts_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Artifacts Type</td><td>The type of neuropathology artifacts available for a donor.</td></tr>
+<tr><td><a href="#artifacts_type_specify"><code>artifacts_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Artifacts Type Specify</td><td>The specific types of neuropathology artifacts available for a donor.</td></tr>
+<tr><td><a href="#neuropathology_diagnosis"><code>neuropathology_diagnosis</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neuropathology Diagnosis Available</td><td>The neuropathology diagnosis of a donor.</td></tr>
+<tr><td><a href="#neuropathology_diagnosis_code"><code>neuropathology_diagnosis_code</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neuorpathology Diagnosis Code</td><td>The code of the donor&#x27;s neuropathology diagnosis.</td></tr>
+<tr><td><a href="#developmental"><code>developmental</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Developmental</td><td>The type of developmental disorder or disease of a donor.</td></tr>
+<tr><td><a href="#developmental_type_specify"><code>developmental_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Developmental Type Specify</td><td>The specific type of developmental disorder or disease of a donor.</td></tr>
+<tr><td><a href="#inflammatory"><code>inflammatory</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Inflammatory</td><td>The type of inflammatory disorder or disease of a donor.</td></tr>
+<tr><td><a href="#inflammatory_type_specify"><code>inflammatory_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Inflammatory Type Specify</td><td>The specific type of inflammatory disorder or disease of a donor.</td></tr>
+<tr><td><a href="#infectious"><code>infectious</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Infectious</td><td>The type of infectious disease of a donor.</td></tr>
+<tr><td><a href="#infectious_type_specify"><code>infectious_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Infectious Type Specify</td><td>The specific type of infectious disease of a donor.</td></tr>
+<tr><td><a href="#traumatic"><code>traumatic</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Traumatic</td><td>The trauma of a donor.</td></tr>
+<tr><td><a href="#traumatic_type"><code>traumatic_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Traumatic Type</td><td>The type of trauma of a donor.</td></tr>
+<tr><td><a href="#traumatic_type_specify"><code>traumatic_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Traumatic Type Specify</td><td>The specific type of trauma of a donor.</td></tr>
+<tr><td><a href="#vascular"><code>vascular</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Vascular</td><td>The vascular disease of a donor.</td></tr>
+<tr><td><a href="#vascular_type"><code>vascular_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Vascular Type</td><td>The type of vascular disease of a donor.</td></tr>
+<tr><td><a href="#vascular_type_specify"><code>vascular_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Vascular Type Specify</td><td>The specific type of vascular disease of a donor.</td></tr>
+<tr><td><a href="#neoplastic"><code>neoplastic</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neoplastic</td><td>The neoplastic status of a donor.</td></tr>
+<tr><td><a href="#neoplastic_type"><code>neoplastic_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neoplastic Type</td><td>The type of neoplastic status of a donor.</td></tr>
+<tr><td><a href="#neoplastic_type_specify"><code>neoplastic_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neoplastic Type Specify</td><td>The specific type of neoplastic status of a donor.</td></tr>
+<tr><td><a href="#aging"><code>aging</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Aging</td><td>A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and…</td></tr>
+<tr><td><a href="#aging_type"><code>aging_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Aging Type</td><td>The type of aging of a donor.</td></tr>
+<tr><td><a href="#aging_type_specify"><code>aging_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Aging Type Specify</td><td>The specific type of aging of a donor.</td></tr>
+<tr><td><a href="#neurodegenerative"><code>neurodegenerative</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neurodegenerative</td><td>A disorder of the central nervous system characterized by gradual and progressive loss of neural tissue and neurologic function.</td></tr>
+<tr><td><a href="#neurodegenerative_type"><code>neurodegenerative_type</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neurodegenerative Type</td><td>The type of neurodegenerative disorder of a donor.</td></tr>
+<tr><td><a href="#neurodegenerative_type_specify"><code>neurodegenerative_type_specify</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>Neurodegenerative Type Specify</td><td>The specific type of neurodegenerative disorder of a donor.</td></tr>
+</tbody></table>
+<h2 id="property-details">Property Details</h2>
+<div class="field-card" id="subject_id">
+<h3><code>subject_id</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</code></td></tr>
+<tr><td>Aliases</td><td>Local Donor ID</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry. [Allotrope]</p>
+</div>
+<div class="field-card" id="repository">
+<h3><code>repository</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>408682ed-0e27-41e2-b9fa-f05674366d6e</code></td></tr>
+<tr><td>Aliases</td><td>Repository</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>Repository&#x27; trailing modifier (qualifier, &#x27;repository&#x27;) of &#x27;xref&#x27; links of &#x27;Format&#x27; concepts. When &#x27;true&#x27;, the link is pointing to the public source-code repository where the given data format is developed or maintained. [EDAM]</p>
+</div>
+<div class="field-card" id="donor_source">
+<h3><code>donor_source</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0d0cf732-0f76-409d-9a73-7a96d829d3d3</code></td></tr>
+<tr><td>Aliases</td><td>Donor Source</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The origin of the donor/subject in this experiment.</p>
+</div>
+<div class="field-card" id="ethnicity">
+<h3><code>ethnicity</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>918370df-49f6-4361-9c52-f46b16412980</code></td></tr>
+<tr><td>Aliases</td><td>Ethnicity</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>Population category defined in terms of cultural, religious, tribal or other social similarities. [EFO]</p>
+</div>
+<div class="field-card" id="race">
+<h3><code>race</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e515c009-550e-4f9c-b1b6-fc876a6fb2a8</code></td></tr>
+<tr><td>Aliases</td><td>Race</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. [ExO]</p>
+</div>
+<div class="field-card" id="secondary_race">
+<h3><code>secondary_race</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>192fe5b1-c812-4767-86fb-3178f9914705</code></td></tr>
+<tr><td>Aliases</td><td>Secondary Race</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The non-primary race category of a donor.</p>
+</div>
+<div class="field-card" id="sex">
+<h3><code>sex</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c819b9d5-2fde-40b2-bf0d-e07b56f96ac9</code></td></tr>
+<tr><td>Aliases</td><td>Sex at Birth</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>An organismal quality inhering in a bearer by virtue of the bearer&#x27;s ability to undergo sexual reproduction in order to differentiate the individuals or types involved. [PATO]</p>
+</div>
+<div class="field-card" id="gender">
+<h3><code>gender</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1c71e775-65aa-442b-a392-1cf9a44e326e</code></td></tr>
+<tr><td>Aliases</td><td>Gender at Time of Death</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>Identification as male/masculine, female/feminine or something else, and association with a (social) role or set of behavioral and cultural traits, clothing, etc; a category to which a person belongs on this basis. Gender is the result of a complex combination of gender role, gender expression, gender identity, and gender modality. Do not use this term for non-human animals. [NCIT]</p>
+</div>
+<div class="field-card" id="sex_orientation">
+<h3><code>sex_orientation</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e47e8a2f-72fb-4036-b288-f4580dc2aa4e</code></td></tr>
+<tr><td>Aliases</td><td>Sexual Orientation at Time of Death</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The pattern of a person&#x27;s emotional, romantic, and/or sexual attractions. [NCIT]</p>
+</div>
+<div class="field-card" id="age_at_death">
+<h3><code>age_at_death</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>14eb923a-161d-45e2-889d-81fea7b632b6</code></td></tr>
+<tr><td>Aliases</td><td>Age Value (Years)</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+<tr><td>Range</td><td>0 – 125 year</td></tr>
+</table>
+<p>A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO]</p>
+</div>
+<div class="field-card" id="birth_country_name">
+<h3><code>birth_country_name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9c27fd29-b512-492f-a32f-b615c7585ff7</code></td></tr>
+<tr><td>Aliases</td><td>Birth Country Name</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The name of the country where a subject was born. [NCIT]</p>
+</div>
+<div class="field-card" id="primary_language">
+<h3><code>primary_language</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>abe9edc7-96ca-4c6a-a1ed-c008548cc373</code></td></tr>
+<tr><td>Aliases</td><td>Primary Language Code</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The alphanumeric code from the ISO 639 standard which denotes the primary lanugage of a subject. The ISO 639 standard includes a two letter representation and a three letter representation. [NCIT, modified]</p>
+</div>
+<div class="field-card" id="secondary_language">
+<h3><code>secondary_language</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>37b7495f-b010-4d1c-ae32-9cb19c680950</code></td></tr>
+<tr><td>Aliases</td><td>Secondary Language Code</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The alphanumeric code from the ISO 639 standard which denotes the secondary lanugage of a subject. The ISO 639 standard includes a two letter representation and a three letter representation. [NCIT, modified]</p>
+</div>
+<div class="field-card" id="year_of_death">
+<h3><code>year_of_death</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>60445046-d9d8-4f00-959e-9a4c42613e5e</code></td></tr>
+<tr><td>Aliases</td><td>Date of Death</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+<tr><td>Range</td><td>1900 – 2050 CE</td></tr>
+</table>
+<p>The year wherein the subject or donor has ceased to exist.</p>
+</div>
+<div class="field-card" id="autopsy_report">
+<h3><code>autopsy_report</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3f787b64-0985-4d0f-9523-54475164b7ad</code></td></tr>
+<tr><td>Aliases</td><td>Autopsy Report</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>A document assembled by an author for the purpose of providing information regarding the cause of death of a subject for the audience. [IAO, modified]</p>
+</div>
+<div class="field-card" id="cause_of_death">
+<h3><code>cause_of_death</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>fa970a03-41ea-473b-a8ce-427fec92cdff</code></td></tr>
+<tr><td>Aliases</td><td>Cause of Death</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The circumstance or condition that results in the death of a living being. [NCIT]</p>
+</div>
+<div class="field-card" id="cause_of_death_code">
+<h3><code>cause_of_death_code</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>61374624-2d3c-477e-95b3-9bd30974b52a</code></td></tr>
+<tr><td>Aliases</td><td>Cause of Death Code</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The ISO code that denotes the circumstance or condition that results in the death of a living being. [NCIT]</p>
+</div>
+<div class="field-card" id="manner_of_death">
+<h3><code>manner_of_death</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>36eeb35b-5020-4a9e-a74b-6e1104415e0e</code></td></tr>
+<tr><td>Aliases</td><td>Manner of Death</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (natural, accident, suicide, homicide, and undetermined).</p>
+</div>
+<div class="field-card" id="marital_status">
+<h3><code>marital_status</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4f0e41c9-dd15-4a37-ae6b-11b7131d7cba</code></td></tr>
+<tr><td>Aliases</td><td>Marital or Partner Status ATOD</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The marital or partner status of the donor at time of death.</p>
+</div>
+<div class="field-card" id="education_years_number">
+<h3><code>education_years_number</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>add3f7fe-ae60-4cc1-bb2e-72bbbe9a1a7d</code></td></tr>
+<tr><td>Aliases</td><td>Education Years Number</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+<tr><td>Range</td><td>0 – 30 year</td></tr>
+</table>
+<p>The level of education of a donor given in number of years.</p>
+</div>
+<div class="field-card" id="family_income_range">
+<h3><code>family_income_range</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6cd785e2-7333-43fe-8c8c-c19532e96ea6</code></td></tr>
+<tr><td>Aliases</td><td>Family Income Range</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The income of the donor&#x27;s family given as a range.</p>
+</div>
+<div class="field-card" id="informant_questionnaire_completed">
+<h3><code>informant_questionnaire_completed</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e8b9666f-a112-456f-aa5a-69a101c3866f</code></td></tr>
+<tr><td>Aliases</td><td>Informant Questionnaire Completed</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The status (completed, not completed) of the document about the subject completed by an informant.</p>
+</div>
+<div class="field-card" id="informant_interview_performed">
+<h3><code>informant_interview_performed</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>274b838b-74c6-46ec-808a-0c080ddeedd9</code></td></tr>
+<tr><td>Aliases</td><td>Informant Interview Performed</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The status (performed, not performed) of the interview event between a clinician and an informant.</p>
+</div>
+<div class="field-card" id="informant_relationship">
+<h3><code>informant_relationship</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>836c19fe-b735-4bf7-bee5-3213122b571e</code></td></tr>
+<tr><td>Aliases</td><td>Informant Relationship</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The relationship that an informant bears to a subject/donor.</p>
+</div>
+<div class="field-card" id="informant_relationship_specify">
+<h3><code>informant_relationship_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>289bcbb8-5177-4c65-b0af-159fd65b69aa</code></td></tr>
+<tr><td>Aliases</td><td>Informant Relationship Specify</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The specific relationship that an informant bears to a subject/donor.</p>
+</div>
+<div class="field-card" id="handedness">
+<h3><code>handedness</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>82a4087c-d0e3-48ca-8bea-a81eefc683a0</code></td></tr>
+<tr><td>Aliases</td><td>Handedness</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>A behavioral quality inhering ina bearer by virtue of the bearer&#x27;s unequal distribution of fine motor skill between its left and right hands or feet. [PATO]</p>
+</div>
+<div class="field-card" id="medical_records_available">
+<h3><code>medical_records_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ee2c9223-f7d1-4c64-a1da-cd7408309955</code></td></tr>
+<tr><td>Aliases</td><td>Medical Records Available</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The status (available, unavailable) of the medical records of the subject/donor.</p>
+</div>
+<div class="field-card" id="medical_records_reviewed">
+<h3><code>medical_records_reviewed</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6139b159-c36c-4501-9176-fe2741e3d448</code></td></tr>
+<tr><td>Aliases</td><td>Medical Records Reviewed</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The status (reviewed, not reviewed) of the medical records of the subject/donor.</p>
+</div>
+<div class="field-card" id="confirmed_hbcac">
+<h3><code>confirmed_hbcac</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b6cdddf7-6f0b-4855-a0fa-16c2ab29f219</code></td></tr>
+<tr><td>Aliases</td><td>HBCAC Confirmation Status</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The donor&#x27;s Huntington Breast Cancer Action Coalition status.</p>
+</div>
+<div class="field-card" id="consent_status">
+<h3><code>consent_status</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1a53e733-276f-421a-850d-eb46e50db972</code></td></tr>
+<tr><td>Aliases</td><td>Consent Status</td></tr>
+<tr><td>Subsets</td><td>General Subject Fields</td></tr>
+</table>
+<p>The donor&#x27;s consent status.</p>
+</div>
+<div class="field-card" id="hemisphere">
+<h3><code>hemisphere</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>68b7a28b-d695-4ec9-800b-6a27ca206081</code></td></tr>
+<tr><td>Aliases</td><td>Hemisphere</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter. [UBERON]</p>
+</div>
+<div class="field-card" id="post_mortem_interval">
+<h3><code>post_mortem_interval</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6fd5c5ac-b128-4a4a-ae98-09eaeba22f92</code></td></tr>
+<tr><td>Aliases</td><td>Post Mortem Interval</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 8888 hour</td></tr>
+</table>
+<p>The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</p>
+</div>
+<div class="field-card" id="left_hemisphere_preparation">
+<h3><code>left_hemisphere_preparation</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>57d5378f-a451-4bf5-a472-cc88d0d29586</code></td></tr>
+<tr><td>Aliases</td><td>Left Hemisphere Preparation</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The type of preparation method used for the left hemisphere.</p>
+</div>
+<div class="field-card" id="left_hemisphere_preparation_specify">
+<h3><code>left_hemisphere_preparation_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>002e915e-01c3-4570-a1f3-76680dcb2c33</code></td></tr>
+<tr><td>Aliases</td><td>Left Hemisphere Preparation Specify</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>Specific details about the type of preparation method used for the left hemisphere.</p>
+</div>
+<div class="field-card" id="right_hemisphere_preparation">
+<h3><code>right_hemisphere_preparation</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>477c2600-f979-43c5-9c61-ab61fd771584</code></td></tr>
+<tr><td>Aliases</td><td>Right Hemisphere Preparation</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The type of preparation method used for the right hemisphere.</p>
+</div>
+<div class="field-card" id="right_hemisphere_preparation_specify">
+<h3><code>right_hemisphere_preparation_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>efd50be4-f7cf-4146-a08e-28f25680728c</code></td></tr>
+<tr><td>Aliases</td><td>Right Hemisphere Preparation Specify</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>Specific details about the type of preparation method used for the right hemisphere.</p>
+</div>
+<div class="field-card" id="rin">
+<h3><code>rin</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cd472c0d-0b64-45c9-a38e-e54d15cea953</code></td></tr>
+<tr><td>Aliases</td><td>RIN</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 99</td></tr>
+</table>
+<p>The RNA integrity number value of a specimen.</p>
+</div>
+<div class="field-card" id="rin_tissue_source">
+<h3><code>rin_tissue_source</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>d547ee51-9ec3-489c-8e49-7d8cd94080a8</code></td></tr>
+<tr><td>Aliases</td><td>RIN Tissue Source</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The tissue sample location or identifier that is used for calculating the RNA integrity number.</p>
+</div>
+<div class="field-card" id="rin_testing_organization">
+<h3><code>rin_testing_organization</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cfed831e-9a62-4a32-bf92-532873420eb3</code></td></tr>
+<tr><td>Aliases</td><td>RIN Testing Organization</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The organization that determines the RNA integrity number of a sample/specimen.</p>
+</div>
+<div class="field-card" id="rine">
+<h3><code>rine</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1210148d-d8fb-45aa-b51a-4b19b6d09bec</code></td></tr>
+<tr><td>Aliases</td><td>RINe</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 99</td></tr>
+</table>
+<p>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</p>
+</div>
+<div class="field-card" id="rine_tissue_source">
+<h3><code>rine_tissue_source</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7d5fd9af-82a1-4bdb-a3c6-9225d1717c53</code></td></tr>
+<tr><td>Aliases</td><td>RINe Tissue Source</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The tissue sample location or identifier that is used for calculating the RINe number.</p>
+</div>
+<div class="field-card" id="rine_testing_organization">
+<h3><code>rine_testing_organization</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>15a6d162-a3ca-4852-b626-a911c37c04c9</code></td></tr>
+<tr><td>Aliases</td><td>RINe Testing Organization</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The organization that determines the RINe number.</p>
+</div>
+<div class="field-card" id="ph">
+<h3><code>ph</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9e67af02-c081-43e1-a42c-bf9603cae616</code></td></tr>
+<tr><td>Aliases</td><td>pH</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 99</td></tr>
+</table>
+<p>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</p>
+</div>
+<div class="field-card" id="brain_weight">
+<h3><code>brain_weight</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>546fc32d-f8a2-4c00-924a-8c4730f11f51</code></td></tr>
+<tr><td>Aliases</td><td>Brain Weight Measurement</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 9998 gram</td></tr>
+</table>
+<p>The weight of a brain specimen.</p>
+</div>
+<div class="field-card" id="weighed_type">
+<h3><code>weighed_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a7463e3f-0c61-4718-a7d0-60fd2116908a</code></td></tr>
+<tr><td>Aliases</td><td>Brain Tissue Weighed Type</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</p>
+</div>
+<div class="field-card" id="photo_2d_available">
+<h3><code>photo_2d_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>611beda8-1ac6-4183-a284-04a30bb474f3</code></td></tr>
+<tr><td>Aliases</td><td>Photo 2d Available</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</p>
+</div>
+<div class="field-card" id="scan_3d_available">
+<h3><code>scan_3d_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>658e8a80-e232-438f-8c1e-d5f38724dc55</code></td></tr>
+<tr><td>Aliases</td><td>Scan 3d Available</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen.</p>
+</div>
+<div class="field-card" id="antemortem_mri_available">
+<h3><code>antemortem_mri_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>43a04caa-4f28-47ac-8a9d-74c40f10776f</code></td></tr>
+<tr><td>Aliases</td><td>Antemortem MRI Available</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen.</p>
+</div>
+<div class="field-card" id="postmortem_mri_available">
+<h3><code>postmortem_mri_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0badd072-0c25-48c6-9357-44d5b5bc0818</code></td></tr>
+<tr><td>Aliases</td><td>Postmortem MRI Available</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen.</p>
+</div>
+<div class="field-card" id="postmortem_mri_type">
+<h3><code>postmortem_mri_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>64a607a9-21e6-4c73-8f2e-2d67b0dc51c8</code></td></tr>
+<tr><td>Aliases</td><td>Postmortem MRI Type</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo).</p>
+</div>
+<div class="field-card" id="anatomical_atlas_registration">
+<h3><code>anatomical_atlas_registration</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b6835813-2bab-42f3-ae63-4c372ed0aad9</code></td></tr>
+<tr><td>Aliases</td><td>Anatomical Atlas Registration</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The anatomical atlas structure to which a specimen/tissue is registered.</p>
+</div>
+<div class="field-card" id="non_brain_tissue_available">
+<h3><code>non_brain_tissue_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3a064c96-a956-4cf3-8b77-056b8e392f99</code></td></tr>
+<tr><td>Aliases</td><td>Non-Brain Tissue Available</td></tr>
+<tr><td>Subsets</td><td>Non-Brain Specimen Collected</td></tr>
+</table>
+<p>The status (yes, no) of whether non-brain tissue from this organism is available.</p>
+</div>
+<div class="field-card" id="tissue_type">
+<h3><code>tissue_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>33ccbc85-ae35-44d6-8bc6-c2fb91116cf7</code></td></tr>
+<tr><td>Aliases</td><td>Tissue Type</td></tr>
+<tr><td>Subsets</td><td>Non-Brain Specimen Collected</td></tr>
+</table>
+<p>The type of tissue (non-brain) that is available from this organism.</p>
+</div>
+<div class="field-card" id="tissue_type_details">
+<h3><code>tissue_type_details</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f551cf87-2c6e-4b92-888d-6310e6a500d8</code></td></tr>
+<tr><td>Aliases</td><td>Tissue Type Details</td></tr>
+<tr><td>Subsets</td><td>Non-Brain Specimen Collected</td></tr>
+</table>
+<p>The details of the non-brain tissue that is available from this organism.</p>
+</div>
+<div class="field-card" id="tissue_source">
+<h3><code>tissue_source</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ee83ecf8-4fca-4353-a9ed-4cdd82eb167e</code></td></tr>
+<tr><td>Aliases</td><td>Tissue Source</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The source of the non-brain tissue that is available from this organism.</p>
+</div>
+<div class="field-card" id="date_of_collection">
+<h3><code>date_of_collection</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9b94949c-a7c9-4d81-a1c9-a70c96c16ca3</code></td></tr>
+<tr><td>Aliases</td><td>Date of Collection</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+</table>
+<p>The date that the tissue collection occurred.</p>
+</div>
+<div class="field-card" id="age_at_date_of_collection">
+<h3><code>age_at_date_of_collection</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6c53ac16-fe2d-48d7-b3d4-b8946b5d2547</code></td></tr>
+<tr><td>Aliases</td><td>Age at Date of Collection</td></tr>
+<tr><td>Subsets</td><td>General Specimen Data</td></tr>
+<tr><td>Range</td><td>0 – 999 year</td></tr>
+</table>
+<p>The age of the donor at the date of tissue collection (years).</p>
+</div>
+<div class="field-card" id="clinical_brain_diagnosis">
+<h3><code>clinical_brain_diagnosis</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b49f026b-4f6c-48c8-b170-bf6d24c672ef</code></td></tr>
+<tr><td>Aliases</td><td>Clinical Brain Diagnosis Available</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The status (available/unavailable) of the clinical brain diagnosis of the donor.</p>
+</div>
+<div class="field-card" id="clinical_brain_diagnosis_code">
+<h3><code>clinical_brain_diagnosis_code</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b7a34c73-ae08-43d3-80d2-d5ef8436e449</code></td></tr>
+<tr><td>Aliases</td><td>Clinical Brain Diagnosis Code</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The code of the donor&#x27;s clinical brain diagnosis.</p>
+</div>
+<div class="field-card" id="clinical_brain_diagnosis_confidence_level">
+<h3><code>clinical_brain_diagnosis_confidence_level</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2e72b4b9-d5fb-4f0d-897c-1f977ed4fabd</code></td></tr>
+<tr><td>Aliases</td><td>Clinical Brain Diagnosis Confidence Level</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The confidence level of the donor&#x27;s clinical brain diagnosis.</p>
+</div>
+<div class="field-card" id="genetic_diagnosis">
+<h3><code>genetic_diagnosis</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f67d3837-159d-4868-9749-aa6c83ded7eb</code></td></tr>
+<tr><td>Aliases</td><td>Genetic Diagnosis Available</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The status (available, unavailable) of the genetic diagnosis of the donor.</p>
+</div>
+<div class="field-card" id="genetic_diagnosis_code">
+<h3><code>genetic_diagnosis_code</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7a7916e0-ff79-4426-b49f-58e2f2a8a367</code></td></tr>
+<tr><td>Aliases</td><td>Genetic Diagnosis Code</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The code of the donor&#x27;s genetic diagnosis.</p>
+</div>
+<div class="field-card" id="genetic_diagnosis_confidence_level">
+<h3><code>genetic_diagnosis_confidence_level</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cb2b0108-8c07-40e8-92a3-b693b6dc64b4</code></td></tr>
+<tr><td>Aliases</td><td>Genetic Diagnosis Confidence Level</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The confidence level of the donor&#x27;s genetic diagnosis.</p>
+</div>
+<div class="field-card" id="non_brain_diagnosis">
+<h3><code>non_brain_diagnosis</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>009ec58e-32e4-4712-930c-056e72c8d8fa</code></td></tr>
+<tr><td>Aliases</td><td>Non Brain Diagnosis Available</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The status (available, unavailable) of a non-brain diagnosis of the donor.</p>
+</div>
+<div class="field-card" id="non_brain_diagnosis_code">
+<h3><code>non_brain_diagnosis_code</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>65e8824e-01d2-44cf-9f47-9962461a65c9</code></td></tr>
+<tr><td>Aliases</td><td>Non Brain Diagnosis Code</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The code of the donor&#x27;s non-brain diagnosis.</p>
+</div>
+<div class="field-card" id="non_brain_diagnosis_confidence_level">
+<h3><code>non_brain_diagnosis_confidence_level</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2a7ff937-287b-40a3-a1f6-ebf598683774</code></td></tr>
+<tr><td>Aliases</td><td>Non Brain Diagnosis Confidence Level</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The confidence level of the donor&#x27;s non-brain diagnosis.</p>
+</div>
+<div class="field-card" id="birth_weight_lbs">
+<h3><code>birth_weight_lbs</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>69d9a60d-32d5-4c3a-a26a-802d8f030c8d</code></td></tr>
+<tr><td>Aliases</td><td>Birth Weight Value (lbs)</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>0 – 100 pound</td></tr>
+</table>
+<p>The weight (at birth) of the subject/donor in pounds.</p>
+</div>
+<div class="field-card" id="birth_weight_oz">
+<h3><code>birth_weight_oz</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b6f30050-f762-4427-8533-31738e737ea2</code></td></tr>
+<tr><td>Aliases</td><td>Birth Weight Value (oz)</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>0 – 100 ounce</td></tr>
+</table>
+<p>The weight (at birth) of the subject/donor in ounces.</p>
+</div>
+<div class="field-card" id="gestational_age_value_weeks">
+<h3><code>gestational_age_value_weeks</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6d8a9b3f-792c-48c2-bd3c-56e52bb51672</code></td></tr>
+<tr><td>Aliases</td><td>Gestational Age Value (weeks)</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>1 – 45 week</td></tr>
+</table>
+<p>The gestational age of the subject/donor in weeks.</p>
+</div>
+<div class="field-card" id="gestational_age_value_days">
+<h3><code>gestational_age_value_days</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4e532e52-6e4c-46cd-9fde-96f97ef3b034</code></td></tr>
+<tr><td>Aliases</td><td>Gestational Age Value (days)</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>0 – 6 day</td></tr>
+</table>
+<p>The gestational age of the subject/donor in days.</p>
+</div>
+<div class="field-card" id="apgar_5_minute_score_available">
+<h3><code>apgar_5_minute_score_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e67d93ac-3753-4835-a250-e2ca207b2675</code></td></tr>
+<tr><td>Aliases</td><td>APGAR Five Minute Score Available</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+</table>
+<p>The status (available, unavailable) of a five-minute APGAR score of the donor.</p>
+</div>
+<div class="field-card" id="apgar_5_minute_score">
+<h3><code>apgar_5_minute_score</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3a10dabf-39b0-4eb7-8399-85fd325c5646</code></td></tr>
+<tr><td>Aliases</td><td>APGAR Five Minute Score</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>1 – 10</td></tr>
+</table>
+<p>The score of the donor&#x27;s five-minute APGAR.</p>
+</div>
+<div class="field-card" id="apgar_10_minute_score_available">
+<h3><code>apgar_10_minute_score_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3d085ff9-7034-487d-a2b2-b9ae80d55333</code></td></tr>
+<tr><td>Aliases</td><td>APGAR Ten Minute Score Available</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+</table>
+<p>The status (available, unavailable) of a ten-minute APGAR score of the donor.</p>
+</div>
+<div class="field-card" id="apgar_10_minute_score">
+<h3><code>apgar_10_minute_score</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>09d512b6-7c20-4693-8894-77824ad7f04d</code></td></tr>
+<tr><td>Aliases</td><td>APGAR Ten Minute Score</td></tr>
+<tr><td>Subsets</td><td>Infant Medical History</td></tr>
+<tr><td>Range</td><td>1 – 10</td></tr>
+</table>
+<p>The score of the donor&#x27;s ten-minute APGAR.</p>
+</div>
+<div class="field-card" id="perinatal_neurologic_event_type">
+<h3><code>perinatal_neurologic_event_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cb4c7e3b-73fc-400e-a4c3-b149a5544363</code></td></tr>
+<tr><td>Aliases</td><td>Perinatal Neurologic Event Type</td></tr>
+<tr><td>Subsets</td><td>Perinatal Neurologic Events</td></tr>
+</table>
+<p>The perinatal neurologic event of a donor.</p>
+</div>
+<div class="field-card" id="perinatal_neurologic_event_type_specify">
+<h3><code>perinatal_neurologic_event_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1bf1f9c5-79a6-4203-910f-cad79fe9cac9</code></td></tr>
+<tr><td>Aliases</td><td>Perinatal Neurologic Event Type Specify</td></tr>
+<tr><td>Subsets</td><td>Perinatal Neurologic Events</td></tr>
+</table>
+<p>The specific perinatal neurologic event of a donor.</p>
+</div>
+<div class="field-card" id="family_history_available">
+<h3><code>family_history_available</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c88bf4dc-5a7c-4f70-a773-e6bbb5a12ec9</code></td></tr>
+<tr><td>Aliases</td><td>Family History Available</td></tr>
+<tr><td>Subsets</td><td>Family History</td></tr>
+</table>
+<p>The status (available, unavailable) of the family history of the subject/donor.</p>
+</div>
+<div class="field-card" id="relative_type">
+<h3><code>relative_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1adef34c-bb96-4dd0-bc87-51868f2ddc3f</code></td></tr>
+<tr><td>Aliases</td><td>Relative Type</td></tr>
+<tr><td>Subsets</td><td>Family History</td></tr>
+</table>
+<p>The familial relation to the subject/donor.</p>
+</div>
+<div class="field-card" id="relative_type_specify">
+<h3><code>relative_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>094064a1-362c-4b75-8556-6b874c843fdb</code></td></tr>
+<tr><td>Aliases</td><td>Relative Type Specify</td></tr>
+<tr><td>Subsets</td><td>Family History</td></tr>
+</table>
+<p>The specific familial relation to the subject/donor.</p>
+</div>
+<div class="field-card" id="condition_type">
+<h3><code>condition_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>030c8275-04c0-4e4f-9f68-48fd0f559250</code></td></tr>
+<tr><td>Aliases</td><td>Condition Type</td></tr>
+<tr><td>Subsets</td><td>Family History</td></tr>
+</table>
+<p>A condition of the donor.</p>
+</div>
+<div class="field-card" id="condition_type_specify">
+<h3><code>condition_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a1ed23dc-3cd5-41c8-87f6-58604fc66a70</code></td></tr>
+<tr><td>Aliases</td><td>Condition Type Specify</td></tr>
+<tr><td>Subsets</td><td>Family History</td></tr>
+</table>
+<p>A specific type of condition of a donor.</p>
+</div>
+<div class="field-card" id="test_name">
+<h3><code>test_name</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b6865e15-7538-4890-be99-a6f9e9920af3</code></td></tr>
+<tr><td>Aliases</td><td>Test Name</td></tr>
+<tr><td>Subsets</td><td>Infectious Disease Testing</td></tr>
+</table>
+<p>The name of the test that has been performed.</p>
+</div>
+<div class="field-card" id="test_result">
+<h3><code>test_result</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c14ea006-662c-4666-bfd1-6ff580c403ed</code></td></tr>
+<tr><td>Aliases</td><td>Result</td></tr>
+<tr><td>Subsets</td><td>Infectious Disease Testing</td></tr>
+</table>
+<p>The result(s) of the test that has been performed.</p>
+</div>
+<div class="field-card" id="tissue_source">
+<h3><code>tissue_source</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>42f8e11b-d9a3-48fe-ac1e-cd6f4469de46</code></td></tr>
+<tr><td>Aliases</td><td>Testing Tissue Source</td></tr>
+<tr><td>Subsets</td><td>Infectious Disease Testing</td></tr>
+</table>
+<p>The tissue sample location or identifier that is the subject of a test.</p>
+</div>
+<div class="field-card" id="drugs_found">
+<h3><code>drugs_found</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e35b53f1-0daa-4b5b-9246-cfba52f61bfb</code></td></tr>
+<tr><td>Aliases</td><td>Drugs Found</td></tr>
+<tr><td>Subsets</td><td>Toxicology Screening</td></tr>
+</table>
+<p>A list of drugs found present in a donor.</p>
+</div>
+<div class="field-card" id="drugs_found_specify">
+<h3><code>drugs_found_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ec3f7c47-9062-4b66-ba80-a9355a388bc0</code></td></tr>
+<tr><td>Aliases</td><td>Drugs Found Specify</td></tr>
+<tr><td>Subsets</td><td>Toxicology Screening</td></tr>
+</table>
+<p>A list of specific drugs found present in a donor.</p>
+</div>
+<div class="field-card" id="toxicology_result">
+<h3><code>toxicology_result</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2cf1a1af-1ece-4ef7-b513-e4d1949f237c</code></td></tr>
+<tr><td>Aliases</td><td>Toxicology Result</td></tr>
+<tr><td>Subsets</td><td>Toxicology Screening</td></tr>
+</table>
+<p>The toxicology result of the donor.</p>
+</div>
+<div class="field-card" id="toxicology_report_level">
+<h3><code>toxicology_report_level</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>594179b0-c744-40a4-958d-fc81461b4b74</code></td></tr>
+<tr><td>Aliases</td><td>Toxicology Report level</td></tr>
+<tr><td>Subsets</td><td>Toxicology Screening</td></tr>
+</table>
+<p>The report level of the toxicology result of the donor.</p>
+</div>
+<div class="field-card" id="toxicology_units">
+<h3><code>toxicology_units</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6f124149-50de-489d-b9e2-f198b2b9857d</code></td></tr>
+<tr><td>Aliases</td><td>Toxicology Units</td></tr>
+<tr><td>Subsets</td><td>Toxicology Screening</td></tr>
+</table>
+<p>The units of the report level of the toxicology result of the donor.</p>
+</div>
+<div class="field-card" id="artifacts">
+<h3><code>artifacts</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b344b605-21dd-4e06-9104-21005179026f</code></td></tr>
+<tr><td>Aliases</td><td>Artifacts</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The neuropathology artifacts available for a donor.</p>
+</div>
+<div class="field-card" id="artifacts_type">
+<h3><code>artifacts_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>dc217b9b-ed6b-48e2-93b4-4f648dc395f7</code></td></tr>
+<tr><td>Aliases</td><td>Artifacts Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of neuropathology artifacts available for a donor.</p>
+</div>
+<div class="field-card" id="artifacts_type_specify">
+<h3><code>artifacts_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ae11485d-dfc6-45fe-9d22-1d0bf7244d7c</code></td></tr>
+<tr><td>Aliases</td><td>Artifacts Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific types of neuropathology artifacts available for a donor.</p>
+</div>
+<div class="field-card" id="neuropathology_diagnosis">
+<h3><code>neuropathology_diagnosis</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>87f6d251-e028-4480-9272-3497655fb9cd</code></td></tr>
+<tr><td>Aliases</td><td>Neuropathology Diagnosis Available</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The neuropathology diagnosis of a donor.</p>
+</div>
+<div class="field-card" id="neuropathology_diagnosis_code">
+<h3><code>neuropathology_diagnosis_code</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>784e9cc1-7258-4535-a6d5-f7f9a4c2da4b</code></td></tr>
+<tr><td>Aliases</td><td>Neuorpathology Diagnosis Code</td></tr>
+<tr><td>Subsets</td><td>Diagnoses</td></tr>
+</table>
+<p>The code of the donor&#x27;s neuropathology diagnosis.</p>
+</div>
+<div class="field-card" id="developmental">
+<h3><code>developmental</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c259cdc2-7c68-48de-ab57-57328f3bddfa</code></td></tr>
+<tr><td>Aliases</td><td>Developmental</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of developmental disorder or disease of a donor.</p>
+</div>
+<div class="field-card" id="developmental_type_specify">
+<h3><code>developmental_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>bee7d477-2dec-4bf5-878e-a105a0054366</code></td></tr>
+<tr><td>Aliases</td><td>Developmental Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of developmental disorder or disease of a donor.</p>
+</div>
+<div class="field-card" id="inflammatory">
+<h3><code>inflammatory</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>05e83583-078d-4a1e-892d-e6f611e5a0b8</code></td></tr>
+<tr><td>Aliases</td><td>Inflammatory</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of inflammatory disorder or disease of a donor.</p>
+</div>
+<div class="field-card" id="inflammatory_type_specify">
+<h3><code>inflammatory_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>616ba8d8-ced3-4f3e-b1ca-7103eb7a2c94</code></td></tr>
+<tr><td>Aliases</td><td>Inflammatory Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of inflammatory disorder or disease of a donor.</p>
+</div>
+<div class="field-card" id="infectious">
+<h3><code>infectious</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>266f5fb8-716b-4472-be30-4a94b62f2245</code></td></tr>
+<tr><td>Aliases</td><td>Infectious</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of infectious disease of a donor.</p>
+</div>
+<div class="field-card" id="infectious_type_specify">
+<h3><code>infectious_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c73cea5e-44d1-4dd9-b55e-3c6ef5dd2ef2</code></td></tr>
+<tr><td>Aliases</td><td>Infectious Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of infectious disease of a donor.</p>
+</div>
+<div class="field-card" id="traumatic">
+<h3><code>traumatic</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a00497c0-376f-4b2e-b60e-d6add2af41dc</code></td></tr>
+<tr><td>Aliases</td><td>Traumatic</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The trauma of a donor.</p>
+</div>
+<div class="field-card" id="traumatic_type">
+<h3><code>traumatic_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>01d2f488-f30b-40e0-913f-c9adc6b39b97</code></td></tr>
+<tr><td>Aliases</td><td>Traumatic Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of trauma of a donor.</p>
+</div>
+<div class="field-card" id="traumatic_type_specify">
+<h3><code>traumatic_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>aa574a9a-a3d0-4a07-bf8b-9db4a1110a88</code></td></tr>
+<tr><td>Aliases</td><td>Traumatic Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of trauma of a donor.</p>
+</div>
+<div class="field-card" id="vascular">
+<h3><code>vascular</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b02d8386-d059-42a8-94cb-751d56b15b3a</code></td></tr>
+<tr><td>Aliases</td><td>Vascular</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The vascular disease of a donor.</p>
+</div>
+<div class="field-card" id="vascular_type">
+<h3><code>vascular_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5beafa90-ffdb-4cce-a78c-a3b3175210b6</code></td></tr>
+<tr><td>Aliases</td><td>Vascular Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of vascular disease of a donor.</p>
+</div>
+<div class="field-card" id="vascular_type_specify">
+<h3><code>vascular_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>543acbbb-9da4-4e24-a9d7-c0642aa33f32</code></td></tr>
+<tr><td>Aliases</td><td>Vascular Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of vascular disease of a donor.</p>
+</div>
+<div class="field-card" id="neoplastic">
+<h3><code>neoplastic</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3f52a0e9-6469-46d3-8ed5-3cdb8afdc259</code></td></tr>
+<tr><td>Aliases</td><td>Neoplastic</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The neoplastic status of a donor.</p>
+</div>
+<div class="field-card" id="neoplastic_type">
+<h3><code>neoplastic_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a58be8f4-2756-4a66-9d05-1fbf44b4e810</code></td></tr>
+<tr><td>Aliases</td><td>Neoplastic Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of neoplastic status of a donor.</p>
+</div>
+<div class="field-card" id="neoplastic_type_specify">
+<h3><code>neoplastic_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b9e8aead-fdf3-453e-a46b-fcb01d661f8f</code></td></tr>
+<tr><td>Aliases</td><td>Neoplastic Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of neoplastic status of a donor.</p>
+</div>
+<div class="field-card" id="aging">
+<h3><code>aging</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>40e3caa7-657b-4137-9879-07e6b29bae14</code></td></tr>
+<tr><td>Aliases</td><td>Aging</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation.</p>
+</div>
+<div class="field-card" id="aging_type">
+<h3><code>aging_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>5e31b66f-131e-4d5e-8760-ddd85f5634d5</code></td></tr>
+<tr><td>Aliases</td><td>Aging Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of aging of a donor.</p>
+</div>
+<div class="field-card" id="aging_type_specify">
+<h3><code>aging_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>8667d972-175c-430a-ac5e-656563e75736</code></td></tr>
+<tr><td>Aliases</td><td>Aging Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of aging of a donor.</p>
+</div>
+<div class="field-card" id="neurodegenerative">
+<h3><code>neurodegenerative</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>764d80ce-7a83-4e68-92df-34a416475e1b</code></td></tr>
+<tr><td>Aliases</td><td>Neurodegenerative</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>A disorder of the central nervous system characterized by gradual and progressive loss of neural tissue and neurologic function.</p>
+</div>
+<div class="field-card" id="neurodegenerative_type">
+<h3><code>neurodegenerative_type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b150b62c-a968-4f5d-9aa3-d1ab5207ff83</code></td></tr>
+<tr><td>Aliases</td><td>Neurodegenerative Type</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The type of neurodegenerative disorder of a donor.</p>
+</div>
+<div class="field-card" id="neurodegenerative_type_specify">
+<h3><code>neurodegenerative_type_specify</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>d422d827-539f-4d10-b09d-0f4be00d7c91</code></td></tr>
+<tr><td>Aliases</td><td>Neurodegenerative Type Specify</td></tr>
+<tr><td>Subsets</td><td>Neuropathological Diagnoses</td></tr>
+</table>
+<p>The specific type of neurodegenerative disorder of a donor.</p>
+</div>
+</body>
+</html>

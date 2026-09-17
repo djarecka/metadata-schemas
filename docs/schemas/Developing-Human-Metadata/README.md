@@ -1245,3 +1245,70 @@ Curators must annotate the following columns:
 <br>
 
 ## Appendix
+
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post mortem interval` | numeric | yes | The length temporal interval between the time of death of the subject/donor and the time at which the specimen is made. |
+| `left hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the left hemisphere. |
+| `left hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the left hemisphere. |
+| `left hemisphere tissue inventory` | — | yes | The inventory (list) of the tissue samples for a specific left hemisphere specimen. |
+| `left hemisphere tissue sampling history` | — | yes | The history of the tissue sampling for a specific left hemisphere specimen. |
+| `right hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the right hemisphere. |
+| `right hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the right hemisphere. |
+| `right hemisphere tissue inventory` | — | yes | The inventory (list) of the tissue samples for a specific right hemisphere specimen. |
+| `right hemisphere tissue sampling history` | — | yes | The history of the tissue sampling for a specific right hemisphere specimen. |
+| `RIN` | numeric | yes | The RNA integrity number value of a specimen. |
+| `RINe` | numeric | yes | A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S … |
+| `pH` | numeric | yes | The value of a measurement of acidity or basicity of a tissue, sample, or specimen. |
+| `brain weight measurement` | numeric | yes | The weight of a brain specimen. |
+| `brain tissue weighed type` | exclusive_categorical | yes | The state of a brain specimen when it is weighed (fresh, frozen, fixed). |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `scan 3d available` | exclusive_categorical | yes | The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen. |
+| `antemortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen. |
+| `postmortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen. |
+| `postmortem MRI type` | exclusive_categorical | no | The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo). |
+| `anatomical atlas registration` | — | yes | The anatomical atlas structure to which a specimen/tissue is registered. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | inclusive_categorical | yes | Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is p… |
+| `donor source` | inclusive_categorical | yes | The origin of the donor/subject in this experiment. |
+| `ethnicity` | exclusive_categorical | yes | Population category defined in terms of cultural, religious, tribal or other social similarities. [EFO] |
+| `race` | exclusive_categorical | yes | An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of … |
+| `sex at birth` | exclusive_categorical | yes | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `gender` | exclusive_categorical | yes | Identification as male/masculine, female/feminine or something else, and association with a (social) role or set of beha… |
+| `sex orientation` | exclusive_categorical | yes | The pattern of a person's emotional, romantic, and/or sexual attractions. [NCIT] |
+| `age value (years)` | numeric | yes | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `birth country name` | exclusive_categorical | yes | The name of the country where a subject was born. [NCIT] |
+| `primary language` | exclusive_categorical | yes | The alphanumeric code from the ISO 639 standard which denotes the primary lanugage of a subject. The ISO 639 standard in… |
+| `secondary language` | exclusive_categorical | yes | The alphanumeric code from the ISO 639 standard which denotes the secondary lanugage of a subject. The ISO 639 standard … |
+| `autopsy report` | exclusive_categorical | yes | A document assembled by an author for the purpose of providing information regarding the cause of death of a subject for… |
+| `cause of death` | text | yes | The circumstance or condition that results in the death of a living being. [NCIT] |
+| `cause of death code` | text | yes | The ISO code that denotes the circumstance or condition that results in the death of a living being. [NCIT] |
+| `manner of death` | exclusive_categorical | yes | The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (… |
+| `informant questionnaire completed` | exclusive_categorical | yes | The status (completed, not completed) of the document about the subject completed by an informant. |
+| `informant interview performed` | exclusive_categorical | yes | The status (performed, not performed) of the interview event between a clinician and an informant. |
+| `informant relationship` | exclusive_categorical | no | The relationship that a informant bears to a subject/donor. |
+| `handedness` | exclusive_categorical | yes | A behavioral quality inhering ina bearer by virtue of the bearer's unequal distribution of fine motor skill between its … |
+| `medical records available` | exclusive_categorical | yes | The status (available, unavailable) of the medical records of the subject/donor. |
+| `medical records reviewed` | exclusive_categorical | no | The status (reviewed, not reviewed) of the medical records of the subject/donor. |
+
+### Infant Medical History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `gestational age value (weeks)` | numeric | yes | The gestational age of the subject/donor in weeks. |
+| `gestational age value (days)` | numeric | yes | The gestational age of the subject/donor in days. |
+| `gestational age value (months)` | numeric | yes | The gestational age of the subject/donor in months. |
+
+<!-- schema-properties-end -->

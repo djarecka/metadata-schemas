@@ -219,6 +219,29 @@ The BICAN Institutional Certification Metadata schema includes fields for donor 
 | Definition       | A data item that indicates whether or not the dataset can be used for genetic studies only. |
 | Data Type        | boolean |
 
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | string | no | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `access level` | categorical | no | A data item that is used to indicate the level of access of a dataset (unrestricted or controlled). |
+| `data use limitation` | categorical | no | A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for … |
+| `disease specification` | categorical | no | The dataset can be used only for research on a specific disease or related condition. |
+| `IRB approval required` | boolean | no | A data item that is used to indicate whether or not IRB approval is required. |
+| `publication required` | boolean | no | A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must chare … |
+| `collaboration required` | boolean | no | A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must privid… |
+| `not for profit use only` | boolean | no | A data item that is used to indicate whether a dataset is designated for non-profit use. |
+| `methods` | boolean | no | The dataset can be used for methods research and development (e.g., development of statistical software or algorithms). |
+| `genetic study only` | boolean | no | The dataset can only be used only for genetic studies. |
+| `IC form local name` | string | no | The name of IC form as it is used by a local entity. |
+| `IC form effective date` | datetime | no | The data at which the IC form is effective. |
+| `project identifier` | string | no | The identifier that uniquely identifies a project. |
+| `cohort tag` | string | no | A data item that indicates a cohort grouping. |
+
+<!-- schema-properties-end -->
+
 ## Changelog
 
 ### August 7, 2025 -- Version 1.0.0

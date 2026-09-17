@@ -647,3 +647,47 @@ Curators must annotate the following columns:
 <br>
 
 ## Appendix
+
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### Family History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `matriline and patriline` | text | yes | The relavant matriline and patriline information for a subject/donor/sample/specimen. |
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `left hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the left hemisphere. |
+| `left hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the left hemisphere. |
+| `left hemisphere tissue inventory` | — | yes | The inventory (list) of the tissue samples for a specific left hemisphere specimen. |
+| `left hemisphere tissue sampling history` | — | yes | The history of the tissue sampling for a specific left hemisphere specimen. |
+| `right hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the right hemisphere. |
+| `right hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the right hemisphere. |
+| `right hemisphere tissue inventory` | — | yes | The inventory (list) of the tissue samples for a specific right hemisphere specimen. |
+| `right hemisphere tissue sampling history` | — | yes | The history of the tissue sampling for a specific right hemisphere specimen. |
+| `RIN` | numeric | yes | The RNA integrity number value of a specimen. |
+| `RIN tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RNA integrity number. |
+| `RIN testing organization` | text | yes | The organization that determines the RNA integrity number of a sample/specimen. |
+| `RINe` | numeric | yes | A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S … |
+| `RINe tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RINe number. |
+| `RINe testing organization` | text | yes | The organization that determines the RINe number. |
+| `pH` | numeric | yes | The value of a measurement of acidity or basicity of a tissue, sample, or specimen. |
+| `brain weight measurement` | numeric | yes | The weight of a brain specimen. |
+| `brain tissue weighed type` | exclusive_categorical | yes | The state of a brain specimen when it is weighed (fresh, frozen, fixed). |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `region of interest` | text | yes | The brain region, structure, or area from which a brain tissue source derives. |
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `species` | exclusive_categorical | yes | The species of a subject/donor/sample/specimen. |
+
+<!-- schema-properties-end -->

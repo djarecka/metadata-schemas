@@ -5,11 +5,13 @@ on:
     paths:
       - 'docs/schemas/**/*.csv'
       - 'scripts/generate_schema_html.py'
+      - 'scripts/generate_all_schema_docs.sh'
   push:
     branches: [main]
     paths:
       - 'docs/schemas/**/*.csv'
       - 'scripts/generate_schema_html.py'
+      - 'scripts/generate_all_schema_docs.sh'
   workflow_dispatch:
 
 jobs:
@@ -27,27 +29,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate Cell Annotation schema docs
-        run: |
-          python scripts/generate_schema_html.py \
-            "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/Cell-Annotation-Schema.csv" \
-            --title "Cell Annotation Schema" \
-            --status "Approved BICAN Standard" \
-            --version "1.0" \
-            --owner "@UCDNJJ, @jeremymiller" \
-            --date "10-03-2025" \
-            --output "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/schema.html" \
-            --readme "docs/schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/README.md"
-
-      # Add more schemas below following the same pattern:
-      #
-      # - name: Generate Donor Metadata schema docs
-      #   run: |
-      #     python scripts/generate_schema_html.py \
-      #       "docs/schemas/Donor-Metadata/donor-metadata.csv" \
-      #       --title "Donor Metadata Schema" \
-      #       --output "docs/schemas/Donor-Metadata/schema.html" \
-      #       --readme "docs/schemas/Donor-Metadata/README.md"
+      - name: Generate schema docs
+        run: bash scripts/generate_all_schema_docs.sh
 
       - name: Commit generated docs
         run: |

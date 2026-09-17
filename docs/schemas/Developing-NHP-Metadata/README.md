@@ -1402,3 +1402,86 @@ Curators must annotate the following columns:
 <br>
 
 ## Appendix
+
+<!-- schema-properties-start -->
+## Schema properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### Family History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `matriline` | text | yes | The relavant matriline and patriline information for a subject/donor/sample/specimen. |
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post mortem interval` | numeric | yes | The length temporal interval between the time of death of the subject/donor and the time at which the specimen is made. |
+| `left hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the left hemisphere. |
+| `left hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the left hemisphere. |
+| `right hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the right hemisphere. |
+| `right hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the right hemisphere. |
+| `RIN` | numeric | yes | The RNA integrity number value of a specimen. |
+| `RIN tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RNA integrity number. |
+| `RIN testing organization` | text | yes | The organization that determines the RNA integrity number of a sample/specimen. |
+| `RINe` | numeric | yes | A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S … |
+| `RINe tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RINe number. |
+| `RINe testing organization` | text | yes | The organization that determines the RINe number. |
+| `pH` | numeric | yes | The value of a measurement of acidity or basicity of a tissue, sample, or specimen. |
+| `brain weight measurement` | numeric | yes | The weight of a brain specimen. |
+| `brain tissue weighed type` | exclusive_categorical | yes | The state of a brain specimen when it is weighed (fresh, frozen, fixed). |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `premortem perfusion done` | exclusive_categorical | yes | The status of premortem perfusion (done, not done). |
+| `premortem perfusion buffer type` | text | no | The type of premortem perfusion buffer that was used for premortem perfusion. |
+| `head off time` | — | yes | The time at which the head was removed from the organism/donor/subject. |
+| `brain extraction time` | — | yes | The time at which the brain was extracted from the organism/donor/subject. |
+| `brain fixed time` | — | no | The time at which the brain specimen was fixed. |
+| `brain frozen time` | — | no | The time at which the brain specimen was frozen. |
+| `brain fixation method` | — | no | The method used for fixing the brain specimen. |
+| `brain freeze method` | — | no | The method used for freezing the brain specimen. |
+| `sedation start time` | — | yes | The time at which sedation of the organism/donor/subject began. |
+| `sedation total dose` | — | yes | The total dose of sedation used on the organism/donor/subject. |
+| `euthanasia time` | — | yes | The time at which euthanasia of the organism/donor/subject occurred. |
+| `euthanasia dose` | — | yes | The dose of compouds used to euthanize the organism/donor/subject. |
+| `perfusion time start` | — | yes | The time at which perfusion began. |
+| `perfusion time end` | — | yes | The time at which perfusion ended. |
+| `brain size anterior-posterior` | numeric | yes | The size of the brain specimen in the anterior-posterior axis. |
+| `brain size medial-lateral` | numeric | yes | The size of the brain specimen in the medial-lateral axis. |
+| `brain size dorsal-ventral` | numeric | yes | The size of the brain specimen in the dorsal-ventral axis. |
+| `brain size unit` | exclusive_categorical | yes | The unit that the brain size measurements are recorded. |
+| `histological stains available` | exclusive_categorical | yes | The status (available, unavailable) of histological stainings of a specimen. |
+| `histological stains type` | exclusive_categorical | no | The type of histological stains available for a specimen. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | inclusive_categorical | yes | 'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is … |
+| `donor source` | inclusive_categorical | yes | The origin of the donor/subject in this experiment. |
+| `sex at birth` | exclusive_categorical | yes | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `age value (years)` | numeric | yes | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `date of death` | date | yes | The year wherein the subject or donor has ceased to exist. |
+| `species` | exclusive_categorical | yes | The species of a subject/donor/sample/specimen. |
+| `body weight` | — | yes | The weight of the whole organism/donor/subject. |
+
+### Infant Medical History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `birth weight value (lbs)` | numeric | yes | The weight (at birth) of the subject/donor in pounds. |
+| `birth weight value (oz)` | numeric | yes | The weight (at birth) of the subject/donor in ounces. |
+| `gestational age value (weeks)` | numeric | yes | The gestational age of the subject/donor in weeks. |
+| `gestational age value (days)` | numeric | yes | The gestational age of the subject/donor in days. |
+
+### Non-Brain Specimen Collected
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `non-brain tissue available` | exclusive_categorical | yes | The status (yes, no) of whether non-brain tissue from this organism is available. |
+| `tissue type` | exclusive_categorical | yes | The type of tissue (non-brain) that is available from this organism. |
+| `tissue type details` | text | no | The details of the non-brain tissue that is available from this organism. |
+
+<!-- schema-properties-end -->

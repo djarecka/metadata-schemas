@@ -347,13 +347,17 @@ def build_html(
 # README Markdown generation
 # ---------------------------------------------------------------------------
 
-README_START = "<!-- schema-properties-start -->"
-README_END   = "<!-- schema-properties-end -->"
+def readme_markers(section_key: str = "") -> tuple[str, str]:
+    """Start/end marker pair for a README section. A bare key reproduces the
+    original single-section markers, so existing single-CSV schemas are unaffected."""
+    suffix = f":{section_key}" if section_key else ""
+    return f"<!-- schema-properties-start{suffix} -->", f"<!-- schema-properties-end{suffix} -->"
 
 
-def build_readme_section(rows: list[dict]) -> str:
-    """Return the Markdown content for the ## Schema properties section."""
+def build_readme_section(rows: list[dict], section_key: str = "", section_title: str = "Schema properties") -> str:
+    """Return the Markdown content for a '## <section_title>' section."""
     lines: list[str] = []
+    readme_start, readme_end = readme_markers(section_key)
 
     def w(s: str) -> None:
         lines.append(s)
@@ -363,8 +367,8 @@ def build_readme_section(rows: list[dict]) -> str:
 
     ordered_keys, groups = group_rows(rows)
 
-    w(README_START + "\n")
-    w("## Schema properties\n")
+    w(readme_start + "\n")
+    w(f"## {section_title}\n")
     w("*Auto-generated from CSV. Do not edit this section manually.*\n")
 
     for cls in ordered_keys:
@@ -383,7 +387,7 @@ def build_readme_section(rows: list[dict]) -> str:
             short_def = definition[:120] + "…" if len(definition) > 120 else definition
             w(f"| `{cell(name)}` | {cell(dtype)} | {required} | {cell(short_def)} |\n")
 
-    w("\n" + README_END + "\n")
+    w("\n" + readme_end + "\n")
     return "".join(lines)
 
 
@@ -393,15 +397,19 @@ def relative_root_link(output_path: str) -> str:
     return ("../" * depth + "index.html") if depth else "index.html"
 
 
-def update_readme(readme_path: str, section_content: str) -> None:
-    """Insert or replace the Schema properties section in a README.md file."""
+def update_readme(readme_path: str, section_content: str, section_key: str = "") -> None:
+    """Insert or replace a Schema properties section in a README.md file.
+
+    Sections are identified by section_key so multiple CSVs in the same
+    folder (e.g. per-entity schemas) can each own a distinct section."""
     path = Path(readme_path)
     original = path.read_text(encoding="utf-8") if path.exists() else ""
+    readme_start, readme_end = readme_markers(section_key)
 
-    if README_START in original and README_END in original:
+    if readme_start in original and readme_end in original:
         # Replace between existing markers (inclusive)
         updated = re.sub(
-            re.escape(README_START) + r".*?" + re.escape(README_END),
+            re.escape(readme_start) + r".*?" + re.escape(readme_end),
             section_content.rstrip("\n"),
             original,
             flags=re.DOTALL,
@@ -444,6 +452,16 @@ def main() -> None:
     parser.add_argument("--date", default="", help="Date created")
     parser.add_argument("--output", "-o", default=None, help="Output HTML file (default: schema.html next to CSV)")
     parser.add_argument("--readme", default=None, help="README.md to create/update (auto-detected in directory mode)")
+    parser.add_argument(
+        "--section-key", default="",
+        help="Identifies this CSV's README section when a folder has multiple CSVs sharing one README "
+             "(e.g. one entity per CSV). Leave unset for single-CSV schemas.",
+    )
+    parser.add_argument(
+        "--section-title", default="Schema properties",
+        help="Heading for the README section (default: 'Schema properties'; "
+             "set per-CSV, e.g. 'Person properties', for multi-CSV schemas).",
+    )
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -487,8 +505,8 @@ def main() -> None:
             sys.stdout.write(content)
 
     if args.readme:
-        section = build_readme_section(rows)
-        update_readme(args.readme, section)
+        section = build_readme_section(rows, section_key=args.section_key, section_title=args.section_title)
+        update_readme(args.readme, section, section_key=args.section_key)
         print(f"README updated: {args.readme}", file=sys.stderr)
 
 

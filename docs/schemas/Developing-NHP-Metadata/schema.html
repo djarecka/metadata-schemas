@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developing NHP Metadata</title>
+<style>
+
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1a1a;
+    --text-muted: #59636e;
+    --border: #d8dee4;
+    --accent: #0969da;
+    --accent-bg: #ddf0ff;
+    --req-bg: #ffe9e6; --req-text: #c5221f;
+    --opt-bg: #e8f0fe; --opt-text: #1557b0;
+    --type-bg: #e6f4ea; --type-text: #137333;
+    --card-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: #30363d;
+        --accent: #4a9eff;
+        --accent-bg: #10243e;
+        --req-bg: #3d1f1c; --req-text: #ff8a80;
+        --opt-bg: #16283f; --opt-text: #8ab4f8;
+        --type-bg: #10321d; --type-text: #7ee787;
+        --card-bg: #161b22;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+.site-nav { display: flex; align-items: center; gap: 8px; padding: 16px 0;
+            border-bottom: 1px solid var(--border); margin-bottom: 24px;
+            font-size: 0.92em; color: var(--text-muted); }
+.site-nav a { font-weight: 600; }
+
+h1 { font-size: 1.9em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+h2 { font-size: 1.3em; color: var(--accent); margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+h3 { font-size: 1.05em; color: var(--text-muted); margin-top: 28px; }
+p  { margin: 8px 0 14px; }
+a  { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
+        padding: 10px 16px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+.meta span { font-size: 0.88em; color: var(--text-muted); }
+.meta span b { color: var(--text); }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 0.93em; }
+th { background: var(--accent); color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-alt); }
+td:first-child { white-space: nowrap; }
+
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+       background: var(--accent-bg); color: var(--accent); padding: 1px 5px; border-radius: 3px;
+       font-size: 0.88em; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px;
+         font-size: 0.78em; font-weight: 600; white-space: nowrap; }
+.req  { background: var(--req-bg); color: var(--req-text); }
+.opt  { background: var(--opt-bg); color: var(--opt-text); }
+.type { background: var(--type-bg); color: var(--type-text); font-family: monospace; }
+
+.field-card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+              margin: 12px 0; background: var(--card-bg); }
+.field-card h3 { margin-top: 0; }
+.field-card .props tr td:first-child { color: var(--text-muted); font-size: 0.85em;
+                                        width: 140px; border-bottom: none; }
+.field-card .props tr td:last-child  { border-bottom: none; }
+.field-card .props { background: var(--bg-alt); border-radius: 4px; }
+
+.enum-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; list-style: none; padding: 0; }
+.enum-list li { background: var(--accent-bg); color: var(--accent); padding: 2px 10px;
+                border-radius: 12px; font-family: monospace; font-size: 0.85em; }
+
+.group-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em;
+               color: var(--text-muted); margin-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../../../index.html">&larr; All BICAN schemas</a></nav>
+<h1>Developing NHP Metadata</h1>
+<div class="meta">
+  <span><b>Document Status:</b> Accepted by MOWG</span>
+  <span><b>Version:</b> 1.0.0</span>
+  <span><b>Date:</b> 2024-07-08</span>
+</div>
+<h2 id="properties">Properties</h2>
+<p class="group-label">Family History</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#matriline"><code>matriline</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>family_history</td><td>The relavant matriline and patriline information for a subject/donor/sample/specimen.</td></tr>
+</tbody></table>
+<p class="group-label">General Specimen Data</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#hemisphere"><code>hemisphere</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>hemisphere</td><td>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter. [UBERON]</td></tr>
+<tr><td><a href="#post-mortem-interval"><code>post mortem interval</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>post_mortem_interval</td><td>The length temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</td></tr>
+<tr><td><a href="#left-hemisphere-preparation"><code>left hemisphere preparation</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>left_hemisphere_preparation</td><td>The type of preparation method used for the left hemisphere.</td></tr>
+<tr><td><a href="#left-hemisphere-preparation-specify"><code>left hemisphere preparation specify</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>left_hemisphere_preparation_specify</td><td>Specific details about the type of preparation method used for the left hemisphere.</td></tr>
+<tr><td><a href="#right-hemisphere-preparation"><code>right hemisphere preparation</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>right_hemisphere_preparation</td><td>The type of preparation method used for the right hemisphere.</td></tr>
+<tr><td><a href="#right-hemisphere-preparation-specify"><code>right hemisphere preparation specify</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>right_hemisphere_preparation_specify</td><td>Specific details about the type of preparation method used for the right hemisphere.</td></tr>
+<tr><td><a href="#rin"><code>RIN</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>rin</td><td>The RNA integrity number value of a specimen.</td></tr>
+<tr><td><a href="#rin-tissue-source"><code>RIN tissue source</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>rin_tissue_source</td><td>The tissue sample location or identifier that is used for calculating the RNA integrity number.</td></tr>
+<tr><td><a href="#rin-testing-organization"><code>RIN testing organization</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>rin_testing_organization</td><td>The organization that determines the RNA integrity number of a sample/specimen.</td></tr>
+<tr><td><a href="#rine"><code>RINe</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>rine</td><td>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</td></tr>
+<tr><td><a href="#rine-tissue-source"><code>RINe tissue source</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>rine_tissue_source</td><td>The tissue sample location or identifier that is used for calculating the RINe number.</td></tr>
+<tr><td><a href="#rine-testing-organization"><code>RINe testing organization</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>rine_testing_organization</td><td>The organization that determines the RINe number.</td></tr>
+<tr><td><a href="#ph"><code>pH</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>ph</td><td>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</td></tr>
+<tr><td><a href="#brain-weight-measurement"><code>brain weight measurement</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>brain_weight</td><td>The weight of a brain specimen.</td></tr>
+<tr><td><a href="#brain-tissue-weighed-type"><code>brain tissue weighed type</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>weighed_type</td><td>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</td></tr>
+<tr><td><a href="#photo-2d-available"><code>photo 2d available</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>photo_2d_available</td><td>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</td></tr>
+<tr><td><a href="#premortem-perfusion-done"><code>premortem perfusion done</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>perfusion</td><td>The status of premortem perfusion (done, not done).</td></tr>
+<tr><td><a href="#premortem-perfusion-buffer-type"><code>premortem perfusion buffer type</code></a></td><td><span class="badge type">text</span></td><td><span class="badge opt">optional</span></td><td>perfusate_type</td><td>The type of premortem perfusion buffer that was used for premortem perfusion.</td></tr>
+<tr><td><a href="#head-off-time"><code>head off time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>head_off_time</td><td>The time at which the head was removed from the organism/donor/subject.</td></tr>
+<tr><td><a href="#brain-extraction-time"><code>brain extraction time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>brain_extraction_time</td><td>The time at which the brain was extracted from the organism/donor/subject.</td></tr>
+<tr><td><a href="#brain-fixed-time"><code>brain fixed time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>brain_fixed_time</td><td>The time at which the brain specimen was fixed.</td></tr>
+<tr><td><a href="#brain-frozen-time"><code>brain frozen time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>brain_frozen_time</td><td>The time at which the brain specimen was frozen.</td></tr>
+<tr><td><a href="#brain-fixation-method"><code>brain fixation method</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>brain_fixation_method</td><td>The method used for fixing the brain specimen.</td></tr>
+<tr><td><a href="#brain-freeze-method"><code>brain freeze method</code></a></td><td><span class="badge type">—</span></td><td><span class="badge opt">optional</span></td><td>brain_freeze_method</td><td>The method used for freezing the brain specimen.</td></tr>
+<tr><td><a href="#sedation-start-time"><code>sedation start time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>sedation_start_time</td><td>The time at which sedation of the organism/donor/subject began.</td></tr>
+<tr><td><a href="#sedation-total-dose"><code>sedation total dose</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>sedation_total_dose</td><td>The total dose of sedation used on the organism/donor/subject.</td></tr>
+<tr><td><a href="#euthanasia-time"><code>euthanasia time</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>euthanasia_time</td><td>The time at which euthanasia of the organism/donor/subject occurred.</td></tr>
+<tr><td><a href="#euthanasia-dose"><code>euthanasia dose</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>euthanasia_dose</td><td>The dose of compouds used to euthanize the organism/donor/subject.</td></tr>
+<tr><td><a href="#perfusion-time-start"><code>perfusion time start</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>perfusion_time_start</td><td>The time at which perfusion began.</td></tr>
+<tr><td><a href="#perfusion-time-end"><code>perfusion time end</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>perfusion_time_end</td><td>The time at which perfusion ended.</td></tr>
+<tr><td><a href="#brain-size-anterior-posterior"><code>brain size anterior-posterior</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>brain_size_anterior_posterior</td><td>The size of the brain specimen in the anterior-posterior axis.</td></tr>
+<tr><td><a href="#brain-size-medial-lateral"><code>brain size medial-lateral</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>brain_size_medial_lateral</td><td>The size of the brain specimen in the medial-lateral axis.</td></tr>
+<tr><td><a href="#brain-size-dorsal-ventral"><code>brain size dorsal-ventral</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>brain_size_dorsal_ventral</td><td>The size of the brain specimen in the dorsal-ventral axis.</td></tr>
+<tr><td><a href="#brain-size-unit"><code>brain size unit</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>brain_size_unit_type</td><td>The unit that the brain size measurements are recorded.</td></tr>
+<tr><td><a href="#histological-stains-available"><code>histological stains available</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>histological_stains_available</td><td>The status (available, unavailable) of histological stainings of a specimen.</td></tr>
+<tr><td><a href="#histological-stains-type"><code>histological stains type</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge opt">optional</span></td><td>histological_stain_type</td><td>The type of histological stains available for a specimen.</td></tr>
+</tbody></table>
+<p class="group-label">General Subject Fields</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#local-donor-id"><code>local donor ID</code></a></td><td><span class="badge type">text</span></td><td><span class="badge req">required</span></td><td>subject_id</td><td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry. [Allotrop…</td></tr>
+<tr><td><a href="#repository"><code>repository</code></a></td><td><span class="badge type">inclusive_categorical</span></td><td><span class="badge req">required</span></td><td>repository</td><td>&#x27;Repository&#x27; trailing modifier (qualifier, &#x27;repository&#x27;) of &#x27;xref&#x27; links of &#x27;Format&#x27; concepts. When &#x27;true&#x27;, the link is pointing to the public source-code repos…</td></tr>
+<tr><td><a href="#donor-source"><code>donor source</code></a></td><td><span class="badge type">inclusive_categorical</span></td><td><span class="badge req">required</span></td><td>donor_source</td><td>The origin of the donor/subject in this experiment.</td></tr>
+<tr><td><a href="#sex-at-birth"><code>sex at birth</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>sex</td><td>An organismal quality inhering in a bearer by virtue of the bearer&#x27;s ability to undergo sexual reproduction in order to differentiate the individuals or types i…</td></tr>
+<tr><td><a href="#age-value-(years)"><code>age value (years)</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>age_of_death</td><td>A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO]</td></tr>
+<tr><td><a href="#date-of-death"><code>date of death</code></a></td><td><span class="badge type">date</span></td><td><span class="badge req">required</span></td><td>year_of_death</td><td>The year wherein the subject or donor has ceased to exist.</td></tr>
+<tr><td><a href="#species"><code>species</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>species</td><td>The species of a subject/donor/sample/specimen.</td></tr>
+<tr><td><a href="#body-weight"><code>body weight</code></a></td><td><span class="badge type">—</span></td><td><span class="badge req">required</span></td><td>body_weight</td><td>The weight of the whole organism/donor/subject.</td></tr>
+</tbody></table>
+<p class="group-label">Infant Medical History</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#birth-weight-value-(lbs)"><code>birth weight value (lbs)</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>birth_weight_lbs</td><td>The weight (at birth) of the subject/donor in pounds.</td></tr>
+<tr><td><a href="#birth-weight-value-(oz)"><code>birth weight value (oz)</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>birth_weight_oz</td><td>The weight (at birth) of the subject/donor in ounces.</td></tr>
+<tr><td><a href="#gestational-age-value-(weeks)"><code>gestational age value (weeks)</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>gestational_age_value_weeks</td><td>The gestational age of the subject/donor in weeks.</td></tr>
+<tr><td><a href="#gestational-age-value-(days)"><code>gestational age value (days)</code></a></td><td><span class="badge type">numeric</span></td><td><span class="badge req">required</span></td><td>gestational_age_value_days</td><td>The gestational age of the subject/donor in days.</td></tr>
+</tbody></table>
+<p class="group-label">Non-Brain Specimen Collected</p>
+<table>
+<thead><tr><th>Property</th><th>Type</th><th>Required</th><th>Aliases</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><a href="#non-brain-tissue-available"><code>non-brain tissue available</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>non_brain_tissue_available</td><td>The status (yes, no) of whether non-brain tissue from this organism is available.</td></tr>
+<tr><td><a href="#tissue-type"><code>tissue type</code></a></td><td><span class="badge type">exclusive_categorical</span></td><td><span class="badge req">required</span></td><td>tissue_type</td><td>The type of tissue (non-brain) that is available from this organism.</td></tr>
+<tr><td><a href="#tissue-type-details"><code>tissue type details</code></a></td><td><span class="badge type">text</span></td><td><span class="badge opt">optional</span></td><td>tissue_type_details</td><td>The details of the non-brain tissue that is available from this organism.</td></tr>
+</tbody></table>
+<h2 id="property-details">Property Details</h2>
+<h3>Family History</h3>
+<div class="field-card" id="matriline">
+<h3><code>matriline</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>ae0447a3-0504-43a3-95d5-4248e53d3224</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>family_history</td></tr>
+</table>
+<p>The relavant matriline and patriline information for a subject/donor/sample/specimen.</p>
+</div>
+<h3>General Specimen Data</h3>
+<div class="field-card" id="hemisphere">
+<h3><code>hemisphere</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>68b7a28b-d695-4ec9-800b-6a27ca206081</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>hemisphere</td></tr>
+</table>
+<p>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter. [UBERON]</p>
+</div>
+<div class="field-card" id="post-mortem-interval">
+<h3><code>post mortem interval</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6fd5c5ac-b128-4a4a-ae98-09eaeba22f92</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>post_mortem_interval</td></tr>
+</table>
+<p>The length temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</p>
+</div>
+<div class="field-card" id="left-hemisphere-preparation">
+<h3><code>left hemisphere preparation</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>57d5378f-a451-4bf5-a472-cc88d0d29586</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>left_hemisphere_preparation</td></tr>
+</table>
+<p>The type of preparation method used for the left hemisphere.</p>
+</div>
+<div class="field-card" id="left-hemisphere-preparation-specify">
+<h3><code>left hemisphere preparation specify</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>002e915e-01c3-4570-a1f3-76680dcb2c33</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>left_hemisphere_preparation_specify</td></tr>
+</table>
+<p>Specific details about the type of preparation method used for the left hemisphere.</p>
+</div>
+<div class="field-card" id="right-hemisphere-preparation">
+<h3><code>right hemisphere preparation</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>477c2600-f979-43c5-9c61-ab61fd771584</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>right_hemisphere_preparation</td></tr>
+</table>
+<p>The type of preparation method used for the right hemisphere.</p>
+</div>
+<div class="field-card" id="right-hemisphere-preparation-specify">
+<h3><code>right hemisphere preparation specify</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>efd50be4-f7cf-4146-a08e-28f25680728c</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>right_hemisphere_preparation_specify</td></tr>
+</table>
+<p>Specific details about the type of preparation method used for the right hemisphere.</p>
+</div>
+<div class="field-card" id="rin">
+<h3><code>RIN</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cd472c0d-0b64-45c9-a38e-e54d15cea953</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>rin</td></tr>
+</table>
+<p>The RNA integrity number value of a specimen.</p>
+</div>
+<div class="field-card" id="rin-tissue-source">
+<h3><code>RIN tissue source</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>d547ee51-9ec3-489c-8e49-7d8cd94080a8</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>rin_tissue_source</td></tr>
+</table>
+<p>The tissue sample location or identifier that is used for calculating the RNA integrity number.</p>
+</div>
+<div class="field-card" id="rin-testing-organization">
+<h3><code>RIN testing organization</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>cfed831e-9a62-4a32-bf92-532873420eb3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>rin_testing_organization</td></tr>
+</table>
+<p>The organization that determines the RNA integrity number of a sample/specimen.</p>
+</div>
+<div class="field-card" id="rine">
+<h3><code>RINe</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1210148d-d8fb-45aa-b51a-4b19b6d09bec</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>rine</td></tr>
+</table>
+<p>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</p>
+</div>
+<div class="field-card" id="rine-tissue-source">
+<h3><code>RINe tissue source</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7d5fd9af-82a1-4bdb-a3c6-9225d1717c53</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>rine_tissue_source</td></tr>
+</table>
+<p>The tissue sample location or identifier that is used for calculating the RINe number.</p>
+</div>
+<div class="field-card" id="rine-testing-organization">
+<h3><code>RINe testing organization</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>15a6d162-a3ca-4852-b626-a911c37c04c9</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>rine_testing_organization</td></tr>
+</table>
+<p>The organization that determines the RINe number.</p>
+</div>
+<div class="field-card" id="ph">
+<h3><code>pH</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>9e67af02-c081-43e1-a42c-bf9603cae616</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>ph</td></tr>
+</table>
+<p>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</p>
+</div>
+<div class="field-card" id="brain-weight-measurement">
+<h3><code>brain weight measurement</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>546fc32d-f8a2-4c00-924a-8c4730f11f51</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>brain_weight</td></tr>
+</table>
+<p>The weight of a brain specimen.</p>
+</div>
+<div class="field-card" id="brain-tissue-weighed-type">
+<h3><code>brain tissue weighed type</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>a7463e3f-0c61-4718-a7d0-60fd2116908a</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>weighed_type</td></tr>
+</table>
+<p>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</p>
+</div>
+<div class="field-card" id="photo-2d-available">
+<h3><code>photo 2d available</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>611beda8-1ac6-4183-a284-04a30bb474f3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>photo_2d_available</td></tr>
+</table>
+<p>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</p>
+</div>
+<div class="field-card" id="premortem-perfusion-done">
+<h3><code>premortem perfusion done</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>1fc487d8-2403-4d7c-952f-7e502d5f8359</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>perfusion</td></tr>
+</table>
+<p>The status of premortem perfusion (done, not done).</p>
+</div>
+<div class="field-card" id="premortem-perfusion-buffer-type">
+<h3><code>premortem perfusion buffer type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>78d62e29-4323-4927-aec8-6fc8dc59a889</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>perfusate_type</td></tr>
+</table>
+<p>The type of premortem perfusion buffer that was used for premortem perfusion.</p>
+</div>
+<div class="field-card" id="head-off-time">
+<h3><code>head off time</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>00ab5986-a8c4-4a7f-bf2b-6b5f08a97b25</code></td></tr>
+<tr><td>Aliases</td><td>head_off_time</td></tr>
+</table>
+<p>The time at which the head was removed from the organism/donor/subject.</p>
+</div>
+<div class="field-card" id="brain-extraction-time">
+<h3><code>brain extraction time</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>06be5810-7b9c-452e-b7ca-13eeb15179ca</code></td></tr>
+<tr><td>Aliases</td><td>brain_extraction_time</td></tr>
+</table>
+<p>The time at which the brain was extracted from the organism/donor/subject.</p>
+</div>
+<div class="field-card" id="brain-fixed-time">
+<h3><code>brain fixed time</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>2a09ecb4-0096-4a6c-b4f0-9b68cb231413</code></td></tr>
+<tr><td>Aliases</td><td>brain_fixed_time</td></tr>
+</table>
+<p>The time at which the brain specimen was fixed.</p>
+</div>
+<div class="field-card" id="brain-frozen-time">
+<h3><code>brain frozen time</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>fb01ce0d-1417-404a-978d-aad708c0404f</code></td></tr>
+<tr><td>Aliases</td><td>brain_frozen_time</td></tr>
+</table>
+<p>The time at which the brain specimen was frozen.</p>
+</div>
+<div class="field-card" id="brain-fixation-method">
+<h3><code>brain fixation method</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>8e0a01a9-ab7a-49a5-bf44-cc0af47719b1</code></td></tr>
+<tr><td>Aliases</td><td>brain_fixation_method</td></tr>
+</table>
+<p>The method used for fixing the brain specimen.</p>
+</div>
+<div class="field-card" id="brain-freeze-method">
+<h3><code>brain freeze method</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>71237def-9b50-481f-a01d-65dc99e3493f</code></td></tr>
+<tr><td>Aliases</td><td>brain_freeze_method</td></tr>
+</table>
+<p>The method used for freezing the brain specimen.</p>
+</div>
+<div class="field-card" id="sedation-start-time">
+<h3><code>sedation start time</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0ad6cca0-d4ce-4cd8-bbce-520bc01db061</code></td></tr>
+<tr><td>Aliases</td><td>sedation_start_time</td></tr>
+</table>
+<p>The time at which sedation of the organism/donor/subject began.</p>
+</div>
+<div class="field-card" id="sedation-total-dose">
+<h3><code>sedation total dose</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3c895613-4526-4b87-8620-7b42eff94fee</code></td></tr>
+<tr><td>Aliases</td><td>sedation_total_dose</td></tr>
+</table>
+<p>The total dose of sedation used on the organism/donor/subject.</p>
+</div>
+<div class="field-card" id="euthanasia-time">
+<h3><code>euthanasia time</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>14c541ab-7db3-4438-9328-c5f3098f5ff7</code></td></tr>
+<tr><td>Aliases</td><td>euthanasia_time</td></tr>
+</table>
+<p>The time at which euthanasia of the organism/donor/subject occurred.</p>
+</div>
+<div class="field-card" id="euthanasia-dose">
+<h3><code>euthanasia dose</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>d87c6869-c0d1-46b3-bb32-95dc3e3d5ed4</code></td></tr>
+<tr><td>Aliases</td><td>euthanasia_dose</td></tr>
+</table>
+<p>The dose of compouds used to euthanize the organism/donor/subject.</p>
+</div>
+<div class="field-card" id="perfusion-time-start">
+<h3><code>perfusion time start</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>7f94f8ad-82b7-4827-9614-838555a1f046</code></td></tr>
+<tr><td>Aliases</td><td>perfusion_time_start</td></tr>
+</table>
+<p>The time at which perfusion began.</p>
+</div>
+<div class="field-card" id="perfusion-time-end">
+<h3><code>perfusion time end</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6c873444-8306-4b3f-9e5a-97f6d34c88b3</code></td></tr>
+<tr><td>Aliases</td><td>perfusion_time_end</td></tr>
+</table>
+<p>The time at which perfusion ended.</p>
+</div>
+<div class="field-card" id="brain-size-anterior-posterior">
+<h3><code>brain size anterior-posterior</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0830564a-26ba-41eb-888a-33d0c39ead8f</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>brain_size_anterior_posterior</td></tr>
+</table>
+<p>The size of the brain specimen in the anterior-posterior axis.</p>
+</div>
+<div class="field-card" id="brain-size-medial-lateral">
+<h3><code>brain size medial-lateral</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4722f739-71f6-4001-9784-afef8f9f2d0e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>brain_size_medial_lateral</td></tr>
+</table>
+<p>The size of the brain specimen in the medial-lateral axis.</p>
+</div>
+<div class="field-card" id="brain-size-dorsal-ventral">
+<h3><code>brain size dorsal-ventral</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>e683f5ee-696f-4baf-a9bf-2f12226ceb4a</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>brain_size_dorsal_ventral</td></tr>
+</table>
+<p>The size of the brain specimen in the dorsal-ventral axis.</p>
+</div>
+<div class="field-card" id="brain-size-unit">
+<h3><code>brain size unit</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4d0c44c6-e620-455d-989e-126c3c81ec91</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>brain_size_unit_type</td></tr>
+</table>
+<p>The unit that the brain size measurements are recorded.</p>
+</div>
+<div class="field-card" id="histological-stains-available">
+<h3><code>histological stains available</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4b868ba6-dba8-45e3-a43e-88e421625cab</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>histological_stains_available</td></tr>
+</table>
+<p>The status (available, unavailable) of histological stainings of a specimen.</p>
+</div>
+<div class="field-card" id="histological-stains-type">
+<h3><code>histological stains type</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6723e756-e4c1-42c7-bf2d-ee2e300b88ff</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>histological_stain_type</td></tr>
+</table>
+<p>The type of histological stains available for a specimen.</p>
+</div>
+<h3>General Subject Fields</h3>
+<div class="field-card" id="local-donor-id">
+<h3><code>local donor ID</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>subject_id</td></tr>
+</table>
+<p>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry. [Allotrope]</p>
+</div>
+<div class="field-card" id="repository">
+<h3><code>repository</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>408682ed-0e27-41e2-b9fa-f05674366d6e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">inclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>repository</td></tr>
+</table>
+<p>&#x27;Repository&#x27; trailing modifier (qualifier, &#x27;repository&#x27;) of &#x27;xref&#x27; links of &#x27;Format&#x27; concepts. When &#x27;true&#x27;, the link is pointing to the public source-code repository where the given data format is developed or maintained. [EDAM]</p>
+</div>
+<div class="field-card" id="donor-source">
+<h3><code>donor source</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>0d0cf732-0f76-409d-9a73-7a96d829d3d3</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">inclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>donor_source</td></tr>
+</table>
+<p>The origin of the donor/subject in this experiment.</p>
+</div>
+<div class="field-card" id="sex-at-birth">
+<h3><code>sex at birth</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>c819b9d5-2fde-40b2-bf0d-e07b56f96ac9</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>sex</td></tr>
+</table>
+<p>An organismal quality inhering in a bearer by virtue of the bearer&#x27;s ability to undergo sexual reproduction in order to differentiate the individuals or types involved. [PATO]</p>
+</div>
+<div class="field-card" id="age-value-(years)">
+<h3><code>age value (years)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>14eb923a-161d-45e2-889d-81fea7b632b6</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>age_of_death</td></tr>
+</table>
+<p>A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO]</p>
+</div>
+<div class="field-card" id="date-of-death">
+<h3><code>date of death</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>60445046-d9d8-4f00-959e-9a4c42613e5e</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">date</span></td></tr>
+<tr><td>Aliases</td><td>year_of_death</td></tr>
+</table>
+<p>The year wherein the subject or donor has ceased to exist.</p>
+</div>
+<div class="field-card" id="species">
+<h3><code>species</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>d11fb2ce-bfdb-4735-9b17-b6ba606520b1</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>species</td></tr>
+</table>
+<p>The species of a subject/donor/sample/specimen.</p>
+</div>
+<div class="field-card" id="body-weight">
+<h3><code>body weight</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f2673501-b48f-4703-bb7e-d642b73c2ad4</code></td></tr>
+<tr><td>Aliases</td><td>body_weight</td></tr>
+</table>
+<p>The weight of the whole organism/donor/subject.</p>
+</div>
+<h3>Infant Medical History</h3>
+<div class="field-card" id="birth-weight-value-(lbs)">
+<h3><code>birth weight value (lbs)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>69d9a60d-32d5-4c3a-a26a-802d8f030c8d</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>birth_weight_lbs</td></tr>
+</table>
+<p>The weight (at birth) of the subject/donor in pounds.</p>
+</div>
+<div class="field-card" id="birth-weight-value-(oz)">
+<h3><code>birth weight value (oz)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>b6f30050-f762-4427-8533-31738e737ea2</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>birth_weight_oz</td></tr>
+</table>
+<p>The weight (at birth) of the subject/donor in ounces.</p>
+</div>
+<div class="field-card" id="gestational-age-value-(weeks)">
+<h3><code>gestational age value (weeks)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>6d8a9b3f-792c-48c2-bd3c-56e52bb51672</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>gestational_age_value_weeks</td></tr>
+</table>
+<p>The gestational age of the subject/donor in weeks.</p>
+</div>
+<div class="field-card" id="gestational-age-value-(days)">
+<h3><code>gestational age value (days)</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>4e532e52-6e4c-46cd-9fde-96f97ef3b034</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">numeric</span></td></tr>
+<tr><td>Aliases</td><td>gestational_age_value_days</td></tr>
+</table>
+<p>The gestational age of the subject/donor in days.</p>
+</div>
+<h3>Non-Brain Specimen Collected</h3>
+<div class="field-card" id="non-brain-tissue-available">
+<h3><code>non-brain tissue available</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>3a064c96-a956-4cf3-8b77-056b8e392f99</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>non_brain_tissue_available</td></tr>
+</table>
+<p>The status (yes, no) of whether non-brain tissue from this organism is available.</p>
+</div>
+<div class="field-card" id="tissue-type">
+<h3><code>tissue type</code> <span class="badge req">required</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>33ccbc85-ae35-44d6-8bc6-c2fb91116cf7</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">exclusive_categorical</span></td></tr>
+<tr><td>Aliases</td><td>tissue_type</td></tr>
+</table>
+<p>The type of tissue (non-brain) that is available from this organism.</p>
+</div>
+<div class="field-card" id="tissue-type-details">
+<h3><code>tissue type details</code> <span class="badge opt">optional</span></h3>
+<table class="props">
+<tr><td>BICAN UUID</td><td><code>f551cf87-2c6e-4b92-888d-6310e6a500d8</code></td></tr>
+<tr><td>Data Type</td><td><span class="badge type">text</span></td></tr>
+<tr><td>Aliases</td><td>tissue_type_details</td></tr>
+</table>
+<p>The details of the non-brain tissue that is available from this organism.</p>
+</div>
+</body>
+</html>

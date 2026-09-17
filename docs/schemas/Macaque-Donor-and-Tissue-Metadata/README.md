@@ -2953,3 +2953,200 @@ Curators must annotate the following columns:
 <br>
 
 ## Appendix
+
+<!-- schema-properties-start:wb-omics-spatial -->
+## WB Omics Spatial properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post mortem interval` | numeric | yes | The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is… |
+| `RIN` | numeric | yes | The RNA integrity number value of a specimen. |
+| `RIN tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RNA integrity number. |
+| `brain weight measurement` | numeric | yes | The weight of a brain specimen. |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `scan 3d available` | exclusive_categorical | yes | The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen. |
+| `antemortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | inclusive_categorical | yes | 'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is … |
+| `donor source` | inclusive_categorical | yes | The origin of the donor/subject in this experiment. |
+| `sex at birth` | exclusive_categorical | yes | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `age value (years)` | numeric | yes | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `year of death` | date | yes | The year wherein the subject or donor has ceased to exist. |
+
+<!-- schema-properties-end:wb-omics-spatial -->
+
+<!-- schema-properties-start:population -->
+## Population properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `trapping date` | date | yes | The date on which the subject/specimen was trapped. |
+| `trapping time` | time | yes | The time at which the subject/specimen was trapped. |
+
+### Behavioral Measurements
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `behavioral scoring available` | exclusive_categorical | yes | The status (available, unavailable) of the behavioral scoring results for a subject/donor/specimen. |
+| `behavioral scoring type` | exclusive_categorical | no | The type of behavioral scoring that is available for a subject/donor/specimen. |
+| `ordinal dominance rank` | numeric | yes |  |
+
+### Family History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `matriline` | — | yes | The relavant matriline and patriline information for a subject/donor/sample/specimen. |
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post mortem interval` | numeric | yes | The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is… |
+| `left hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the left hemisphere. |
+| `left hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the left hemisphere. |
+| `right hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the right hemisphere. |
+| `right hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the right hemisphere. |
+| `RIN` | numeric | yes | The RNA integrity number value of a specimen. |
+| `RIN tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RNA integrity number. |
+| `RIN testing organization` | text | yes | The organization that determines the RNA integrity number of a sample/specimen. |
+| `RINe` | numeric | yes | A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S … |
+| `RINe tissue source` | text | yes | The tissue sample location or identifier that is used for calculating the RINe number. |
+| `RINe testing organization` | text | yes | The organization that determines the RINe number. |
+| `pH` | numeric | yes | The value of a measurement of acidity or basicity of a tissue, sample, or specimen. |
+| `brain weight measurement` | numeric | yes | The weight of a brain specimen. |
+| `brain tissue weighed type` | exclusive_categorical | yes | The state of a brain specimen when it is weighed (fresh, frozen, fixed). |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `scan 3d available` | exclusive_categorical | yes | The status (available, unavailable) of three-dimensional scans of a subject/donor/specimen. |
+| `antemortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen. |
+| `postmortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen. |
+| `postmortem MRI type` | exclusive_categorical | no | The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo). |
+| `premortem perfusion done` | exclusive_categorical | yes | The status of premortem perfusion (done, not done). |
+| `premortem perfusion buffer type` | text | no | The type of premortem perfusion buffer that was used for premortem perfusion. |
+| `head off time` | time | yes | The time at which the head was removed from the organism/donor/subject. |
+| `brain extraction time` | time | yes | The time at which the brain was extracted from the organism/donor/subject. |
+| `brain fixed time` | time | no | The time at which the brain specimen was fixed. |
+| `brain frozen time` | time | no | The time at which the brain specimen was frozen. |
+| `brain fixation method` | exclusive_categorical | no | The method used for fixing the brain specimen. |
+| `brain freeze method` | exclusive_categorical | no | The method used for freezing the brain specimen. |
+| `sedation start time` | time | yes | The time at which sedation of the organism/donor/subject began. |
+| `sedation total dose` | numeric | yes | The total dose of sedation used on the organism/donor/subject. |
+| `euthanasia time` | time | yes | The time at which euthanasia of the organism/donor/subject occurred. |
+| `euthanasia dose` | numeric | yes | The dose of compouds used to euthanize the organism/donor/subject. |
+| `perfusion time start` | time | yes | The time at which perfusion began. |
+| `perfusion time end` | time | yes | The time at which perfusion ended. |
+| `brain size anterior-posterior` | numeric | yes | The size of the brain specimen in the anterior-posterior axis. |
+| `brain size medial-lateral` | numeric | yes | The size of the brain specimen in the medial-lateral axis. |
+| `brain size dorsal-ventral` | numeric | yes | The size of the brain specimen in the dorsal-ventral axis. |
+| `brain size unit` | exclusive_categorical | yes | The unit that the brain size measurements are recorded. |
+| `histological stains available` | exclusive_categorical | yes | The status (available, unavailable) of histological stainings of a specimen. |
+| `histological stains type` | exclusive_categorical | no | The type of histological stains available for a specimen. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | inclusive_categorical | yes | 'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is … |
+| `donor source` | inclusive_categorical | yes | The origin of the donor/subject in this experiment. |
+| `sex at birth` | exclusive_categorical | yes | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `age value (years)` | numeric | yes | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `year of death` | date | yes | The year wherein the subject or donor has ceased to exist. |
+| `autopsy report` | exclusive_categorical | yes | A document assembled by an author for the purpose of providing information regarding the cause of death of a subject for… |
+| `cause of death` | text | yes | The circumstance or condition that results in the death of a living being. [NCIT] |
+| `cause of death code` | text | yes | The ISO code that denotes the circumstance or condition that results in the death of a living being. [NCIT] |
+| `manner of death` | exclusive_categorical | yes | The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (… |
+| `medical records reviewed` | exclusive_categorical | yes | The status (reviewed, not reviewed) of the medical records of the subject/donor. |
+| `species` | exclusive_categorical | yes | The species of a subject/donor/sample/specimen. |
+| `social group` | exclusive_categorical | yes | The social group to which the subject belongs. |
+| `body weight` | numeric | yes | The weight of the whole organism/donor/subject. |
+
+### Infant Medical History
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `birth weight value (lbs)` | numeric | yes | The weight (at birth) of the subject/donor in pounds. |
+| `birth weight value (oz)` | numeric | yes | The weight (at birth) of the subject/donor in ounces. |
+| `gestational age value (weeks)` | numeric | yes | The gestational age of the subject/donor in weeks. |
+| `gestational age value (days)` | numeric | yes | The gestational age of the subject/donor in days. |
+
+### Non-Brain Specimen Collected
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `non-brain tissue available` | exclusive_categorical | yes | The status (yes, no) of whether non-brain tissue from this organism is available. |
+| `tissue type` | exclusive_categorical | yes | The type of tissue (non-brain) that is available from this organism. |
+| `tissue type details` | text | no | The details of the non-brain tissue that is available from this organism. |
+
+<!-- schema-properties-end:population -->
+
+<!-- schema-properties-start:patchseq -->
+## Patchseq properties
+*Auto-generated from CSV. Do not edit this section manually.*
+
+### Diagnoses
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `non brain diagnosis description` | text | no | The description (text) of a non-brain diagnosis for a subject/donor/specimen. |
+
+### General Specimen Data
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `hemisphere` | exclusive_categorical | yes | One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex … |
+| `post mortem interval` | numeric | yes | The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is… |
+| `left hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the left hemisphere. |
+| `left hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the left hemisphere. |
+| `right hemisphere preparation` | exclusive_categorical | yes | The type of preparation method used for the right hemisphere. |
+| `right hemisphere preparation specify` | text | yes | Specific details about the type of preparation method used for the right hemisphere. |
+| `photo 2d available` | exclusive_categorical | yes | The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen. |
+| `antemortem MRI available` | exclusive_categorical | yes | The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen. |
+| `premortem perfusion done` | exclusive_categorical | yes | The status of premortem perfusion (done, not done). |
+| `premortem perfusion buffer type` | text | no | The type of premortem perfusion buffer that was used for premortem perfusion. |
+| `region of interest` | exclusive_categorical | yes | The brain region, structure, or area from which a brain tissue source derives. |
+
+### General Subject Fields
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `local donor ID` | text | yes | An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe… |
+| `repository` | inclusive_categorical | yes | 'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is … |
+| `donor source` | inclusive_categorical | yes | The origin of the donor/subject in this experiment. |
+| `sex at birth` | exclusive_categorical | yes | An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to … |
+| `age value (years)` | numeric | yes | A time quality inhering in a bearer by virtue of how long the bearer has existed. [PATO] |
+| `year of death` | date | yes | The year wherein the subject or donor has ceased to exist. |
+| `manner of death` | exclusive_categorical | yes | The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (… |
+| `medical records available` | exclusive_categorical | yes | The status (available, unavailable) of the medical records of the subject/donor. |
+| `medical records reviewed` | exclusive_categorical | no | The status (reviewed, not reviewed) of the medical records of the subject/donor. |
+| `species` | exclusive_categorical | yes | The species of a subject/donor/sample/specimen. |
+| `behavioral scoring available` | exclusive_categorical | yes | The status (available, unavailable) of the behavioral scoring results for a subject/donor/specimen. |
+| `behavioral scoring type` | text | no | The type of behavioral scoring that is available for a subject/donor/specimen. |
+
+### Infectious Disease Testing
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `test name` | exclusive_categorical | no | The name of the test that has been performed. |
+| `test result` | exclusive_categorical | no | The result(s) of the test that has been performed. |
+| `testing tissue source` | exclusive_categorical | yes | The tissue sample location or identifier that is the subject of a test. |
+
+### Non-Brain Specimen Collected
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `non-brain tissue available` | exclusive_categorical | yes | The status (yes, no) of whether non-brain tissue from this organism is available. |
+| `tissue type` | exclusive_categorical | yes | The type of tissue (non-brain) that is available from this organism. |
+| `tissue type details` | text | no | The details of the non-brain tissue that is available from this organism. |
+
+<!-- schema-properties-end:patchseq -->
