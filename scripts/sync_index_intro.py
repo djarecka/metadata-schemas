@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """
-Keep index.html's intro paragraph(s) in sync with README.md.
+Keep docs/index.md's intro paragraph(s) in sync with README.md.
 
 The "intro" is whatever prose sits between the README's H1 title and its
-first H2 section. index.html marks where that content goes with:
+first H2 section. docs/index.md marks where that content goes with:
 
     <!-- readme-intro-start -->
     ...
     <!-- readme-intro-end -->
 
 Usage:
-    python scripts/sync_index_intro.py [README.md] [index.html]
+    python scripts/sync_index_intro.py [README.md] [docs/index.md]
 """
 
-import html
 import re
 import sys
 from pathlib import Path
@@ -33,7 +32,7 @@ def extract_intro_paragraphs(readme_text: str) -> list[str]:
 
 
 def render_paragraphs(paragraphs: list[str]) -> str:
-    return "\n".join(f"<p class=\"lead\">{html.escape(p)}</p>" for p in paragraphs)
+    return "\n\n".join(paragraphs)
 
 
 def sync(readme_path: Path, index_path: Path) -> None:
@@ -43,8 +42,8 @@ def sync(readme_path: Path, index_path: Path) -> None:
         print(f"No intro paragraph found in {readme_path}; leaving {index_path} untouched.", file=sys.stderr)
         return
 
-    index_html = index_path.read_text(encoding="utf-8")
-    if START not in index_html or END not in index_html:
+    index_text = index_path.read_text(encoding="utf-8")
+    if START not in index_text or END not in index_text:
         print(f"Markers {START!r}/{END!r} not found in {index_path}; nothing to sync.", file=sys.stderr)
         return
 
@@ -52,7 +51,7 @@ def sync(readme_path: Path, index_path: Path) -> None:
     updated = re.sub(
         re.escape(START) + r".*?" + re.escape(END),
         lambda _match: replacement,
-        index_html,
+        index_text,
         flags=re.DOTALL,
     )
     index_path.write_text(updated, encoding="utf-8")
@@ -61,7 +60,7 @@ def sync(readme_path: Path, index_path: Path) -> None:
 
 def main() -> None:
     readme_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("README.md")
-    index_path = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("index.html")
+    index_path = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("docs/index.md")
     sync(readme_path, index_path)
 
 

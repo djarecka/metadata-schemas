@@ -539,21 +539,151 @@ This is designed not to tie-in to a single project (i.e. no tool-specific fields
 ## Schema properties
 *Auto-generated from CSV. Do not edit this section manually.*
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `matrix_file_id` | — | no | The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`. |
-| `dataset_title` | string | yes | The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal gan… |
-| `dataset_description` | string | no | The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal… |
-| `cellannotation_schema_version` | — | no | The version of the Cell Annotation Schema (CAS) used, formatted as '[MAJOR].[MINOR].[PATCH]'. This is used to track the … |
-| `cellannotation_timestamp` | — | no | Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also… |
-| `cellannotation_version` | — | no | The CAP taxonomy annotation version; required by CAP. |
-| `cellannotation_url` | string | no | A persistent URL of all cell annotations published (per dataset). |
-| `author_list` | — | no | A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet. |
-| `author_name` | — | no | The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also sepe… |
-| `author_contact` | — | no | A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet. |
-| `orcid` | — | no | A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet. |
-| `labelsets` | — | no | A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, cl… |
-| `annotations` | array | yes | A list of the annotations. |
+**Status:** Approved BICAN Standard &middot; **Version:** 1.0 &middot; **Owner:** @UCDNJJ, @jeremymiller &middot; **Date:** 10-03-2025
+
+### Properties
+
+| Property | Type | Required | Aliases | Description |
+|----------|------|----------|---------|-------------|
+| [`matrix_file_id`](#matrix_file_id) | — | no | — | The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`. |
+| [`dataset_title`](#dataset_title) | string | yes | — | The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal gan… |
+| [`dataset_description`](#dataset_description) | string | no | description | The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal… |
+| [`cellannotation_schema_version`](#cellannotation_schema_version) | — | no | — | The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the … |
+| [`cellannotation_timestamp`](#cellannotation_timestamp) | — | no | — | Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also… |
+| [`cellannotation_version`](#cellannotation_version) | — | no | — | The CAP taxonomy annotation version; required by CAP. |
+| [`cellannotation_url`](#cellannotation_url) | string | no | — | A persistent URL of all cell annotations published (per dataset). |
+| [`author_list`](#author_list) | — | no | taxonomy users | A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet. |
+| [`author_name`](#author_name) | — | no | taxonomy author, point person name | The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also sepe… |
+| [`author_contact`](#author_contact) | — | no | point person email | A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet. |
+| [`orcid`](#orcid) | — | no | point person ORCID | A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet. |
+| [`labelsets`](#labelsets) | — | no | — | A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, cl… |
+| [`annotations`](#annotations) | array | yes | — | A list of the annotations. |
+
+### Property Details
+
+<div id="matrix_file_id" class="field-detail">
+<h5><code>matrix_file_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5d625688-96da-4c65-97b9-211cbcad4aea</code></li>
+<li><strong>Subsets:</strong> annotations, tooling</li>
+</ul>
+<p>The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`.</p>
+</div>
+
+<div id="dataset_title" class="field-detail">
+<h5><code>dataset_title</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5aab17df-0830-44d4-bcd8-f954695867d0</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Example:</strong> <code>&#x27;Human retina cell atlas - retinal ganglion cells&#x27;</code></li>
+</ul>
+<p>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal ganglion cells&#x27;.</p>
+</div>
+
+<div id="dataset_description" class="field-detail">
+<h5><code>dataset_description</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>1b5ff66c-0e00-4a29-8ccf-65dbf59d79da</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> description</li>
+<li><strong>Example:</strong> <code>&#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;</code></li>
+</ul>
+<p>The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;.</p>
+</div>
+
+<div id="cellannotation_schema_version" class="field-detail">
+<h5><code>cellannotation_schema_version</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>195cbdbf-d486-4d54-9c1d-83edf0a44ec5</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the version of the schema used for cell annotations.</p>
+</div>
+
+<div id="cellannotation_timestamp" class="field-detail">
+<h5><code>cellannotation_timestamp</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>37da06ba-9c15-405f-b5d6-f8d2bf5fc3a3</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also could be the same as `development_date`.</p>
+</div>
+
+<div id="cellannotation_version" class="field-detail">
+<h5><code>cellannotation_version</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>439f52e8-e2e6-406c-850c-434d448c8b6d</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>The CAP taxonomy annotation version; required by CAP.</p>
+</div>
+
+<div id="cellannotation_url" class="field-detail">
+<h5><code>cellannotation_url</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>e47029df-a5cf-49d0-b8de-76302a1e6fbb</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>A persistent URL of all cell annotations published (per dataset).</p>
+</div>
+
+<div id="author_list" class="field-detail">
+<h5><code>author_list</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>15e4be61-b1fb-49a5-9a81-7fed61138256</code></li>
+<li><strong>Aliases:</strong> taxonomy users</li>
+<li><strong>Subsets:</strong> annotations, tooling</li>
+</ul>
+<p>A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="author_name" class="field-detail">
+<h5><code>author_name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>0ea83cdb-cd06-4ef8-84c1-6aec29220759</code></li>
+<li><strong>Aliases:</strong> taxonomy author, point person name</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also seperated by `cell_set` with &quot;cell_set_alias_assignee&quot;. This is called `Point person name` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="author_contact" class="field-detail">
+<h5><code>author_contact</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>fa084043-3c8e-47cb-959e-2f3daf2165ec</code></li>
+<li><strong>Aliases:</strong> point person email</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="orcid" class="field-detail">
+<h5><code>orcid</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>2c96776b-b158-4e0c-ba67-ea7a63efb1e8</code></li>
+<li><strong>Aliases:</strong> point person ORCID</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="labelsets" class="field-detail">
+<h5><code>labelsets</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7fa0b7a1-6af7-4f79-8da0-29d7950ea736</code></li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, class, neurotransmitter, etc.). Specifically: `name`, `description`, and `rank` (0 most specific) and some information about provenance needed for each labelset. This is equilalent to `Cluster annotation term set` in BKP.</p>
+</div>
+
+<div id="annotations" class="field-detail">
+<h5><code>annotations</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>46e6ec2f-6baf-4df9-bfbd-36463694be93</code></li>
+<li><strong>Data Type:</strong> <code>array</code></li>
+</ul>
+<p>A list of the annotations.</p>
+</div>
 
 <!-- schema-properties-end -->
 

@@ -1,0 +1,44 @@
+site_name: BICAN Metadata Schemas
+site_url: https://djarecka.github.io/metadata-schemas/
+repo_url: https://github.com/djarecka/metadata-schemas
+repo_name: metadata-schemas
+edit_uri: edit/doc-automation/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Schemas:
+      - Cell Annotation: schemas/Cell-Annotation-and-Taxonomy/Cell Annotation/README.md
+      - Library Minimal Metadata: schemas/Library-Minimal-Metadata/README.md
+      - Human Donor Metadata: schemas/Donor-Metadata/README.md
+      - Developing Human Metadata: schemas/Developing-Human-Metadata/README.md
+      - Developing NHP Metadata: schemas/Developing-NHP-Metadata/README.md
+      - Developing Tissue Metadata: schemas/Developing-Tissue-Metadata/README.md
+      - Institutional Certification: schemas/Institutional-Certification/README.md
+      - HMBA Macaque Donor and Tissue Metadata: schemas/Macaque-Donor-and-Tissue-Metadata/README.md

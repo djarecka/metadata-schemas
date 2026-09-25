@@ -1,19 +1,23 @@
-name: Generate Schema Documentation
+name: Generate and Deploy Schema Documentation
 
 on:
   pull_request:
     paths:
       - 'docs/schemas/**/*.csv'
       - 'README.md'
-      - 'scripts/generate_schema_html.py'
+      - 'mkdocs.yml'
+      - 'docs/index.md'
+      - 'scripts/generate_schema_readme.py'
       - 'scripts/generate_all_schema_docs.sh'
       - 'scripts/sync_index_intro.py'
   push:
-    branches: [main]
+    branches: [doc-automation]
     paths:
       - 'docs/schemas/**/*.csv'
       - 'README.md'
-      - 'scripts/generate_schema_html.py'
+      - 'mkdocs.yml'
+      - 'docs/index.md'
+      - 'scripts/generate_schema_readme.py'
       - 'scripts/generate_all_schema_docs.sh'
       - 'scripts/sync_index_intro.py'
   workflow_dispatch:
@@ -33,6 +37,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install MkDocs
+        run: pip install mkdocs-material
+
       - name: Generate schema docs
         run: bash scripts/generate_all_schema_docs.sh
 
@@ -41,10 +48,14 @@ jobs:
           shopt -s globstar
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/schemas/**/*.html index.html
+          git add docs/schemas/**/README.md docs/index.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: regenerate schema HTML docs from CSV"
+            git commit -m "chore: regenerate schema docs from CSV"
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
+
+      - name: Build and deploy site
+        if: github.event_name != 'pull_request'
+        run: mkdocs gh-deploy --force
