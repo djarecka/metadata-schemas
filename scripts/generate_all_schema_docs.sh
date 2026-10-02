@@ -20,7 +20,7 @@ python3 "$SCRIPT" \
   --related-model-url "https://brain-bican.github.io/models/index_library_generation/"
 
 python3 "$SCRIPT" \
-  "docs/schemas/Donor-Metadata/donor-metadata.csv" \
+  "docs/schemas/Donor-Metadata/Donor_Metadata.csv" \
   --status "Endorsed BICAN Standard" \
   --version "1.0.0" \
   --date "2023-04-01" \
@@ -55,29 +55,29 @@ python3 "$SCRIPT" \
   --readme "docs/schemas/Institutional-Certification/README.md"
 
 python3 "$SCRIPT" \
-  "docs/schemas/Macaque-Donor-and-Tissue-Metadata/HMBA_Macaque_WB_Omics_Spatial.csv" \
+  "docs/schemas/Macaque-Metadata/HMBA_Macaque_WB_Omics_Spatial.csv" \
   --status "Accepted by MOWG" \
   --version "1.0.0" \
   --date "2024-07-08" \
-  --readme "docs/schemas/Macaque-Donor-and-Tissue-Metadata/README.md" \
+  --readme "docs/schemas/Macaque-Metadata/README.md" \
   --section-key "wb-omics-spatial" \
   --section-title "WB Omics Spatial properties"
 
 python3 "$SCRIPT" \
-  "docs/schemas/Macaque-Donor-and-Tissue-Metadata/HMBA_Macaque_Population.csv" \
+  "docs/schemas/Macaque-Metadata/HMBA_Macaque_Population.csv" \
   --status "Accepted by MOWG" \
   --version "1.0.0" \
   --date "2024-07-08" \
-  --readme "docs/schemas/Macaque-Donor-and-Tissue-Metadata/README.md" \
+  --readme "docs/schemas/Macaque-Metadata/README.md" \
   --section-key "population" \
   --section-title "Population properties"
 
 python3 "$SCRIPT" \
-  "docs/schemas/Macaque-Donor-and-Tissue-Metadata/HMBA_Macaque_Patchseq.csv" \
+  "docs/schemas/Macaque-Metadata/HMBA_Macaque_Patchseq.csv" \
   --status "Accepted by MOWG" \
   --version "1.0.0" \
   --date "2024-07-08" \
-  --readme "docs/schemas/Macaque-Donor-and-Tissue-Metadata/README.md" \
+  --readme "docs/schemas/Macaque-Metadata/README.md" \
   --section-key "patchseq" \
   --section-title "Patchseq properties"
 

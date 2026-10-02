@@ -65,7 +65,7 @@ def _get(row: dict, *keys: str) -> str:
 # Convenience wrappers for columns that have known name variants across CSVs.
 
 def _field_name(row: dict) -> str:
-    return _get(row, "Proposed BICAN Field Name", "Proposed BICAN Field")
+    return _get(row, "Proposed BICAN Field Name", "Proposed BICAN Field", "BICAN Field Name")
 
 
 def _linkml_class(row: dict) -> str:
@@ -165,7 +165,7 @@ def build_readme_section(
             nullable = _get(row, "Nullable", "nullable")
             required = "yes" if nullable.upper() == "FALSE" else "no"
             aliases = _get(row, "Aliases") or "—"
-            definition = _get(row, "Definition", "definition")
+            definition = _get(row, "Definition", "definition", "Description")
             short_def = definition[:120] + "…" if len(definition) > 120 else definition
             aid = anchor_id(name)
             w(f"| [`{cell(name)}`](#{aid}) | {cell(dtype)} | {required} | {cell(aliases)} | {cell(short_def)} |\n")
@@ -182,7 +182,7 @@ def build_readme_section(
             nullable = _get(row, "Nullable", "nullable")
             required = nullable.upper() == "FALSE"
             aliases = _get(row, "Aliases")
-            definition = _get(row, "Definition", "definition")
+            definition = _get(row, "Definition", "definition", "Description")
             uuid = _get(row, "BICAN UUID")
             permissible = _get(row, "Permissible Values")
             example = _get(row, "Data Example")
