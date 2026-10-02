@@ -30,8 +30,8 @@ Use the navigation to browse each schema, or jump directly to one below.
 - **`docs/schemas/Institutional-Certification/`**
     - [Institutional Certification](schemas/Institutional-Certification/README.md) &middot; Endorsed BICAN Standard &middot; v1.0.0
 
-- **`docs/schemas/Macaque-Donor-and-Tissue-Metadata/`**
-    - [HMBA Macaque Donor and Tissue Metadata](schemas/Macaque-Donor-and-Tissue-Metadata/README.md) &middot; Accepted by MOWG &middot; v1.0.0 &mdash; covers WB Omics Spatial, Population, and Patchseq
+- **`docs/schemas/Macaque-Metadata/`**
+    - [HMBA Macaque Donor and Tissue Metadata](schemas/Macaque-Metadata/README.md) &middot; Accepted by MOWG &middot; v1.0.0 &mdash; covers WB Omics Spatial, Population, and Patchseq
 
 - **`docs/schemas/project-registration-biccn/`**
     - Projects & Data Collections &mdash; pending (different CSV format, not yet auto-generated)
