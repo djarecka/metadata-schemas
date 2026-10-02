@@ -15,6 +15,38 @@ Usage (file):
 
 Usage (directory — auto-discovers CSV and README.md):
     python generate_schema_readme.py <schema_dir>
+
+COLUMN VOCABULARIES — READ BEFORE ADDING A SCHEMA
+-------------------------------------------------
+The CSVs in this repo do not share one column vocabulary. There are three:
+
+1. Classic BICAN field table: "Proposed BICAN Field Name", "Definition",
+   "LinkML Class", "BICAN UUID", "Aliases", "Data Example", "Min/Max Value",
+   "Unit", "Subsets".  (Cell Annotation, Developing Human/NHP/Tissue,
+   Institutional Certification, Macaque, BICAN-Project-Registration)
+
+2. NIMP-aligned: "BICAN Field Name", "Description", "LinkML Class",
+   "LinkML Slot Name", plus NIMP-only identifier columns.
+   (Donor_Metadata.csv, Library_Minimal_Metadata.csv, Library_QC_Metadata.csv)
+
+3. schemasheets LinkML model sheet: "LinkML Class Name", "LinkML Slot",
+   "Attribute Name", "Definition", "Nullable", "Alias" (singular), plus
+   project-specific columns such as "AIT Location" and "Source".
+   (Cell-Taxonomy.csv, fetched from a Google Sheet by fetch_schema_tables.yaml)
+
+This script reconciles them only through the fallback chains in `_get`, which
+return the first non-empty match. **That fails silently**: a vocabulary the
+chain does not know yields an empty string rather than an error. This has
+already bitten once — after the `refactoring` merge the Library Minimal
+Metadata README shrank by 669 lines while its CSV *gained* rows, because every
+field-name lookup resolved to "".
+
+So: when wiring in a new schema, check its header against the chains below, and
+sanity-check the generated output size. The chains are also order-dependent —
+adding a name can change which column another schema reads.
+
+Unifying this properly (an explicit per-schema column mapping, and a hard error
+when a required logical field resolves to nothing) is agreed outstanding work.
 """
 
 import csv
@@ -65,7 +97,18 @@ def _get(row: dict, *keys: str) -> str:
 # Convenience wrappers for columns that have known name variants across CSVs.
 
 def _field_name(row: dict) -> str:
-    return _get(row, "Proposed BICAN Field Name", "Proposed BICAN Field", "BICAN Field Name")
+    # The BICAN field tables name the field directly. A LinkML model sheet
+    # (e.g. a schemasheets Slots tab) has no such column -- its identifier is
+    # the slot, or the attribute for a class-scoped row. Those come last so a
+    # BICAN table is never read through them.
+    return _get(
+        row,
+        "Proposed BICAN Field Name",
+        "Proposed BICAN Field",
+        "BICAN Field Name",
+        "LinkML Slot",
+        "Attribute Name",
+    )
 
 
 def _linkml_class(row: dict) -> str:
@@ -164,7 +207,7 @@ def build_readme_section(
             dtype = _get(row, "Data Type") or "—"
             nullable = _get(row, "Nullable", "nullable")
             required = "yes" if nullable.upper() == "FALSE" else "no"
-            aliases = _get(row, "Aliases") or "—"
+            aliases = _get(row, "Aliases", "Alias") or "—"
             definition = _get(row, "Definition", "definition", "Description")
             short_def = definition[:120] + "…" if len(definition) > 120 else definition
             aid = anchor_id(name)
@@ -181,7 +224,7 @@ def build_readme_section(
             dtype = _get(row, "Data Type")
             nullable = _get(row, "Nullable", "nullable")
             required = nullable.upper() == "FALSE"
-            aliases = _get(row, "Aliases")
+            aliases = _get(row, "Aliases", "Alias")
             definition = _get(row, "Definition", "definition", "Description")
             uuid = _get(row, "BICAN UUID")
             permissible = _get(row, "Permissible Values")

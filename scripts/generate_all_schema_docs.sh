@@ -81,10 +81,25 @@ python3 "$SCRIPT" \
   --section-key "patchseq" \
   --section-title "Patchseq properties"
 
-# project-registration-biccn intentionally skipped: its CSVs (Field, Data Type,
-# Required, Description) use a different column layout than generate_schema_readme.py
-# expects (Proposed BICAN Field Name, LinkML Class, BICAN UUID, Nullable, ...),
-# so it needs its own column-mapping support before it can be wired in here.
+# Cell-Taxonomy comes from a schemasheets Slots tab (fetched by
+# fetch_schema_tables.yaml), not a BICAN field table, so only the columns that
+# map obviously are rendered: slot -> Property, Data Type, Nullable -> Required,
+# Alias -> Aliases, Definition -> Description. Its remaining columns
+# (AIT Location, Source, Notes, New, from_schema) have no equivalent here and
+# BICAN UUID / Data Example / Min / Max / Unit are absent from the tab, so the
+# detail blocks simply omit them. See the column-vocabulary note before
+# extending this.
+python3 "$SCRIPT" \
+  "docs/schemas/Cell-Taxonomy/Cell-Taxonomy.csv" \
+  --readme "docs/schemas/Cell-Taxonomy/README.md" \
+  --related-model-label "Cell Taxonomy Model" \
+  --related-model-url "https://brain-bican.github.io/models/index_cell_taxonomy/"
+
+# NOTE: the old project-registration-biccn skip comment was removed here. That
+# directory no longer exists -- the refactoring merge replaced it with
+# BICAN-Project-Registration, whose CSVs use the standard column vocabulary
+# (Proposed BICAN Field Name, BICAN UUID, LinkML Class, Definition, ...), so it
+# could be wired in without new mapping work. Not done yet.
 
 python3 "$(dirname "$SCRIPT")/sync_index_intro.py" README.md docs/index.md
 
