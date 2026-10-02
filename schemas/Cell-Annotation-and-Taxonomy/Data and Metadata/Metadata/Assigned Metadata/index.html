@@ -1,0 +1,1761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Cell-Annotation-and-Taxonomy/Data%20and%20Metadata/Metadata/Assigned%20Metadata/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Assigned Metadata Schema - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assigned-metadata-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assigned Metadata Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        obs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="obs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-matrix-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Matrix Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color Vector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID Vector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assay-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assay Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suspension-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suspension Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-condition-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Condition Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-uncontrolled-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Uncontrolled Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donor-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#species" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Species
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Age
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donor-genotype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Genotype
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-reported-ethnicity-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-reported Ethnicity Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disease
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disease Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        uns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="uns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assigned-metadata-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigned Metadata Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-7-2025-version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 7, 2025 -- Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-release-changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-release Changelog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="assigned-metadata-schema">Assigned Metadata Schema</h1>
+<p>Document Status: <em>Approved BICAN Standard</em></p>
+<p>Version: 1.0</p>
+<p>Owner: @UCDNJJ, @jeremymiller</p>
+<p>Reviewers: @patrick-lloyd-ray, @carolth, @djarecka, @memartone</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: 10-03-2025</p>
+<h2 id="overview">Overview</h2>
+<p>The BICAN Taxonomy Assigned Metadata schema specifies the metadata relating to taxonomy metadata that can be taken from a variety of sources in BICAN. These metadata reflect the metadata needed to accurately track taxonomy metadata in BICAN. As such, it is a collaborative schema that reflects the joint efforts of members of BICAN.</p>
+<p>There are many subject/donor metadata schemas that can be used in leiu of those specified in this document.</p>
+<ul>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Developing-Human-Metadata">Developing-Human-Metadata</a></li>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Developing-NHP-Metadata">Developing-NHP-Metadata</a></li>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Developing-Tissue-Metadata">Developing-Tissue-Metadata</a></li>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Donor-Metadata">Donor-Metadata</a></li>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Macaque-Donor-and-Tissue-Metadata">Macaque-Donor-and-Tissue-Metadata</a></li>
+<li><a href="https://github.com/brain-bican/metadata-schemas/blob/5a3017b276ef64d2376b2b305fac4c81aca540f5/docs/schemas/Marmoset-Metadata">Marmoset-Metadata</a></li>
+</ul>
+<p>to name a few. If you are not using one of these metadata schemas, feel free to enter your own metadata in the format specified by this document below.</p>
+<p>This document has the following sections:</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#assigned-metadata-schema">Assigned Metadata Schema</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#general-requirements">General Requirements</a><ul>
+<li><a href="#obs">obs</a></li>
+<li><a href="#cell-id">Cell ID</a></li>
+<li><a href="#feature-matrix-label">Feature Matrix Label</a></li>
+<li><a href="#dataset-label">Dataset Label</a></li>
+<li><a href="#color-vector">Color Vector</a></li>
+<li><a href="#id-vector">ID Vector</a></li>
+<li><a href="#assay">Assay</a></li>
+<li><a href="#assay-ontology-term-id">Assay Ontology Term ID</a></li>
+<li><a href="#suspension-type">Suspension Type</a></li>
+<li><a href="#batch-condition-columns">Batch Condition Columns</a></li>
+<li><a href="#additional-uncontrolled-metadata">Additional Uncontrolled Metadata</a></li>
+<li><a href="#brain-region">Brain Region</a></li>
+<li><a href="#tissue">Tissue</a></li>
+<li><a href="#tissue-ontology-term-id">Tissue Ontology Term ID</a></li>
+<li><a href="#donor-id">Donor ID</a></li>
+<li><a href="#species">Species</a></li>
+<li><a href="#age">Age</a></li>
+<li><a href="#sex">Sex</a></li>
+<li><a href="#donor-genotype">Donor Genotype</a></li>
+<li><a href="#self-reported-ethnicity-ontology-term-id">Self-reported Ethnicity Ontology Term ID</a></li>
+<li><a href="#disease">Disease</a></li>
+<li><a href="#disease-ontology-term-id">Disease Ontology Term ID</a></li>
+<li><a href="#uns">uns</a></li>
+<li><a href="#assigned-metadata-metadata">Assigned Metadata Metadata</a></li>
+<li><a href="#batch-condition">Batch Condition</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#august-7-2025----version-100">August 7, 2025 -- Version 1.0.0</a></li>
+<li><a href="#pre-release-changelog">Pre-release Changelog</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<p>This includes cell-level metadata that is assigned at some point in the process between when a cell goes from the donor to a value in the data, and (in theory) can be ENTIRELY captured by values in Allen Institute, BICAN, or related standardized pipelines. It includes things like donor metadata, experimental protocols, dissection information, RNA QC metrics, and sequencing metadata. Ideally a schema for this will be defined through other BICAN groups, and can be adopted here.</p>
+<h3 id="obs">obs</h3>
+<p>The obs component contains cell level metadata from the experiment.</p>
+<h4 id="cell-id">Cell ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>34ca0703-429f-4920-8a08-dd4c61b29444</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Identifier corresponding to each individual cell. Included in the data and in every other location to refer to the data (e.g., metadata and annotations). In AnnData files, the ID corresponding to each individual cell is stored in the obs index.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="feature-matrix-label">Feature Matrix Label</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>feature_matrix_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>2c860046-83d5-47f9-98d5-29ce81446819</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>ID of the associated feature matrix where the data is stored (if not included in this file). This is used in the Brain Knowledge Platform (BKP) when data is found elsewhere for connected cell to data file.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dataset-label">Dataset Label</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>dataset_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>519ecc82-e397-4b1e-a846-d27d48610ff3</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Link between each cell and each dataset in BKP. In CAS, this is a taxonomy-level variable in uns called <code>dataset_url</code>.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="color-vector">Color Vector</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>[COLUMN_NAME]_color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>0ab06f78-6df2-4555-8990-3eec36b2adbb</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The color vector for metadata/taxonomy values in format [COLUMN_NAME]_label. This is ONLY used for molgen-shiny plots. Some metadata files come with these and some do not. This field is OPTIONAL.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="id-vector">ID Vector</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>[COLUMN_NAME]_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>701b32ca-4d95-47c5-8213-e7ab8c5373eb</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The order of metadata values (e.g., the levels of a factor, or ascending order of a numeric) for metadata/taxonomy values in format [COLUMN_NAME]_id.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="assay">Assay</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>assay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>a2ced0f5-4fdb-4ede-b524-2d975a70f21a</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The human-readable term that denotes the assay or technique used. In CELLxGENE these correspond to a human-readable modality along with the associated EFO ontology term. We often use the term modality in place of assay (e.g., 'Smart-seq2'corresponds to 'EFO:0008931', '10x 3' v3'corresponds to 'EFO:0009922'). This is called <code>library method</code> in BKP. This is called <code>Modality</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="assay-ontology-term-id">Assay Ontology Term ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>assay_ontology_term_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>12c1b9a3-57fa-44ea-8254-38eb3fa4ba71</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ontology ID of the assay term.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="suspension-type">Suspension Type</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>suspension_type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>d6d84f18-90c8-4f4f-849a-fd4d0b665b95</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The type of suspension. This is either "cell", "nucleus", or "na" in CELLxGENE; and called <code>entity</code> in the BKP.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="batch-condition-columns">Batch Condition Columns</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>[batch_condition_columns]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5d64eed3-ae83-4b47-864d-cc4b3258e7ce</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This is a column for vectors of metadata associated with batches (zero or more). These are not required, but called out separately by cellxgene for analysis purposes.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="additional-uncontrolled-metadata">Additional Uncontrolled Metadata</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>[additional uncontrolled metadata]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>d417074d-5f7a-4bb8-8a7f-11e20fdcca97</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Additional uncontrolled cell metadata. These are not required, but any additional columns are allowed by all h5ad formats.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brain-region">Brain Region</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>brain_region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>71611b58-f98e-4a69-ad88-c0029a377cbe</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>region of interest</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The brain region(s) sampled. This is called <code>tissue_ontology_term_id</code> in cellxgene; cell_set structures also defined below; called <code>region_of_interest_label</code> and <code>anatomic_division_label</code> in BKP. Also associated are acronymns, labels, etc. Note that this slot in the Assigned metadata is meant to deal with cell-level assignments for brain region (e.g., dissection) and NOT cell set summarizations by brain region, which are included below.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tissue">Tissue</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>tissue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>33ccbc85-ae35-44d6-8bc6-c2fb91116cf7</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>tissue type</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The human-readable term for the tissue sampled.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tissue-ontology-term-id">Tissue Ontology Term ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>tissue_ontology_term_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>7f797e30-8586-48d9-98e8-5d0ae4670a5a</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ID for the tissue sampled. Along with "tissue" field, these correspond to Allen Atlas or UBERON terms for the 'brain region' fields that we have (e.g., 'brain' = 'UBERON_0000955').</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="donor-id">Donor ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>donor_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>local donor ID</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Identifier for the unique individual, ideally from the specimen portal (or other upstream source). This is called <code>donor_label</code> in the BKP. More than one identifier may be needed, but ideally for the analysis only a single one is retained and stored here.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="species">Species</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>d11fb2ce-bfdb-4735-9b17-b6ba606520b1</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This is a term the for the species sampled. This is split into two fields in CAP/cellxgene/BICAN: <code>organism</code> (e.g., homo sapiens) and  <code>organism_ontology_term_id</code> (e.g., 'NCBITaxon:10090')..This is called <code>species name</code> and <code>species ID</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="age">Age</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>14eb923a-161d-45e2-889d-81fea7b632b6</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>age at death</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A free text field for defining the age of the donor. In CELLxGENE this is recorded in <code>development_stage_ontology_term_id</code> and is <code>HsapDv</code> if human, <code>MmusDv</code> if mouse.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sex">Sex</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>sex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>c819b9d5-2fde-40b2-bf0d-e07b56f96ac9</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>PThis is a label that denotes the biological sex of the donor. This is called <code>sex_ontology_term_id</code> (e.g., PATO:0000384/383 for male/female) in CELLxGENE and called <code>donor_sex</code> in BKP.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="donor-genotype">Donor Genotype</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>donor_genotype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f6e7f720-924f-4098-822d-b79546a33583</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This is the genotype of the donor. This is one (or sometimes more) column describing the genotype of the animal (for transgenic mice, in particular). Not used for humans and most NHP.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="self-reported-ethnicity-ontology-term-id">Self-reported Ethnicity Ontology Term ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>self_reported_ethnicity_ontology_term_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>918370df-49f6-4361-9c52-f46b16412980</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This denotes the self-reported ethnicity of the donor. This field that is required for CELLxGENE but otherwise not used. The term should be from HANCESTRO if human and 'na' if non-human.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="disease">Disease</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>disease</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>42695d98-c3b8-447f-9358-364f502a7bda</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>condition type</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A human-readable name for a disease.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="disease-ontology-term-id">Disease Ontology Term ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>disease_ontology_term_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>039354be-2ed5-40e1-a513-02589322d8b7</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ID of the disease term. Recommend the associated MONDO ontology term (or PATO:0000461 for 'normal'). Used in CELLxGENE.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uns">uns</h3>
+<p>The uns component contains more general information and fields with formatting incompatible with the above components.</p>
+<h4 id="assigned-metadata-metadata">Assigned Metadata Metadata</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>assigned_metadata_metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e0cbb726-f108-4514-8243-0799327cb104</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This is information about the assigned_metadata itself.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="batch-condition">Batch Condition</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>batch_condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f4abc03e-7f6f-45cb-8a2e-d59a5846f368</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This is the list of obs fields that define “batches”; Used by CELLxGENE if provided, but otherwise not needed.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="changelog">Changelog</h2>
+<h3 id="august-7-2025-version-100">August 7, 2025 -- Version 1.0.0</h3>
+<ul>
+<li><strong>8-07-2025</strong>: Finalized schema and added document status.</li>
+<li><strong>8-07-2025</strong>: Approved as BICAN Standard.</li>
+</ul>
+<h3 id="pre-release-changelog">Pre-release Changelog</h3>
+<ul>
+<li><strong>10-03-2025</strong>: Initial version created.</li>
+<li><strong>10-04-2025</strong>: Added additional fields and clarified definitions.</li>
+<li><strong>10-05-2025</strong>: Added UUIDs and clarified definitions.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

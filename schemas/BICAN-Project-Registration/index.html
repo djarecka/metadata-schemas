@@ -1,0 +1,2069 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/BICAN-Project-Registration/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Projects and Data Collections Metadata Schema - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projects-and-data-collections-metadata-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Projects and Data Collections Metadata Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Collection Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Collection Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-long-form-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection long form title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-short-form-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection short form title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-species" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection species
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection access control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-access-control-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection access control code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-access-control-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection access control description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-completion-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection completion state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-modality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection modality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection technique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection license
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-web-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection web resource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data collection citation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organization Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organization-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        organization name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organization-research-organization-registry-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        organization Research Organization Registry ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#person-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Person Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Person Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#person-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        person name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#person-given-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        person given name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#person-family-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        person family name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#person-orcid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        person ORCID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-short-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project short title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-subprogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project subprogram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project creator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-contributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project contributor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-funding-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project funding source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-highlighted-web-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project highlighted web resource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        project publication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlled-vocabularies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlled Vocabularies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="projects-and-data-collections-metadata-schema">Projects and Data Collections Metadata Schema</h1>
+<p>Document Status: <em>Under MOWG Review</em></p>
+<p>Version: 1.0</p>
+<p>Owner: @pbishwakarma</p>
+<p>Reviewers: @patrick-lloyd-ray, @carolth, @mgiglio99, @nsuvarnaiari</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: DD-MM-YYYY</p>
+<h2 id="overview">Overview</h2>
+<p>The BICAN Projects and Data Collections Metadata schema specifies the minimum metadata required to register a project and data collection with BCDC. These minimum metadata reflect an update to the project inventory schema to support more granular attribution and data management. </p>
+<p>Note that there are additional fields in the project schema which are not explicitly required at time of creation, but will be populated when relevant resources are created/updated (e.g. data collection -&gt; project relations, web resource links, timestamps etc.)</p>
+<p>This document has the following sections:</p>
+<ul>
+<li><a href="#general-requirements">General Requirements</a></li>
+<li><a href="#project-metadata">Project Metadata</a>, which describes metadata for a project.</li>
+<li><a href="#data-collection-metadata">Data Collection Metadata</a>, which describes metadata for a data collection.</li>
+<li><a href="#organization-metadata">Organization Metadata</a>, which describes metadata for an organization. This is primarily used in reference to a project creator or funding source/awardee.</li>
+<li><a href="#person-metadata">Person Metadata</a>, which describes metadata for a person. This is primarily used in reference to a project creator or contributor.</li>
+<li><a href="#controlled-vocabularies">Project Registration Controlled Vocabularies</a>, which describes the controlled values used to validate the input in the metadata fields.</li>
+<li><a href="#appendix">Appendix</a></li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<h2 id="data-collection-metadata">Data Collection Metadata</h2>
+<p>The data in Data Collection Metadata is the metadata essential for registering, tracking, and storing data collections. </p>
+<p>The following table describes the Data Collection Metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond ones listed. </p>
+<h3 id="data-collection-name">data collection name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A human-readable, locally unique label that identifies a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f7b04e21-c12d-4b3d-ba0e-b1de6ac92dca</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-long-form-title">data collection long form title</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection long form title</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A long form title of a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>62208817-6a7f-4e70-9c4a-d262f43d82cc</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-short-form-title">data collection short form title</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection short form title</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A short form title of a data collection (fewer than 30 characters).</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f5169355-52cf-4720-904f-946c92489faa</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-description">data collection description</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection description</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A description of a data collection that includes a specification of the license of the data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c5188587-2b4f-4889-ae93-224efdb803d2</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-archive">data collection archive</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection archive</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The location (archive) at which the data in a data collection is to be deposited. </td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>39498a35-3cb5-46ce-9e23-dc5e499b85c4</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Archive CV]</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-species">data collection species</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection species</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The common name of the species of the donor from which data were collected for this data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>7135fb76-5423-44da-ba52-4c33e8626033</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Species CV](/docs/schemas/project-registration-bican/controlled-vocabularies/species-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-access-control">data collection access control</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection access control</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The level of access specified for a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3880e926-d2fb-4960-bf61-4b5789e6c027</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Access Control CV](/docs/schemas/project-registration-bican/controlled-vocabularies/accessControl-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-access-control-code">data collection access control code</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection access control code</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The code that denotes the access restrictions specified for a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1ff82abd-7ada-48f0-b235-6aa1b7c36f6b</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Access Control Code CV]</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-access-control-description">data collection access control description</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection access control description</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A free text description of the access restrictions specified for a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>85b8be40-51e1-4357-af33-fa95fe7d7d68</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-completion-state">data collection completion state</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection completion state</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A value that specifies whether or not additional data is being generated for a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>456513f2-0af8-45e1-b8f0-338636ed3f61</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Completion State CV](/docs/schemas/project-registration-bican/controlled-vocabularies/completionState-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-modality">data collection modality</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection modality</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The modality of the data in a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>480af9eb-0128-4602-9c8f-01416820cee3</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Modality CV](/docs/schemas/project-registration-bican/controlled-vocabularies/modality-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-technique">data collection technique</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection technique</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The technique that was used to acquire the data in a collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>bee3bda8-c103-448f-8557-effcaca176bf</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Technique CV](/docs/schemas/project-registration-bican/controlled-vocbularies/technique-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-license">data collection license</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection license</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A license that is applied to the data in a data collection. </td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>b184e037-1b45-4ca6-8651-7044b1a74199</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[License CV](/docs/schemas/project-registration-bican/controlled-vocabularies/license-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-web-resource">data collection web resource</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection web resource</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A URL or weblink that provides the location of relevant tools or pages to a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ebdc27a1-37ca-46ec-8914-6d3fae85a3d9</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="data-collection-citation">data collection citation</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>data collection web citation</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A data citation for a data collection.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ea4729c6-df21-40db-8141-5af1d44ba75c</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="organization-metadata">Organization Metadata</h2>
+<p>The data in Organization Metadata is the metadata essential for registering, tracking, and storing organizational data. </p>
+<p>The following table describes the Organization Metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond ones listed.</p>
+<h3 id="organization-name">organization name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>organization name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A human-readable, locally unique label that identifies a organization. </td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3788d44f-8383-4707-845d-bb8289815b32</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="organization-research-organization-registry-id">organization Research Organization Registry ID</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>organization Research Organization Registry ID</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A Research Organization Registry ID that identifies an organization.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3fd3913c-0e36-4fe0-ac99-073f496c0919</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="person-metadata">Person Metadata</h2>
+<p>The data in Person Metadata is the metadata essential for registering, tracking, and storing data about persons. </p>
+<p>The following table describes the Person Metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond ones listed.</p>
+<h3 id="person-name">person name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>person name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A full name of a person in [given name],[family name] format.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>da5203bf-0202-4cd0-b0c2-5cc05806e2e4</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="person-given-name">person given name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>person given name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A given name of a person.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>2354176f-40f2-4110-98d9-0c203314bfde</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="person-family-name">person family name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>person family name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A family name of a person.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f5d8f1a3-ce30-45eb-ac26-13a8998c2f5a</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="person-orcid">person ORCID</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>person ORCID</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>An ORCID that identifies a person.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e834467e-a05e-4b9f-8348-5c0079bdaac8</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="project-metadata">Project Metadata</h2>
+<p>The data in Person Metadata is the metadata essential for registering, tracking, and storing data about persons. </p>
+<p>The following table describes the Person Metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond ones listed.</p>
+<h3 id="project-name">project name</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A human readable, locally unique identifier that denotes a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a0d7797f-aaf1-4d3e-8289-51a94237b9c8</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-title">project title</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project title</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A long form project title.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>34e55bb4-17db-4b7f-bd7d-7272ffe1c9f2</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-short-title">project short title</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project short title</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A short form project title.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>216cc403-423a-4b43-b935-b9b61dbb8a26</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-description">project description</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project description</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A long form project description. </td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c51e8c8d-d62b-4b79-843b-a3a6810fe709</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-subprogram">project subprogram</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project subprogram</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A subprogram to which a project belongs.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>cfd9d928-673a-428a-b5f0-c04e2fdd8ec9</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Subprogram CV](/docs/schemas/project-registration-bican/controlled-vocabularies/subprogram-cv.csv</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-contact">project contact</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project contact</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A primary contact for a project. This is typically a person but can also be an institution.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>62381d66-c414-4fe9-8b07-0a00ee855e71</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-creator">project creator</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project creator</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A creator of a project. This is either a person or institution.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>34c891d4-d721-4023-bbf9-06b84f6a93cc</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-contributor">project contributor</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project contributor</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A contributor to a project. This is often given as a list.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>8a1a747c-c24d-451a-9168-ed14d274a97c</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-funding-source">project funding source</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project funding source</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The funding source for a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3f85bc4b-2e03-426e-b376-4607fc9515e3</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Grant CV](/docs/schemas/project-registration-bican/controlled-vocabularies/grant-cv.csv)</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-collections">project collections</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project collections</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The data collections that are part of a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>66093eb6-fdaf-4782-8dba-23f6575254d8</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td>[Data Collection CV]</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-highlighted-web-resource">project highlighted web resource</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project highlighted web resource</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A link to relevant tools/pages of a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>2bb2472b-73b7-426b-adb2-739924a0751b</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-protocol">project protocol</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project protocol</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A protocol for a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3e80809a-de1a-4333-98a9-f19549fda246</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="project-publication">project publication</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>project publication</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>string</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>A publication associated with a project.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>52d1b518-37e0-4b69-b1d8-36d1ff437376</td>
+    </tr>    
+    <tr>
+      <th>Permissible Values</th>
+      <td></td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="controlled-vocabularies">Controlled Vocabularies</h2>
+<h2 id="appendix">Appendix</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

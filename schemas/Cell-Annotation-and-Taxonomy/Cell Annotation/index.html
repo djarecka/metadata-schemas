@@ -1,0 +1,3809 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Cell-Annotation-and-Taxonomy/Cell%20Annotation/">
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../../Library-Minimal-Metadata/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cell Annotation - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cell-annotation-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cell Annotation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrix-file-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix File ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-schema-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Schema Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Timestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orcid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORCID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelsets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labelsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotation-key-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Key Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-key-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Key Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Annotation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Annotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-repo-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Repo URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rank
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labelset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-fullname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Fullname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ontology-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Ontology Term
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale-dois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale DOIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marker-gene-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker Gene Evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synonyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synonyms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviews
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#review-datestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Datestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-annotation-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Annotation Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-set-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Set Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-cell-set-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parent Cell Set Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferred-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferred Annotations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferred Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferred-cell-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferred Cell Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-node-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Node Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-transfer-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Transfer Comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-marger-gene-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Negative Marger Gene Evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-7-2025-version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 7, 2025 -- Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrix-file-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix File ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-schema-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Schema Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Timestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-annotation-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Annotation URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orcid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORCID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelsets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labelsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotation-key-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Key Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-key-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Key Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Annotation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Annotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-repo-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm Repo URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rank
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labelset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-fullname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Fullname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ontology-term-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Ontology Term ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ontology-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Ontology Term
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale-dois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale DOIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marker-gene-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker Gene Evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synonyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synonyms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviews
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#review-datestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Datestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-annotation-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Annotation Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-set-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Set Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-cell-set-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parent Cell Set Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferred-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferred Annotations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferred Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferred-cell-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferred Cell Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-node-accession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Node Accession
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotation-transfer-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation Transfer Comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-marger-gene-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Negative Marger Gene Evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-7-2025-version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 7, 2025 -- Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="cell-annotation-schema">Cell Annotation Schema</h1>
+<p>Document Status: <em>Approved BICAN Standard</em></p>
+<p>Version: 1.0</p>
+<p>Owner: @UCDNJJ, @jeremymiller</p>
+<p>Reviewers: @patrick-lloyd-ray, @carolth, @djarecka, @memartone</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: 10-03-2025</p>
+<h2 id="overview">Overview</h2>
+<p>The BICAN Cell Annotation schema specifies the metadata relating to cell annotations that can be taken from a variety of sources in BICAN. These metadata reflect the metadata needed to accurately track cell metadata in BICAN. As such, it is a collaborative schema that reflects the joint efforts of members of BICAN.</p>
+<p>This document has the following sections:</p>
+<ul>
+<li><a href="#cell-annotation-schema">Cell Annotation Schema</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#general-requirements">General Requirements</a></li>
+<li><a href="#properties">Properties</a><ul>
+<li><a href="#matrix-file-id">Matrix File ID</a></li>
+<li><a href="#dataset-title">Dataset Title</a></li>
+<li><a href="#dataset-description">Dataset Description</a></li>
+<li><a href="#cell-annotation-schema-version">Cell Annotation Schema Version</a></li>
+<li><a href="#cell-annotation-timestamp">Cell Annotation Timestamp</a></li>
+<li><a href="#cell-annotation-version">Cell Annotation Version</a></li>
+<li><a href="#cell-annotation-url">Cell Annotation URL</a></li>
+<li><a href="#author-list">Author List</a></li>
+<li><a href="#author-name">Author Name</a></li>
+<li><a href="#author-contact">Author Contact</a></li>
+<li><a href="#orcid">ORCID</a></li>
+<li><a href="#labelsets">Labelsets</a></li>
+<li><a href="#annotation-key-name">Annotation Key Name</a></li>
+<li><a href="#annotation-key-description">Annotation Key Description</a></li>
+<li><a href="#annotation-method">Annotation Method</a></li>
+<li><a href="#automated-annotation">Automated Annotation</a><ul>
+<li><a href="#algorithm-name">Algorithm Name</a></li>
+<li><a href="#algorithm-version">Algorithm Version</a></li>
+<li><a href="#algorithm-repo-url">Algorithm Repo URL</a></li>
+<li><a href="#reference-location">Reference Location</a></li>
+</ul>
+</li>
+<li><a href="#rank">Rank</a></li>
+<li><a href="#annotations">Annotations</a></li>
+<li><a href="#labelset">Labelset</a></li>
+<li><a href="#cell-label">Cell Label</a></li>
+<li><a href="#cell-fullname">Cell Fullname</a></li>
+<li><a href="#cell-ontology-term-id">Cell Ontology Term ID</a></li>
+<li><a href="#cell-ontology-term">Cell Ontology Term</a></li>
+<li><a href="#cell-ids">Cell IDs</a></li>
+<li><a href="#rationale">Rationale</a></li>
+<li><a href="#rationale-dois">Rationale DOIs</a></li>
+<li><a href="#marker-gene-evidence">Marker Gene Evidence</a></li>
+<li><a href="#synonyms">Synonyms</a></li>
+<li><a href="#reviews">Reviews</a><ul>
+<li><a href="#review-datestamp">Review Datestamp</a></li>
+<li><a href="#reviewer">Reviewer</a></li>
+<li><a href="#review">Review</a></li>
+<li><a href="#explanation">Explanation</a></li>
+</ul>
+</li>
+<li><a href="#author-annotation-fields">Author Annotation Fields</a></li>
+<li><a href="#cell-set-accession">Cell Set Accession</a></li>
+<li><a href="#parent-cell-set-accession">Parent Cell Set Accession</a></li>
+<li><a href="#transferred-annotations">Transferred Annotations</a></li>
+<li><a href="#transferred-cell-label">Transferred Cell Label</a></li>
+<li><a href="#source-taxonomy">Source Taxonomy</a></li>
+<li><a href="#source-node-accession">Source Node Accession</a></li>
+<li><a href="#annotation-transfer-comment">Annotation Transfer Comment</a></li>
+<li><a href="#cells">Cells</a></li>
+<li><a href="#cell-id">Cell ID</a></li>
+<li><a href="#confidence">Confidence</a></li>
+<li><a href="#author-categories">Author Categories</a></li>
+<li><a href="#negative-marger-gene-evidence">Negative Marger Gene Evidence</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#august-7-2025----version-100">August 7, 2025 -- Version 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<p>This includes any cell-level or cluster-level metadata that can be calculated explicitly from the Data and Assigned Metadata without the need for human intervention. Some examples include # reads detected/cell, # UMI/cell, fraction of cells per cluster derived from each anatomic dissections, expressed neurotransmitter genes (quantitatively defined), average QUANTITATIVE_VALUE (e.g., doublet score) per cluster. Currently none of these are required for the schema, but they are sometimes used for annotation.</p>
+<p>A general, open-standard schema for cell annotations which records connections, types, provenance and evidence.</p>
+<p>This is designed not to tie-in to a single project (i.e. no tool-specific fields in core schema),and allows for extensions to support ad hoc user fields, new formal schema extensions, and project/tool specific metadata.</p>
+<h2 id="properties">Properties</h2>
+<h3 id="matrix-file-id">Matrix File ID</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>matrix_file_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5d625688-96da-4c65-97b9-211cbcad4aea</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ID of a matrix file. This is like dataset_url; e.g. <code>CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122</code>.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataset-title">Dataset Title</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>dataset_title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5aab17df-0830-44d4-bcd8-f954695867d0</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataset-description">Dataset Description</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>dataset_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>1b5ff66c-0e00-4a29-8ccf-65dbf59d79da</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>description</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.'.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-annotation-schema-version">Cell Annotation Schema Version</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cellannotation_schema_version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>195cbdbf-d486-4d54-9c1d-83edf0a44ec5</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The version of the Cell Annotation Schema (CAS) used, formatted as '[MAJOR].[MINOR].[PATCH]'. This is used to track the version of the schema used for cell annotations.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-annotation-timestamp">Cell Annotation Timestamp</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cellannotation_timestamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>37da06ba-9c15-405f-b5d6-f8d2bf5fc3a3</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also could be the same as <code>development_date</code>.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-annotation-version">Cell Annotation Version</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cellannotation_version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>439f52e8-e2e6-406c-850c-434d448c8b6d</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The CAP taxonomy annotation version; required by CAP.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-annotation-url">Cell Annotation URL</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cellannotation_url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e47029df-a5cf-49d0-b8de-76302a1e6fbb</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A persistent URL of all cell annotations published (per dataset).</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="author-list">Author List</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>author_list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>15e4be61-b1fb-49a5-9a81-7fed61138256</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>taxonomy users</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of all collaborators, comma separated [First] [Last]. Called <code>Taxonomy Users</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="author-name">Author Name</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>author_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>0ea83cdb-cd06-4ef8-84c1-6aec29220759</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>taxonomy author, point person name</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called <code>taxonomy_author</code>. In CCN it is also seperated by <code>cell_set</code> with "cell_set_alias_assignee". This is called <code>Point person name</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="author-contact">Author Contact</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>author_contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>fa084043-3c8e-47cb-959e-2f3daf2165ec</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>point person email</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A valid email address of the primary author of a taxonomy. This is called <code>Point person email</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="orcid">ORCID</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>orcid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>2c96776b-b158-4e0c-ba67-ea7a63efb1e8</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>point person orcid</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A valid ORCID of the primary author of the taxonomy. This is called <code>Point person ORCID</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="labelsets">Labelsets</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>labelsets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>87fa0b7a1-6af7-4f79-8da0-29d7950ea736</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cluster annotation term set</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data frame representation that contains information about each <code>cellannotation_set</code> set of columns (e.g., subclass, class, neurotransmitter, etc.). Specifically: <code>name</code>, <code>description</code>, and <code>rank</code> (0 most specific) and some information about provenance needed for each labelset. This is equilalent to <code>Cluster annotation term set</code> in BKP.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotation-key-name">Annotation Key Name</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>annotation_key_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f09d7148-9750-4a9c-8eba-da1a11c3b274</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The name of the annotation key.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotation-key-description">Annotation Key Description</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>annotation_key_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>63e9a887-cdf9-4248-ae83-41a720ce8f53</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A description of the annotation key, providing context and details about its use. This should include some text describing what types of cell annotation this annotation key is used to record.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotation-method">Annotation Method</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>annotation_method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>2e91e232-dccb-4584-8a0b-0263660d6c08</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The method used for creating the cell annotations. This MUST be one of the following strings: 'algorithmic', 'manual', or 'both' .</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>value set</td>
+</tr>
+</tbody>
+</table>
+<h4 id="automated-annotation">Automated Annotation</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>automated_annotation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>9fba68df-a9f0-4cf9-994d-9b15f31fb88d</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A boolean indicating whether the annotation was created using an automated method. This is used to distinguish between annotations that were generated by algorithms versus those that were manually curated.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h5 id="algorithm-name">Algorithm Name</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>algorithm_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>fd9cb36e-5d29-45d7-8002-c4da15c9a3d1</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The name of the algorithm used. It MUST be a string of the algorithm's name.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h5 id="algorithm-version">Algorithm Version</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>algorithm_version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>81ed9281-3f29-46e8-8e06-963afe3e27e4</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The version of the algorithm used (if applicable). It MUST be a string of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]', but other versioning systems are permitted (based on the algorithm's versioning).</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h5 id="algorithm-repo-url">Algorithm Repo URL</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>algorithm_repo_url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>ce81ab8b-3892-473d-883c-c8fa266376ec</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This field denotes the URL of the version control repository associated with the algorithm used (if applicable). It MUST be a string of a valid URL.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h5 id="reference-location">Reference Location</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>reference_location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>4d60f911-5c5c-4ebc-a1df-b243a7252730</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This field denotes a valid URL of the annotated dataset that was the source of annotated reference data. This MUST be a string of a valid URL. The concept of a 'reference' specifically refers to 'annotation transfer' algorithms, whereby a 'reference' dataset is used to transfer cell annotations to the 'query' dataset.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rank">Rank</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>25bb3ce6-eda7-47be-8855-317a3b1002ea</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A number indicating relative granularity with 0 being the most specific. Use this where a single dataset has multiple keys that are used consistently to record annotations and different levels of granularity.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations">Annotations</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>annotations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>46e6ec2f-6baf-4df9-bfbd-36463694be93</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of the annotations.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="labelset">Labelset</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>labelset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>9a521209-c4f3-40df-aab2-17ada8d3abce</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The unique name of the set of cell annotations. Each cell within the AnnData/Seurat file MUST be associated with a 'cell_label' value in order for this to be a valid 'cellannotation_setname'.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string, required</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-label">Cell Label</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>736fdcaf-06b5-43a9-ae38-022c07d44675</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>This denotes any free-text term which the author uses to annotate cells, i.e. the preferred cell label name used by the author. Abbreviations are exceptable in this field; refer to 'cell_fullname' for related details. Certain key words have been reserved:- 'doublets' is reserved for encoding cells defined as doublets based on some computational analysis- 'junk' is reserved for encoding cells that failed sequencing for some reason, e.g. few genes detected, high fraction of mitochondrial reads- 'unknown' is explicitly reserved for unknown or 'author does not know'- 'NA' is incomplete, i.e. no cell annotation was provided.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-fullname">Cell Fullname</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_fullname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>b5036e70-9181-45c0-8fdb-66da93be2d87</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_preferred_alias</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The longer name for a cell type (e.g., "Somatostatin interneuron 1" rather than "SST 1"). This was called the cell_set_preferred_alias in CCN.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-ontology-term-id">Cell Ontology Term ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_ontology_term_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>fe21fa47-6fd2-4432-82de-2412db9462c6</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_ontology_tag</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The highest resolution Cell Ontology term ID corresponding to the cell type. This was called <code>cell_set_ontology_tag</code> in CCN.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-ontology-term">Cell Ontology Term</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_ontology_term</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>52685f23-9bcc-416a-ae70-e9de43ef4123</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_structure</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The highest resolution Cell Ontology term (name) corresponding to the cell type. This was called <code>cell_set_structure</code> in CCN and was also largely mapping to the <code>cell_set_aligned_alias</code>.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-ids">Cell IDs</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>64cbaff0-a87b-4cab-9107-4feb97e07e61</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_structure</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>List of cell barcode sequences/UUIDs used to uniquely identify the cells within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST be included in the AnnData/Seurat matrix.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rationale">Rationale</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>a76fa81e-ba3f-4813-ac7c-cce1f43683a6</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Free text evidence for cell annotations. This human-readable free-text must be encoded as a single string and has a 2000-character limit.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rationale-dois">Rationale DOIs</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>rationale_dois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>cd9ce030-058c-4890-b552-750735c90ba4</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_alias_citation</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of publication DOI's of rationale. In CCN, this is called "cell_set_alias_citation". NOTE: this can use comma-separated, pipe-separated, or /#/-separated.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="marker-gene-evidence">Marker Gene Evidence</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>marker_gene_evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e790e621-e7f2-42ba-8f20-bcac2c1f86e4</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list (comma-separated) of marker genes used as evidence for cell type annotation (e.g., by NS-Forest). Note: This is reserved for ontology markers.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="synonyms">Synonyms</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>synonyms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>137f6d7d-d257-4ffb-8a14-24fcb0bab0e9</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_set_additional_alias</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list (comma-separated) of aliases or synonyms (e.g., "neuroglial cell, glial cell, neuroglia"). This was called <code>cell_set_additional_alias</code> in CCN.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reviews">Reviews</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>reviews</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>54d10921-012f-4403-bcaa-853a170c29d2</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of reviews.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h5 id="review-datestamp">Review Datestamp</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>review_datestamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5a59ce8d-b35b-4ce7-8515-a93e0ba5818a</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Date and time review was last edited.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h5 id="reviewer">Reviewer</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>reviewer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>83675161-f5c0-4fcc-9608-52ee45974788</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Review author.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h5 id="review">Review</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>ca5dd5dd-d60e-420c-a88c-de4a38254e86</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Reviewer's verdict on the annotation. Must be <code>agree</code> or <code>disagree</code>.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>value set</td>
+</tr>
+</tbody>
+</table>
+<h5 id="explanation">Explanation</h5>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>632f2913-a0be-411d-a58f-9566b9aaaa93</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Free-text explanation of annotation review. This is required if the review is <code>disagree</code> and should include reasons for disagreement.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="author-annotation-fields">Author Annotation Fields</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>author_annotation_fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>2acaa8e2-2b31-4f0b-bbea-03a03f6d9ea3</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-set-accession">Cell Set Accession</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_set_accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>55cb81b4-5f6d-4930-aba6-0ef1d1784124</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cluster annotation term</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ID corresponding to the cell_set; called the "Cluster Annotation Term" in BKP. This is critical for scrattch.taxonomy and scrattch.mapping to work properly.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent-cell-set-accession">Parent Cell Set Accession</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>parent_cell_set_accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>bfa1e2d9-e65d-480d-b54c-9947acaddd93</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>parent_cluster_annotation_term_id</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The ID corresponding to the parent cell_set. This corresponds to the parent Cluster Annotation Term ID in knowledgebase.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transferred-annotations">Transferred Annotations</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>transferred_annotations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>1c3f146c-eb76-451d-9925-15f58f47f71a</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A dataframe where each column is a string corresponding to the taxonomy of comparison; values are the transferred cell label from that taxonomy. This is used to store annotations that have been transferred from one taxonomy to another, allowing for cross-taxonomy comparisons.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transferred-cell-label">Transferred Cell Label</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>tranferred_cell_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e2c995b9-2448-4dd8-904a-bf32d6df6233</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The cell label that was transferred from the reference dataset.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="source-taxonomy">Source Taxonomy</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>source_taxonomy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>c36dce85-4c4a-4419-8ceb-388236a65b3e</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The PURL of the source taxonomy.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="source-node-accession">Source Node Accession</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>source_node_accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e119d520-a55b-4b36-9be1-7928f13d3044</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The accession of the node that the label was transferred from.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotation-transfer-comment">Annotation Transfer Comment</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>annotation_transfer_comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>4b846509-4955-4226-b931-5a68041127c8</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Free-text field for comments on the annotation transfer.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cells">Cells</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cells</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>ec4f450b-cf5f-4bfc-9b07-8eac2703c326</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The list of cells that are annotated -- by convention this is only used for annotation transfer labelset. It MUST not be combined with the <code>cell_ids</code> field.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell-id">Cell ID</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cell_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>34ca0703-429f-4920-8a08-dd4c61b29444</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cell_label</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Identifier corresponding to each individual cell. Included in the data and in every other location to refer to the data (e.g., metadata and annotations). In AnnData files, the ID corresponding to each individual cell is stored in the obs index.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="confidence">Confidence</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>e81a70d8-d0db-4ba8-99bd-aef3cb0fd1e5</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>confidence_score</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The normalized confidence score.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>float</td>
+</tr>
+</tbody>
+</table>
+<h4 id="author-categories">Author Categories</h4>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>author_categories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5f3854a0-da07-4cdc-aea1-3ec2efe17cf9</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of author defined categories.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="negative-marger-gene-evidence">Negative Marger Gene Evidence</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>negative_marker_gene_evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5720e5f6-18a5-4cb4-b7bf-afef27b8b3d1</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A list of names of genes whose expression in the cells being annotated is explicitly used as evidence against this cell annotation. Each gene MUST be included in the matrix of the AnnData/Seurat file.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<!-- schema-properties-start -->
+<h2 id="schema-properties">Schema properties</h2>
+<p><em>Auto-generated from CSV. Do not edit this section manually.</em></p>
+<p><strong>Status:</strong> Approved BICAN Standard &middot; <strong>Version:</strong> 1.0 &middot; <strong>Owner:</strong> @UCDNJJ, @jeremymiller &middot; <strong>Date:</strong> 10-03-2025</p>
+<h3 id="properties_1">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#matrix_file_id"><code>matrix_file_id</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>—</td>
+<td>The ID of a matrix file. This is like dataset_url; e.g. <code>CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122</code>.</td>
+</tr>
+<tr>
+<td><a href="#dataset_title"><code>dataset_title</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal gan…</td>
+</tr>
+<tr>
+<td><a href="#dataset_description"><code>dataset_description</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>description</td>
+<td>The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal…</td>
+</tr>
+<tr>
+<td><a href="#cellannotation_schema_version"><code>cellannotation_schema_version</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>—</td>
+<td>The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the …</td>
+</tr>
+<tr>
+<td><a href="#cellannotation_timestamp"><code>cellannotation_timestamp</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>—</td>
+<td>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also…</td>
+</tr>
+<tr>
+<td><a href="#cellannotation_version"><code>cellannotation_version</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>—</td>
+<td>The CAP taxonomy annotation version; required by CAP.</td>
+</tr>
+<tr>
+<td><a href="#cellannotation_url"><code>cellannotation_url</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>A persistent URL of all cell annotations published (per dataset).</td>
+</tr>
+<tr>
+<td><a href="#author_list"><code>author_list</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>taxonomy users</td>
+<td>A list of all collaborators, comma separated [First] [Last]. Called <code>Taxonomy Users</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td><a href="#author_name"><code>author_name</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>taxonomy author, point person name</td>
+<td>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called <code>taxonomy_author</code>. In CCN it is also sepe…</td>
+</tr>
+<tr>
+<td><a href="#author_contact"><code>author_contact</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>point person email</td>
+<td>A valid email address of the primary author of a taxonomy. This is called <code>Point person email</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td><a href="#orcid"><code>orcid</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>point person ORCID</td>
+<td>A valid ORCID of the primary author of the taxonomy. This is called <code>Point person ORCID</code> in taxonomy Google Sheet.</td>
+</tr>
+<tr>
+<td><a href="#labelsets"><code>labelsets</code></a></td>
+<td>—</td>
+<td>no</td>
+<td>—</td>
+<td>A data frame representation that contains information about each <code>cellannotation_set</code> set of columns (e.g., subclass, cl…</td>
+</tr>
+<tr>
+<td><a href="#annotations"><code>annotations</code></a></td>
+<td>array</td>
+<td>yes</td>
+<td>—</td>
+<td>A list of the annotations.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-details">Property Details</h3>
+<div id="matrix_file_id" class="field-detail">
+<h5><code>matrix_file_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5d625688-96da-4c65-97b9-211cbcad4aea</code></li>
+<li><strong>Subsets:</strong> annotations, tooling</li>
+</ul>
+<p>The ID of a matrix file. This is like dataset_url; e.g. `CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122`.</p>
+</div>
+
+<div id="dataset_title" class="field-detail">
+<h5><code>dataset_title</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5aab17df-0830-44d4-bcd8-f954695867d0</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Example:</strong> <code>&#x27;Human retina cell atlas - retinal ganglion cells&#x27;</code></li>
+</ul>
+<p>The title of the dataset. This MUST be less than or equal to 200 characters. e.g. &#x27;Human retina cell atlas - retinal ganglion cells&#x27;.</p>
+</div>
+
+<div id="dataset_description" class="field-detail">
+<h5><code>dataset_description</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>1b5ff66c-0e00-4a29-8ccf-65dbf59d79da</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> description</li>
+<li><strong>Example:</strong> <code>&#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;</code></li>
+</ul>
+<p>The description of the dataset. e.g. &#x27;A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.&#x27;.</p>
+</div>
+
+<div id="cellannotation_schema_version" class="field-detail">
+<h5><code>cellannotation_schema_version</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>195cbdbf-d486-4d54-9c1d-83edf0a44ec5</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>The version of the Cell Annotation Schema (CAS) used, formatted as &#x27;[MAJOR].[MINOR].[PATCH]&#x27;. This is used to track the version of the schema used for cell annotations.</p>
+</div>
+
+<div id="cellannotation_timestamp" class="field-detail">
+<h5><code>cellannotation_timestamp</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>37da06ba-9c15-405f-b5d6-f8d2bf5fc3a3</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>Timestamp when published: %yyyy-%mm-%dd %hh:%mm:%ss; Useful in general, though currently only required by CAP. This also could be the same as `development_date`.</p>
+</div>
+
+<div id="cellannotation_version" class="field-detail">
+<h5><code>cellannotation_version</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>439f52e8-e2e6-406c-850c-434d448c8b6d</code></li>
+<li><strong>Subsets:</strong> tooling</li>
+</ul>
+<p>The CAP taxonomy annotation version; required by CAP.</p>
+</div>
+
+<div id="cellannotation_url" class="field-detail">
+<h5><code>cellannotation_url</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>e47029df-a5cf-49d0-b8de-76302a1e6fbb</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>A persistent URL of all cell annotations published (per dataset).</p>
+</div>
+
+<div id="author_list" class="field-detail">
+<h5><code>author_list</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>15e4be61-b1fb-49a5-9a81-7fed61138256</code></li>
+<li><strong>Aliases:</strong> taxonomy users</li>
+<li><strong>Subsets:</strong> annotations, tooling</li>
+</ul>
+<p>A list of all collaborators, comma separated [First] [Last]. Called `Taxonomy Users` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="author_name" class="field-detail">
+<h5><code>author_name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>0ea83cdb-cd06-4ef8-84c1-6aec29220759</code></li>
+<li><strong>Aliases:</strong> taxonomy author, point person name</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>The primary author [First Name] [Last Name] of the taxonomy. In CCN was called `taxonomy_author`. In CCN it is also seperated by `cell_set` with &quot;cell_set_alias_assignee&quot;. This is called `Point person name` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="author_contact" class="field-detail">
+<h5><code>author_contact</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>fa084043-3c8e-47cb-959e-2f3daf2165ec</code></li>
+<li><strong>Aliases:</strong> point person email</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A valid email address of the primary author of a taxonomy. This is called `Point person email` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="orcid" class="field-detail">
+<h5><code>orcid</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>2c96776b-b158-4e0c-ba67-ea7a63efb1e8</code></li>
+<li><strong>Aliases:</strong> point person ORCID</li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A valid ORCID of the primary author of the taxonomy. This is called `Point person ORCID` in taxonomy Google Sheet.</p>
+</div>
+
+<div id="labelsets" class="field-detail">
+<h5><code>labelsets</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7fa0b7a1-6af7-4f79-8da0-29d7950ea736</code></li>
+<li><strong>Subsets:</strong> annotations</li>
+</ul>
+<p>A data frame representation that contains information about each `cellannotation_set` set of columns (e.g., subclass, class, neurotransmitter, etc.). Specifically: `name`, `description`, and `rank` (0 most specific) and some information about provenance needed for each labelset. This is equilalent to `Cluster annotation term set` in BKP.</p>
+</div>
+
+<div id="annotations" class="field-detail">
+<h5><code>annotations</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>46e6ec2f-6baf-4df9-bfbd-36463694be93</code></li>
+<li><strong>Data Type:</strong> <code>array</code></li>
+</ul>
+<p>A list of the annotations.</p>
+</div>
+
+<!-- schema-properties-end -->
+
+<h2 id="changelog">Changelog</h2>
+<h3 id="august-7-2025-version-100">August 7, 2025 -- Version 1.0.0</h3>
+<ul>
+<li>Initial version of the Cell Annotation Schema.</li>
+<li>Added all required fields and definitions.</li>
+<li>Established relationships between fields and their respective data types.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

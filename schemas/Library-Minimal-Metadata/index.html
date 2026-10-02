@@ -1,0 +1,4287 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Library-Minimal-Metadata/">
+      
+      
+        <link rel="prev" href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/">
+      
+      
+        <link rel="next" href="../Donor-Metadata/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Library Minimal Metadata - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bican-library-minimal-metadata-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Library Minimal Metadata
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recieve-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recieve Sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pool Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-library-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amplified-cdna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplified cDNA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcoded-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcoded Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissociated-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissociated Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enriched-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enriched Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-aliquot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Aliquot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Package
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amplified-cdna_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplified cDNA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcoded-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcoded Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissociated-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissociated Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enriched-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enriched Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-aliquot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Aliquot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Package
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-pool_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recieve-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recieve Sample
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pool Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-library-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amplified-cdna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplified cDNA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcoded-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcoded Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissociated-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissociated Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enriched-cell-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enriched Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-aliquot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Aliquot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Package
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amplified-cdna_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplified cDNA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcoded-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcoded Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissociated-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissociated Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enriched-cell-sample_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enriched Cell Sample
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-aliquot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Aliquot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Package
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-pool_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="bican-library-minimal-metadata-schema">BICAN Library Minimal Metadata Schema</h1>
+<p>Document Status: <em>Endorsed BICAN Standard</em></p>
+<p>Version: 1.1.1</p>
+<p>Owners: Kimberly Smith; na.hong@yale.edu; Wenjin.J.Zheng@uth.tmc.edu</p>
+<p>Contributors: Kimberly Smith; Lydia Ng; Melissa Goldman; Cristina Guinto; Fenna Krienen; Suvvi Nadendla; Michelle Giglio; Chongyuan Luo; Joe Nery; Lei Chang; Lisa Anderson; Nick Fitzgerald; Cat Reeves; Jaime McClintock; Chris Frazar</p>
+<p>Reviewer: @patrick-lloyd-ray</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: 09-09-2023</p>
+<h2 id="background">Background</h2>
+<p>The Brain Research Through Advancing Innovative Neurotechnologies® (BRAIN) Initiative Cell Atlas Network (BICAN) aims to transform our understanding of brain cell types and the precise tools needed to access them, bringing us one step closer to unraveling the complex workings of the human brain.</p>
+<p>Building on findings from the BRAIN Initiative Cell Census Network (BICCN), BICAN takes the next step in mapping brain cells and circuits across multiple species, with an emphasis on humans. The aim of BICAN is to generate a complete reference atlas of cell types in the human brain across the lifespan, which can be shared and used throughout the research community. In addition to developing a “parts list” detailing the vast array of neurons and non-neuronal cells in the human brain, the project also aims to map cell interactions that underlie a wide range of brain disorders.</p>
+<p>To this end, BICAN aims to support the publication, sharing, and exploration of datasets generated in the course of the project. Creating a complete reference atlas from multiple datasets requires vast harmonization of metadata. In order to facilitate the harmonization of metadata, we require datasets include a small set of metadata available from data submitters.</p>
+<p>This document describes a schema, a type of contract, that BICAN requires of all libraries to enable searching, filtering, and integration of datasets.</p>
+<p>Note that the requirements in the schema are just the minimum required information. Datasets often have additional metadata, which is preserved in datasets submitted to the data archives.</p>
+<h2 id="overview">Overview</h2>
+<p>To harmonize gaps among existing library construction processes, the Library Minimal Metadata (LMM) was developed through the consensus of domain experts, including biomedical researchers, experimenters, data analysts, and informaticians. LMM is a metadata standard that aims to facilitate the interoperation and reuse of essential information and enhance the value of library-related resources.</p>
+<p>This metadata standard was created through the work of the Library Minimal Metadata Task Force. A version of this metadata standard is available here: https://docs.google.com/spreadsheets/d/11V0aFRnlQFtnTVyuq2TomIgyNPXwC1Fe/edit#gid=1598277230</p>
+<p>This document has the following sections:</p>
+<ul>
+<li><a href="#bican-library-minimal-metadata-schema">BICAN Library Minimal Metadata Schema</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#general-requirements">General Requirements</a></li>
+<li><a href="#recieve-sample">Recieve Sample</a></li>
+<li><a href="#generate-library">Generate Library</a></li>
+<li><a href="#pool-library">Pool Library</a></li>
+<li><a href="#delivery-library-pool">Delivery Library Pool</a></li>
+<li><a href="#appendix">Appendix</a></li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#version-121">Version 1.2.1</a></li>
+<li><a href="#version-12">Version 1.2</a></li>
+<li><a href="#added">Added</a></li>
+<li><a href="#version-111">Version 1.1.1</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#version-11">Version 1.1</a></li>
+<li><a href="#added-1">Added</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<h2 id="recieve-sample">Recieve Sample</h2>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>tissue sample label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Identifier name for final intact piece of tissue before cell or nuclei prep.  This piece of tissue will be used in dissociation and has an ROI associated with it.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>2e4ca2fc-2d77-4d19-af45-d0fb7bbc2269</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<h2 id="generate-library">Generate Library</h2>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>amplified cDNA label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of a collection of cDNA molecules derived and amplified from an input barcoded_cell_sample.  These cDNA molecules represent the gene expression of each cell, with all cDNA molecules from a given cell retaining that cell's unique barcode from the cell barcoding step.  This is a necessary step for GEX methods but is not used for ATAC methods.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e2606a11-114e-472f-9e05-33f9b6fc3089</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>amplified cDNA amplified quantity ng</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Amount of cDNA produced after cDNA amplification measured in nanograms.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0db79d05-8612-4896-b9d3-eb1558841449</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>amplified cDNA PCR cycles</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Number of PCR cycles used during cDNA amplification for this cDNA.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3827634c-3f8f-4760-b358-86ce4b030238</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>cDNA amplification process date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Date of cDNA amplification.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6cc333e7-9b98-497f-b7b1-eae904db2400</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>amplified cDNA RNA amplification pass-fail</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Pass or Fail result based on qualitative assessment of cDNA yield and size.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>bc62bdb2-7dc8-4404-bb84-ce0bbcae59e5</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>amplified cDNA percent cDNA longer than 400bp</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>QC metric to measure mRNA degradation of cDNA.  Higher % is higher quality starting material.  Over 400bp is used as a universal cutoff for intact (full length) vs degraded cDNA and is a common output from Bioanalyzer and Fragment Analyzer elecropheragrams.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>8d150467-f69e-461c-b54c-bcfd22f581e5</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>cDNA amplification set</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>cDNA amplification set, containing multiple amplified_cDNA_names that were processed at the same time.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>42e98a88-50b3-4ea2-871b-2142f6a0dfdd</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>barcoded cell sample port well</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Specific position of the loaded port of the 10x chip.  An Enriched or Dissociated Cell Sample is loaded into a port on a chip (creating a Barcoded Cell Sample).  Can be left null for non-10x methods.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>aca38100-d245-4be4-9be3-ba27192779fe</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>barcoded cell input quantity count</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Number of enriched or dissociated cells/nuclei going into the barcoding process.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>aa534269-7c9b-4b63-b990-eea8cda56d0e</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>barcoded cell sample label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of a collection of barcoded cells.  Input will be either dissociated_cell_sample or enriched_cell_sample.  Cell barcodes are only guaranteed to be unique within this one collection. One dissociated_cell_sample or enriched_cell_sample can lead to multiple barcoded_cell_samples.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4c0e6380-e53f-4173-a474-d41e836fefe3</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Expected cell capture</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing.  This is a derived number from 'Barcoded cell input quantity count' that is dependent on the "capture rate" of the barcoding method.  It is usually a calculated fraction of the 'Barcoded cell input quantity count' going into the barcoding method.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f10e928d-5a2b-4943-af18-d8fe5d05528d</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>study sets</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Intended cohort or dataset that the Barcoded Cell Sample initially belongs to.  This Study helps to group together samples that are meant to be analyzed together.  Multiple Studies can be assigned to a Barcoded Cell Sample.  These studies are more granular than the grant or PI and can be used to group together samples from related ROIs.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>8877f8f0-3939-4062-84c9-414bdcdd04ca</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>1st round barcodes</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Specific element for Paired-tag.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>24bc6d6b-fd91-4c7f-9357-22664b3e0632</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>2nd&3rd round barcode</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Specific element for Paired-tag.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>95c7fe57-2eae-42ce-b4a2-6445574e8e92</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Antibody information</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Vendor, Catalog# and Lot#</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a7af711c-f30b-469b-a3ca-b78b1b2fb99a</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>dissociated cell sample cell prep type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The type of cell preparation. For example: Cells, Nuclei. This is a property of dissociated_cell_sample.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>baae4ac3-f959-4594-b943-3a82ec19bd34</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>dissociated cell sample label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of a collection of dissociated cells or nuclei derived from dissociation of a tissue sample.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>65e2c7da-9eb4-45b2-8ccb-d69ef9785ee2</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>dissociated cell source barcode name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of oligo used in cell plexing.  The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample.  The oligo name is associated with a sequence in a lookup table.  This sequence will be needed to during analysis, after alignment, to associate reads with parent dissociated cell sample.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>184abbaf-baff-4b5f-b51e-dd38de6006af</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>dissociated cell source barcode name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>ValueSet</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of oligo used in cell plexing.  The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample.  The oligo name is associated with a sequence in a lookup table.  This sequence will be needed to during analysis, after alignment, to associate reads with parent dissociated cell sample.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0c8628d0-809b-458c-b4b3-686131dceef8</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>dissociated cell sample preparation date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Date of dissociated cell sample creation.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c508b63d-a1b4-42de-9b22-9c4736deac6e</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>patched cell structure</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Value Set</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Ontological structure assigned to a single patched cell.  This is typically assigned and confirmed after imaging.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>7636b4c8-12f6-4b33-bdc6-c2f1a3b1c953</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Enriched cell sample container name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of container (strip or tube or plate) of the enriched_cell_prep.  This container could contain 1 or more enriched_cell_samples.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>5ace37aa-85d6-4493-909e-8fc221ec2609</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Enriched cell sample name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of collection of enriched cells or nuclei after enrichment process (usually via FACS using the Enrichment Plan) applied to dissociated_cell_sample.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>bb3fc701-23a7-45c1-890d-7471730e0ec1</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>enrichment population</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample with desired mix of cell populations.  This plan can also be used to describe 'No FACS' where no enrichment was performed.  This is a property of enriched_cell_prep_container. </td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>875f1c70-f5aa-45e3-94b9-5e482f6c4830</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>enriched cell source barcode name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>ValueSet</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 10x load (Barcoding Cell step) [aka 1st round barcodes].</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>bdd5e2bf-c6fa-43e6-a5ac-6878fcf814d6</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>enriched cell sample preparation date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Date of enriched cell sample creation.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e2fd2d84-3999-4cc4-8f41-e0e2a708f407</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>histone modification marker</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Histone modification marker antibodies (eg H3K27ac, H3K27me3, H3K9me3) used in conjunction with an Enriched Cell Source Barcode in order to combine multiple Enriched Cell Populations before Barcoded Cell Sample step for 10xMultiome method.  Each of the Histone antibodies captures an essential part of the epigenome.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a2ef2228-e438-4260-95e5-22eb3b35b5a9</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library avg size bp</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Average size of the library in terms of base pairs.  This is used to calculate the molarity before pooling and sequencing.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f851eba9-56d1-4472-9d0c-d7f8bc33000a</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library method</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Standardized nomenclature to describe the library method used.  This specifies the alignment method required for the library.  For example, 10xV3.1 (for RNASeq single assay), 10xMult-GEX (for RNASeq multiome assay), and 10xMult-ATAC (for ATACSeq multiome assay).</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>7b60d59e-fdd7-4b27-a2d4-cae9b69103a6</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Library concentration nm</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Concentration of library in terms of nM (nMol/L).  Number of molecules is needed for accurate pooling of the libraries and for generating the number of target reads/cell in sequencing.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>90805b3f-f380-4f23-b159-e7eaa0c8f052</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library creation date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Date of library construction.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>9c2f575d-1b64-451d-894f-656861afe07a</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library input ng</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Amount of cDNA going into library construction in nanograms.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e4d31d97-722d-4771-a0e4-e6062190f2c1</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of a library, which is a collection of fragmented and barcode-indexed DNA molecules for sequencing.  An index or barcode is typically introduced to enable identification of library origin to allow libraries to be pooled together for sequencing.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f717e254-3630-4342-be7b-4d56376e7afe</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library prep pass-fail</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>enum</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Pass or Fail result based on qualitative assessment of library yield and size.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6817ede2-7ead-402d-9dbc-131aca627c6c</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library prep set</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library set, containing multiple library_names that were processed at the same time.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>b124ffa9-9134-4a61-a30d-bb191b2fc7fa</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library quantification fmol</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Amount of library generated in terms of femtomoles.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4c09ada7-c116-48bc-8fb1-0dcf5c4b939a</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library quantification ng</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Amount of library generated in terms of nanograms.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>318b2d3a-dae7-4c63-bfbb-93862b92f63e</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>R1/R2 index name</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Name of the pair of library indexes used for sequencing.  Indexes allow libraries to be pooled together for sequencing.  Sequencing output (fastq) are demultiplexed by using the indexes for each library.  The name will be associated with the sequences of i7, i5, and i5as, which are needed by SeqCores for demultiplexing.  The required direction of the sequence (sense or antisense) of the index can differ depending on sequencing instruments.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c94b5d8a-e92d-47af-8c0e-ea3b58be4d06</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<h2 id="pool-library">Pool Library</h2>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library aliquot label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>One library in the library pool.  Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow for sequencing together then separating the sequencing output by originating library aliquot through the process of demultiplexing.  The resulting demultiplexed fastq files will include the library_aliquot_name.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>34191bad-d167-4335-8224-ade897d3728e</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>fastq file alignment status</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Categorical Variable</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>The QC status of the fastq file alignment process result.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>834a0e66-fd81-4d9c-b379-146372c3a629</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool tube internal label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library Pool Tube local name.  Label of the tube containing the library pool, which is made up of multiple library_aliquots.  This is a Library Lab local tube name, before the pool is aliquoted to the Seq Core provided tube 'Library Pool Tube Name'.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f1fdea98-7849-4def-a62f-a04cbbf98922</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>embargo date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>date until which data much be embargoed.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e7bc38d8-7315-40be-b8b7-923bf770ff38</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<h2 id="delivery-library-pool">Delivery Library Pool</h2>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>SeqCore library pool tube barcode</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library Pool tube name as provided by the SeqCore (often a barcode).  This tube is provided from the SeqCore and is part of the SeqCore tracking system.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>da02a0ee-9abf-45ef-abb1-981f1aaba6b2</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool label</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library lab's library pool name.  For some labs this may be the same as "Libray pool tube local name".   Other labs distinguish between the local tube label of the library pool and the library pool name provided to SeqCore for tracking.  Local Pool Name is used to communicate sequencing status between SeqCore and Library Labs.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>29e0578b-6427-4c93-b29b-bde27fbadeec</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool tube avg size bp</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Average insert size of library pool, measured in base pairs.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>cf1b7c96-cdc1-4eed-8e76-ac44fbd151f7</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool fmol</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Amount of library pool in the tube as measured in femtamoles (fmol).</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>af1a6f3f-aca9-4452-b86e-f3c70c3600b6</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>loading concentration pM</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>float</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Sequencer Loading Concentration as measured in pM (pmol/L).  This is a value used by the SeqCore.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a1a1b046-549d-4e94-9b3c-5fac2a31fdd6</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Length of Read 2 (for Paired End Runs)</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0b9a9cbc-b8dd-42a2-a567-aafd9370db30</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Length of Index 1 (i7 Primer)</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0b94df0d-d96e-4d49-a498-b3eb83afc5f8</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Length of Index 2 (i5 Primer)</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a61c1d55-b880-499c-ba4a-30311fdca62f</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>Length of Read 1</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Separate field to replace the combined field "Sequencing cycle". Sequencing Cycle is needed for sequencing the library pool.  The sequencing cycle needed is specific to the Library Chemistry Method and is required instruction to the SeqCores.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f22ac08a-bb81-4524-91f0-0e1e1a032335</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool tube contents nM</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>float</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library pool concentration as measured in nanomolarity (nMol/L).</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>32f2d02b-7300-4554-aa93-6de6e456eda7</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool tube volume ul</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Library pool volume as measured in ul.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>b1b923ac-c218-4db4-a3b1-45a219612567</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>PhiX spike in percent</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>integer</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>PhiX spike-in percent desired to be added to the library pool for sequencing.  PhiX is used to increase complexity of the sample being sequenced, to reduce sequencing artifacts maintain sequencing quality on the instruments.  This is an optional instruction to the SeqCore.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>b5ab26ad-d523-406e-a85b-e77f2f4b06b5</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>custom primers</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>boolean</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Custom sequencing primers if needed, indicate with reads require them (R1/R2/i7/i5).</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>76c905d5-ef4a-421a-bd59-b541c5c1d45d</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>library pool construction date</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>Date</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td>Date of library construction.</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ef950ca1-2a62-4fce-a826-6c27d94d3be3</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>flowcell</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+        <td><code>text</code>
+        </td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+        <td></td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4c8d7ac8-d3e3-4177-a93d-18ec2302c392</td>
+    </tr>    
+</tbody></table>
+<p><br></p>
+<h2 id="appendix">Appendix</h2>
+<!-- schema-properties-start -->
+<h2 id="schema-properties">Schema properties</h2>
+<p><em>Auto-generated from CSV. Do not edit this section manually.</em></p>
+<p><strong>Related LinkML model:</strong> <a href="https://brain-bican.github.io/models/index_library_generation/">Library Generation Model</a></p>
+<h3 id="properties">Properties</h3>
+<h4 id="amplified-cdna">Amplified cDNA</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#amplified-cdna-nhash-id"><code>amplified cdna NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for Amplified cDNA</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP database id for the project this amplified cDNA belongs to</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-amplified-quantity-ng"><code>amplified cDNA amplified quantity ng</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>amplified quantity ng</td>
+<td>Amount of cDNA produced after cDNA amplification measured in nanograms</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-pcr-cycles"><code>amplified cDNA PCR cycles</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>cDNA amplification cycles</td>
+<td>Number of PCR cycles used during cDNA amplification for this cDNA.</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-rna-amplification-pass-fail"><code>amplified cDNA RNA amplification pass-fail</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>cDNA amplification pass-fail result</td>
+<td>Pass or Fail result based on qualitative assessment of cDNA yield and size.</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-percent-cdna-longer-than-400bp"><code>amplified cDNA percent cDNA longer than 400bp</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>cDNA amplification percent cDNA greater than 400bp</td>
+<td>QC metric to measure mRNA degradation of cDNA. Higher % is higher quality starting material. Over 400bp is used as a uni…</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-project"><code>amplified cdna project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Amplified cDNA Project</td>
+</tr>
+<tr>
+<td><a href="#amplified-cdna-lab"><code>amplified cdna lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Amplified cDNA Lab</td>
+</tr>
+</tbody>
+</table>
+<h4 id="barcoded-cell-sample">Barcoded Cell Sample</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#barcoded-cell-sample-nhash-id"><code>barcoded cell sample NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for a Barcoded Cell Sample</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-number-of-expected-cells"><code>barcoded cell sample number of expected cells</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing. This is a …</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP database id for the project this Barcoded Cell Sample belongs to</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-port-well"><code>barcoded cell sample port well</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>10x chip port well</td>
+<td>Specific position of the loaded port of the 10x chip. An Enriched or Dissociated Cell Sample is loaded into a port on a …</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-input-quantity-count"><code>barcoded cell input quantity count</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Number of enriched or dissociated cells/nuclei going into the barcoding process.</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-technique"><code>barcoded cell sample technique</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Required standardized nomenclature to describe the general method used to barcode individual cells. This method (eg Mult…</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-tag-local-name"><code>barcoded cell sample tag local name</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Barcoded Cell Sample tags can be used to group a set of barcoded cell samples so that the tag can be used to obtain all …</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-project"><code>barcoded cell sample project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Barcoded Cell Sample Project</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-lab"><code>barcoded cell sample lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Barcoded Cell Sample Lab</td>
+</tr>
+<tr>
+<td><a href="#bcs-alignment-job-id"><code>bcs alignment job ID</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Barcoded Cell Sample Alignment QC Job ID</td>
+</tr>
+<tr>
+<td><a href="#barcoded-cell-sample-alignment-qc-status"><code>barcoded cell sample alignment QC status</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Barcoded Cell Sample alignment QC status</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dissociated-cell-sample">Dissociated Cell Sample</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#dissociated-cell-sample-nhash-id"><code>dissociated cell sample NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for a Dissociated Cell Sample</td>
+</tr>
+<tr>
+<td><a href="#dissociated-cell-sample-cell-label-barcode"><code>dissociated cell sample cell label barcode</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>dissociated cell source barcode name</td>
+<td>Name of oligo used in cell plexing. The oligo will tag allow separate dissociated cell samples to be combined downstream…</td>
+</tr>
+<tr>
+<td><a href="#dissociated-cell-sample-cell-prep-type"><code>dissociated cell sample cell prep type</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>cell prep type</td>
+<td>The type of cell preparation. For example: Cells; Nuclei. This is a property of dissociated_cell_sample.</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP database id of the project the dissociated cell sample is associated with</td>
+</tr>
+<tr>
+<td><a href="#tissue-nhash-ids"><code>tissue NHash IDs</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for upstream tissues</td>
+</tr>
+<tr>
+<td><a href="#patched-cell-structure"><code>patched cell structure</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Ontological structure assigned to a single patched cell.  This is typically assigned and confirmed after imaging.</td>
+</tr>
+<tr>
+<td><a href="#dissociated-cell-sample-project"><code>dissociated cell sample project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Dissociated Cell Sample Project</td>
+</tr>
+<tr>
+<td><a href="#dissociated-cell-sample-lab"><code>dissociated cell sample lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Dissociated Cell Sample Lab</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enriched-cell-sample">Enriched Cell Sample</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#enriched-cell-sample-nhash-id"><code>enriched cell sample NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for an Enriched Cell Sample</td>
+</tr>
+<tr>
+<td><a href="#enriched-cell-sample-cell-label-barcode"><code>enriched cell sample cell label barcode</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>enriched cell source barcode name</td>
+<td>Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 1…</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP database id for the project his Enriched Cell Sample is associated with</td>
+</tr>
+<tr>
+<td><a href="#enrichment-population"><code>enrichment population</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample wit…</td>
+</tr>
+<tr>
+<td><a href="#histone-modification-marker"><code>histone modification marker</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Histone modification marker antibodies (eg H3K27ac; H3K27me3; H3K9me3) used in conjunction with an Enriched Cell Source …</td>
+</tr>
+<tr>
+<td><a href="#enriched-cell-sample-project"><code>enriched cell sample project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Enriched Cell Sample Project</td>
+</tr>
+<tr>
+<td><a href="#enriched-cell-sample-lab"><code>enriched cell sample lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Enriched Cell Sample Lab</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library">Library</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#library-nhash-id"><code>library NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for a Library</td>
+</tr>
+<tr>
+<td><a href="#library-technique"><code>library technique</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>library method; library chemistry method</td>
+<td>Standardized nomenclature to describe the library method used. This specifies the alignment method required for the libr…</td>
+</tr>
+<tr>
+<td><a href="#library-r1/r2-index"><code>library r1/r2 index</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>R1/R2 index name</td>
+<td>Name of the pair of library indexes used for sequencing. Indexes allow libraries to be pooled together for sequencing. S…</td>
+</tr>
+<tr>
+<td><a href="#library-source-type"><code>library source type</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>The upstream resource type for library creation. Could be either Barcoded Cell Samples or Amplified cDNA</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP database id for the project this Library is associated with</td>
+</tr>
+<tr>
+<td><a href="#library-avg-size-bp"><code>library avg size bp</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Average size of the library in terms of base pairs. This is used to calculate the molarity before pooling and sequencing…</td>
+</tr>
+<tr>
+<td><a href="#library-concentration-nm"><code>library concentration nm</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>—</td>
+<td>Concentration of library in terms of nM (nMol/L). Number of molecules is needed for accurate pooling of the libraries an…</td>
+</tr>
+<tr>
+<td><a href="#library-input-ng"><code>library input ng</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>—</td>
+<td>Amount of cDNA going into library construction in nanograms.</td>
+</tr>
+<tr>
+<td><a href="#library-prep-pass-fail"><code>library prep pass-fail</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>library prep pass-fail result</td>
+<td>Pass or Fail result based on qualitative assessment of library yield and size.</td>
+</tr>
+<tr>
+<td><a href="#library-quantification-fmol"><code>library quantification fmol</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>—</td>
+<td>Amount of library generated in terms of femtomoles</td>
+</tr>
+<tr>
+<td><a href="#library-quantification-ng"><code>library quantification ng</code></a></td>
+<td>float</td>
+<td>no</td>
+<td>—</td>
+<td>Amount of library generated in terms of nanograms</td>
+</tr>
+<tr>
+<td><a href="#library-project"><code>library project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Project</td>
+</tr>
+<tr>
+<td><a href="#library-lab"><code>library lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Lab</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library-aliquot">Library Aliquot</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#library-aliquot-local-name"><code>library aliquot local name</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>library aliquot label</td>
+<td>One library in the library pool. Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow for…</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-nhash-id"><code>library aliquot NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for a Library Aliquot. This NHash id is a concatenation of the NHash ids of th…</td>
+</tr>
+<tr>
+<td><a href="#sequencing-result-date"><code>sequencing result date</code></a></td>
+<td>date</td>
+<td>no</td>
+<td>—</td>
+<td>The date of sequencing results for the Library Aliquot as reported by the Sequencing Center</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-sequencing-result-status"><code>library aliquot sequencing result status</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>The status of the sequencing results for the Library Aliquot as reported by the Sequencing Center</td>
+</tr>
+<tr>
+<td><a href="#fastq-file-alignment-status"><code>fastq file alignment status</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>The FASTQ file alignment status as reported by the Library Lab</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-fastq-file-size-in-tb"><code>library aliquot fastq file size in TB</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot FASTQ File Size in TB</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-project"><code>library aliquot project</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Aliquot Project</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-lab"><code>library aliquot lab</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Aliquot Lab</td>
+</tr>
+<tr>
+<td><a href="#alignment-qc-status"><code>alignment QC status</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot Alignment QC Status</td>
+</tr>
+<tr>
+<td><a href="#nemo-aliquot-fastq-public-url"><code>NeMO aliquot fastq public URL</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>NeMO Aliquot Fastq Public URL</td>
+</tr>
+<tr>
+<td><a href="#nemo-aliquot-fastq-gcp-url"><code>NeMO aliquot fastq gcp URL</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>NeMO Aliquot Fastq GCP URL</td>
+</tr>
+<tr>
+<td><a href="#aliquot-alignment-job-id"><code>aliquot alignment job ID</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot Alignment QC Job ID</td>
+</tr>
+<tr>
+<td><a href="#library-aliquot-qc-last-updated-date"><code>library aliquot QC last updated date</code></a></td>
+<td>date</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot QC last updated date</td>
+</tr>
+<tr>
+<td><a href="#aliquot-alignment-qc-uploaded-date"><code>aliquot alignment QC uploaded date</code></a></td>
+<td>date</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot alignment QC uploaded date</td>
+</tr>
+<tr>
+<td><a href="#aliquot-qc-total-reads"><code>aliquot QC total reads</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Library Aliquot QC total reads</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library-package">Library Package</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#sequencing-center-id"><code>sequencing center ID</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP id for the Sequencing Center this Library Package will be sent to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library-pool">Library Pool</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#library-pool-nhash-id"><code>library pool NHash ID</code></a></td>
+<td>text</td>
+<td>yes</td>
+<td>—</td>
+<td>NIMP generated globally unique identifier for a Library Pool</td>
+</tr>
+<tr>
+<td><a href="#library-pool-tube-barcode"><code>library pool tube barcode</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>SeqCore library pool tube barcode</td>
+<td>Library Pool tube name as provided by the SeqCore (often a barcode). This tube is provided from the SeqCore and is part …</td>
+</tr>
+<tr>
+<td><a href="#flowcell"><code>flowcell</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>The Flowcell is a unique identifer of the sequencing cartridge (provided by the sequencing instrument manufacturer) used…</td>
+</tr>
+<tr>
+<td><a href="#library-pool-alignment-status"><code>library pool alignment status</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Whether the Library Pool is approved for alignment or not</td>
+</tr>
+<tr>
+<td><a href="#library-pool-sequencing-instrument"><code>library pool sequencing instrument</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Library Pool Sequencing Instrument</td>
+</tr>
+<tr>
+<td><a href="#library-pool-flowcell-type"><code>library pool flowcell type</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>—</td>
+<td>Library Pool Flowcell Type</td>
+</tr>
+<tr>
+<td><a href="#library-pool-fastq-submission-id"><code>library pool fastq submission ID</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Library Pool FASTQ Submission ID</td>
+</tr>
+<tr>
+<td><a href="#library-pool-projects"><code>library pool projects</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Pool Projects</td>
+</tr>
+<tr>
+<td><a href="#library-pool-labs"><code>library pool labs</code></a></td>
+<td>categorical</td>
+<td>yes</td>
+<td>—</td>
+<td>Library Pool Labs</td>
+</tr>
+<tr>
+<td><a href="#nemo-pool-bucket"><code>NeMO pool bucket</code></a></td>
+<td>text</td>
+<td>no</td>
+<td>—</td>
+<td>Nemo Pool Bucket</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated">The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#name-of-metadata-field"><code>Name of metadata field</code></a></td>
+<td>Type of values in this field (integer; float; text; date)</td>
+<td>no</td>
+<td>Aliases for this metadata element in other schemas/resources</td>
+<td>A detailed definition for this field</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-details">Property Details</h3>
+<h4 id="amplified-cdna_1">Amplified cDNA</h4>
+<div id="amplified-cdna-nhash-id" class="field-detail">
+<h5><code>amplified cdna NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>01046de6-448d-4f50-a794-0a5ffb2bcf97</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for Amplified cDNA</p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9a55368b-3b12-47f3-a3cb-ee282c6d73ce</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>NIMP database id for the project this amplified cDNA belongs to</p>
+</div>
+
+<div id="amplified-cdna-amplified-quantity-ng" class="field-detail">
+<h5><code>amplified cDNA amplified quantity ng</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>0db79d05-8612-4896-b9d3-eb1558841449</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Aliases:</strong> amplified quantity ng</li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Amount of cDNA produced after cDNA amplification measured in nanograms</p>
+</div>
+
+<div id="amplified-cdna-pcr-cycles" class="field-detail">
+<h5><code>amplified cDNA PCR cycles</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>3827634c-3f8f-4760-b358-86ce4b030238</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Aliases:</strong> cDNA amplification cycles</li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Number of PCR cycles used during cDNA amplification for this cDNA.</p>
+</div>
+
+<div id="amplified-cdna-rna-amplification-pass-fail" class="field-detail">
+<h5><code>amplified cDNA RNA amplification pass-fail</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>bc62bdb2-7dc8-4404-bb84-ce0bbcae59e5</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> cDNA amplification pass-fail result</li>
+<li><strong>Subsets:</strong> analysis</li>
+</ul>
+<p>Pass or Fail result based on qualitative assessment of cDNA yield and size.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="amplified-cdna-percent-cdna-longer-than-400bp" class="field-detail">
+<h5><code>amplified cDNA percent cDNA longer than 400bp</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>8d150467-f69e-461c-b54c-bcfd22f581e5</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Aliases:</strong> cDNA amplification percent cDNA greater than 400bp</li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>QC metric to measure mRNA degradation of cDNA. Higher % is higher quality starting material. Over 400bp is used as a universal cutoff for intact (full length) vs degraded cDNA and is a common output from Bioanalyzer and Fragment Analyzer elecropheragrams.</p>
+</div>
+
+<div id="amplified-cdna-project" class="field-detail">
+<h5><code>amplified cdna project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>20f516dc-ed4f-494e-9959-d01f286171fc</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Amplified cDNA Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="amplified-cdna-lab" class="field-detail">
+<h5><code>amplified cdna lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>88b13d5b-3b06-4294-9b83-b4b615c6085e</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Amplified cDNA Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="barcoded-cell-sample_1">Barcoded Cell Sample</h4>
+<div id="barcoded-cell-sample-nhash-id" class="field-detail">
+<h5><code>barcoded cell sample NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b421ecfe-488e-4e87-bf4c-6d30aa5b06bb</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for a Barcoded Cell Sample</p>
+</div>
+
+<div id="barcoded-cell-sample-number-of-expected-cells" class="field-detail">
+<h5><code>barcoded cell sample number of expected cells</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f10e928d-5a2b-4943-af18-d8fe5d05528d</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Expected number of cells/nuclei of a barcoded_cell_sample that will be barcoded and available for sequencing. This is a derived number from &#x27;Barcoded cell input quantity count&#x27; that is dependent on the &quot;capture rate&quot; of the barcoding method. It is usually a calculated fraction of the &#x27;Barcoded cell input quantity count&#x27; going into the barcoding method.</p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9a55368b-3b12-47f3-a3cb-ee282c6d73ce</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>NIMP database id for the project this Barcoded Cell Sample belongs to</p>
+</div>
+
+<div id="barcoded-cell-sample-port-well" class="field-detail">
+<h5><code>barcoded cell sample port well</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>aca38100-d245-4be4-9be3-ba27192779fe</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+<li><strong>Aliases:</strong> 10x chip port well</li>
+<li><strong>Subsets:</strong> analysis</li>
+</ul>
+<p>Specific position of the loaded port of the 10x chip. An Enriched or Dissociated Cell Sample is loaded into a port on a chip (creating a Barcoded Cell Sample). Can be left null for non-10x methods.</p>
+</div>
+
+<div id="barcoded-cell-input-quantity-count" class="field-detail">
+<h5><code>barcoded cell input quantity count</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>aa534269-7c9b-4b63-b990-eea8cda56d0e</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Number of enriched or dissociated cells/nuclei going into the barcoding process.</p>
+</div>
+
+<div id="barcoded-cell-sample-technique" class="field-detail">
+<h5><code>barcoded cell sample technique</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b2366423-b883-4b33-b036-a1e4707c32bd</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Required standardized nomenclature to describe the general method used to barcode individual cells. This method (eg Multiome; ATAConly; GEXonly) will be more general than the Library Method (which is specific for alignment) and could be used for general classification of Barcoded Cell Samples.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="barcoded-cell-sample-tag-local-name" class="field-detail">
+<h5><code>barcoded cell sample tag local name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>8877f8f0-3939-4062-84c9-414bdcdd04ca</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+<li><strong>Subsets:</strong> analysis; tracking</li>
+</ul>
+<p>Barcoded Cell Sample tags can be used to group a set of barcoded cell samples so that the tag can be used to obtain all the members of the cohort</p>
+</div>
+
+<div id="barcoded-cell-sample-project" class="field-detail">
+<h5><code>barcoded cell sample project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b5f4485b-3700-460d-8455-016127783ccb</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Barcoded Cell Sample Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="barcoded-cell-sample-lab" class="field-detail">
+<h5><code>barcoded cell sample lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f73165f0-8540-4ed0-91fd-ff2ce946ebcb</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Barcoded Cell Sample Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="bcs-alignment-job-id" class="field-detail">
+<h5><code>bcs alignment job ID</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>12ef6c0b-7db5-451f-8e84-a9fcd8086a2e</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>Barcoded Cell Sample Alignment QC Job ID</p>
+</div>
+
+<div id="barcoded-cell-sample-alignment-qc-status" class="field-detail">
+<h5><code>barcoded cell sample alignment QC status</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>a0f07acd-df7c-4dce-9bdf-313ce84b4ead</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Barcoded Cell Sample alignment QC status</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="dissociated-cell-sample_1">Dissociated Cell Sample</h4>
+<div id="dissociated-cell-sample-nhash-id" class="field-detail">
+<h5><code>dissociated cell sample NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9b18ee42-7e93-44f1-a1d3-f811eb3b777b</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for a Dissociated Cell Sample</p>
+</div>
+
+<div id="dissociated-cell-sample-cell-label-barcode" class="field-detail">
+<h5><code>dissociated cell sample cell label barcode</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>0c8628d0-809b-458c-b4b3-686131dceef8</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> dissociated cell source barcode name</li>
+<li><strong>Subsets:</strong> analysis</li>
+</ul>
+<p>Name of oligo used in cell plexing. The oligo will tag allow separate dissociated cell samples to be combined downstream in the barcoded cell sample. The oligo name is associated with a sequence in a lookup table. This sequence will be needed to during analysis (after alignment) to associate reads with parent dissociated cell sample.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="dissociated-cell-sample-cell-prep-type" class="field-detail">
+<h5><code>dissociated cell sample cell prep type</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>baae4ac3-f959-4594-b943-3a82ec19bd34</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> cell prep type</li>
+<li><strong>Subsets:</strong> analysis; tracking</li>
+</ul>
+<p>The type of cell preparation. For example: Cells; Nuclei. This is a property of dissociated_cell_sample.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9a55368b-3b12-47f3-a3cb-ee282c6d73ce</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>NIMP database id of the project the dissociated cell sample is associated with</p>
+</div>
+
+<div id="tissue-nhash-ids" class="field-detail">
+<h5><code>tissue NHash IDs</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>8b10c5a7-a1c8-488f-9a7c-a80fd801db3c</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for upstream tissues</p>
+</div>
+
+<div id="patched-cell-structure" class="field-detail">
+<h5><code>patched cell structure</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7636b4c8-12f6-4b33-bdc6-c2f1a3b1c953</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Ontological structure assigned to a single patched cell.  This is typically assigned and confirmed after imaging.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="dissociated-cell-sample-project" class="field-detail">
+<h5><code>dissociated cell sample project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>80976c95-c329-496e-8c5b-f9d48b6cf189</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Dissociated Cell Sample Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="dissociated-cell-sample-lab" class="field-detail">
+<h5><code>dissociated cell sample lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b94f6f31-8ac0-40b5-861f-86c3112bf1b8</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Dissociated Cell Sample Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="enriched-cell-sample_1">Enriched Cell Sample</h4>
+<div id="enriched-cell-sample-nhash-id" class="field-detail">
+<h5><code>enriched cell sample NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>ba153086-53ce-48e5-a2ed-e355a0ff0cc3</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for an Enriched Cell Sample</p>
+</div>
+
+<div id="enriched-cell-sample-cell-label-barcode" class="field-detail">
+<h5><code>enriched cell sample cell label barcode</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>bdd5e2bf-c6fa-43e6-a5ac-6878fcf814d6</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> enriched cell source barcode name</li>
+<li><strong>Subsets:</strong> alignment</li>
+</ul>
+<p>Name of molecular barcode used to individual Enriched Cell Source to allow for pooling of Enriched Cell Sources before 10x load (Barcoding Cell step) [aka 1st round barcodes]</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9a55368b-3b12-47f3-a3cb-ee282c6d73ce</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>NIMP database id for the project his Enriched Cell Sample is associated with</p>
+</div>
+
+<div id="enrichment-population" class="field-detail">
+<h5><code>enrichment population</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>875f1c70-f5aa-45e3-94b9-5e482f6c4830</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+</ul>
+<p>Actual percentage of cells as a result of using set of fluorescent marker label(s) to enrich dissociated_cell_sample with desired mix of cell populations. This plan can also be used to describe &#x27;No FACS&#x27; where no enrichment was performed. This is a property of enriched_cell_prep_container.</p>
+</div>
+
+<div id="histone-modification-marker" class="field-detail">
+<h5><code>histone modification marker</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>a2ef2228-e438-4260-95e5-22eb3b35b5a9</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>Histone modification marker antibodies (eg H3K27ac; H3K27me3; H3K9me3) used in conjunction with an Enriched Cell Source Barcode in order to combine multiple Enriched Cell Populations before Barcoded Cell Sample step for 10xMultiome method. Each of the Histone antibodies captures an essential part of the epigenome.</p>
+</div>
+
+<div id="enriched-cell-sample-project" class="field-detail">
+<h5><code>enriched cell sample project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f59d224e-7732-4409-afb9-a9f502d0173b</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Enriched Cell Sample Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="enriched-cell-sample-lab" class="field-detail">
+<h5><code>enriched cell sample lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>210cc89d-3b30-4d24-b870-3fa35fe64c2b</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Enriched Cell Sample Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="library_1">Library</h4>
+<div id="library-nhash-id" class="field-detail">
+<h5><code>library NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f9466382-60f1-45ab-a107-c247531ff3dd</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for a Library</p>
+</div>
+
+<div id="library-technique" class="field-detail">
+<h5><code>library technique</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7b60d59e-fdd7-4b27-a2d4-cae9b69103a6</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> library method; library chemistry method</li>
+<li><strong>Subsets:</strong> analysis; tracking; alignment</li>
+</ul>
+<p>Standardized nomenclature to describe the library method used. This specifies the alignment method required for the library. For example 10xV3.1 (for RNASeq single assay); 10xMult-GEX (for RNASeq multiome assay); 10xMult-ATAC (for ATACSeq multiome assay).</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-r1/r2-index" class="field-detail">
+<h5><code>library r1/r2 index</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>c94b5d8a-e92d-47af-8c0e-ea3b58be4d06</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> R1/R2 index name</li>
+<li><strong>Subsets:</strong> analysis; tracking</li>
+</ul>
+<p>Name of the pair of library indexes used for sequencing. Indexes allow libraries to be pooled together for sequencing. Sequencing output (fastq) are demultiplexed by using the indexes for each library. The name will be associated with the sequences of i7; i5; and i5as that are needed by SeqCores for demultiplexing. The required direction of the sequence (sense or antisense) of the index can differ depending on sequencing instruments.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-source-type" class="field-detail">
+<h5><code>library source type</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5ce18f3d-0e4a-4843-aac6-2b8d3af51c87</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>The upstream resource type for library creation. Could be either Barcoded Cell Samples or Amplified cDNA</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9a55368b-3b12-47f3-a3cb-ee282c6d73ce</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>NIMP database id for the project this Library is associated with</p>
+</div>
+
+<div id="library-avg-size-bp" class="field-detail">
+<h5><code>library avg size bp</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f851eba9-56d1-4472-9d0c-d7f8bc33000a</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Average size of the library in terms of base pairs. This is used to calculate the molarity before pooling and sequencing.</p>
+</div>
+
+<div id="library-concentration-nm" class="field-detail">
+<h5><code>library concentration nm</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>90805b3f-f380-4f23-b159-e7eaa0c8f052</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Concentration of library in terms of nM (nMol/L). Number of molecules is needed for accurate pooling of the libraries and for generating the number of target reads/cell in sequencing.</p>
+</div>
+
+<div id="library-input-ng" class="field-detail">
+<h5><code>library input ng</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>e4d31d97-722d-4771-a0e4-e6062190f2c1</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Amount of cDNA going into library construction in nanograms.</p>
+</div>
+
+<div id="library-prep-pass-fail" class="field-detail">
+<h5><code>library prep pass-fail</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>6817ede2-7ead-402d-9dbc-131aca627c6c</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> library prep pass-fail result</li>
+<li><strong>Subsets:</strong> analysis</li>
+</ul>
+<p>Pass or Fail result based on qualitative assessment of library yield and size.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-quantification-fmol" class="field-detail">
+<h5><code>library quantification fmol</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>4c09ada7-c116-48bc-8fb1-0dcf5c4b939a</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Subsets:</strong> analysis</li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Amount of library generated in terms of femtomoles</p>
+</div>
+
+<div id="library-quantification-ng" class="field-detail">
+<h5><code>library quantification ng</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>318b2d3a-dae7-4c63-bfbb-93862b92f63e</code></li>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Range:</strong> 0 – —</li>
+</ul>
+<p>Amount of library generated in terms of nanograms</p>
+</div>
+
+<div id="library-project" class="field-detail">
+<h5><code>library project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>eb67d39c-2e42-4123-9ac5-71cb08791de4</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-lab" class="field-detail">
+<h5><code>library lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b328bb86-d5de-421e-8b33-fa07fdd30f68</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="library-aliquot_1">Library Aliquot</h4>
+<div id="library-aliquot-local-name" class="field-detail">
+<h5><code>library aliquot local name</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>34191bad-d167-4335-8224-ade897d3728e</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+<li><strong>Aliases:</strong> library aliquot label</li>
+<li><strong>Subsets:</strong> analysis; tracking; alignment</li>
+</ul>
+<p>One library in the library pool. Each Library_aliquot_name in a library pool will have a unique R1/R2 index to allow for sequencing together then separating the sequencing output by originating library aliquot through the process of demultiplexing. The resulting demultiplexed fastq files will include the library_aliquot_name.</p>
+</div>
+
+<div id="library-aliquot-nhash-id" class="field-detail">
+<h5><code>library aliquot NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>3db64dfd-6576-41de-8235-243691238fb2</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for a Library Aliquot. This NHash id is a concatenation of the NHash ids of the corresponding Library and the Library Pool.</p>
+</div>
+
+<div id="sequencing-result-date" class="field-detail">
+<h5><code>sequencing result date</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>529393f3-ca97-4726-8a22-b1b2284ab30e</code></li>
+<li><strong>Data Type:</strong> <code>date</code></li>
+</ul>
+<p>The date of sequencing results for the Library Aliquot as reported by the Sequencing Center</p>
+</div>
+
+<div id="library-aliquot-sequencing-result-status" class="field-detail">
+<h5><code>library aliquot sequencing result status</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7d6a2e23-efed-4918-98a8-7b9beca99636</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>The status of the sequencing results for the Library Aliquot as reported by the Sequencing Center</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="fastq-file-alignment-status" class="field-detail">
+<h5><code>fastq file alignment status</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>834a0e66-fd81-4d9c-b379-146372c3a629</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Subsets:</strong> alignment</li>
+</ul>
+<p>The FASTQ file alignment status as reported by the Library Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-aliquot-fastq-file-size-in-tb" class="field-detail">
+<h5><code>library aliquot fastq file size in TB</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9ad18a13-465d-44c6-9274-4a2e007150be</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>Library Aliquot FASTQ File Size in TB</p>
+</div>
+
+<div id="library-aliquot-project" class="field-detail">
+<h5><code>library aliquot project</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>c972ebc0-bb1f-4124-b69c-8db7b28ef8b7</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Aliquot Project</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-aliquot-lab" class="field-detail">
+<h5><code>library aliquot lab</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>1c4ca594-b465-4bc9-be3b-2da4f2fce4ea</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Aliquot Lab</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="alignment-qc-status" class="field-detail">
+<h5><code>alignment QC status</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>83dcf584-00c8-48a2-8bda-c360100e7cb3</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Aliquot Alignment QC Status</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="nemo-aliquot-fastq-public-url" class="field-detail">
+<h5><code>NeMO aliquot fastq public URL</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>4c24ea68-c861-4329-9fbd-179de9c63444</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NeMO Aliquot Fastq Public URL</p>
+</div>
+
+<div id="nemo-aliquot-fastq-gcp-url" class="field-detail">
+<h5><code>NeMO aliquot fastq gcp URL</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7e4711cd-641c-4d8b-9431-8c00c3c56fc5</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NeMO Aliquot Fastq GCP URL</p>
+</div>
+
+<div id="aliquot-alignment-job-id" class="field-detail">
+<h5><code>aliquot alignment job ID</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>7ab5aa8f-297a-4471-9ddd-291a3bbbce0c</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>Library Aliquot Alignment QC Job ID</p>
+</div>
+
+<div id="library-aliquot-qc-last-updated-date" class="field-detail">
+<h5><code>library aliquot QC last updated date</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>61a19053-9b68-43b5-ab8c-3d620f3233b7</code></li>
+<li><strong>Data Type:</strong> <code>date</code></li>
+</ul>
+<p>Library Aliquot QC last updated date</p>
+</div>
+
+<div id="aliquot-alignment-qc-uploaded-date" class="field-detail">
+<h5><code>aliquot alignment QC uploaded date</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>c0509f07-e68a-49cf-90a4-19be987302ff</code></li>
+<li><strong>Data Type:</strong> <code>date</code></li>
+</ul>
+<p>Library Aliquot alignment QC uploaded date</p>
+</div>
+
+<div id="aliquot-qc-total-reads" class="field-detail">
+<h5><code>aliquot QC total reads</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>33a3e1e3-9fc1-45bd-95ee-6649d64dbfbe</code></li>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+</ul>
+<p>Library Aliquot QC total reads</p>
+</div>
+
+<h4 id="library-package_1">Library Package</h4>
+<div id="sequencing-center-id" class="field-detail">
+<h5><code>sequencing center ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>ea95bdad-a450-464f-ac5f-b707be243342</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>NIMP id for the Sequencing Center this Library Package will be sent to.</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<h4 id="library-pool_1">Library Pool</h4>
+<div id="library-pool-nhash-id" class="field-detail">
+<h5><code>library pool NHash ID</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9dfdce26-643a-4e1d-8d47-8f418628c893</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>NIMP generated globally unique identifier for a Library Pool</p>
+</div>
+
+<div id="library-pool-tube-barcode" class="field-detail">
+<h5><code>library pool tube barcode</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>da02a0ee-9abf-45ef-abb1-981f1aaba6b2</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+<li><strong>Aliases:</strong> SeqCore library pool tube barcode</li>
+<li><strong>Subsets:</strong> analysis; tracking</li>
+</ul>
+<p>Library Pool tube name as provided by the SeqCore (often a barcode). This tube is provided from the SeqCore and is part of the SeqCore tracking system.</p>
+</div>
+
+<div id="flowcell" class="field-detail">
+<h5><code>flowcell</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>4c8d7ac8-d3e3-4177-a93d-18ec2302c392</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>The Flowcell is a unique identifer of the sequencing cartridge (provided by the sequencing instrument manufacturer) used and consumed when sequencing Library Pools on an Illumina sequencing instrument.  A flowcell can be different sizes with different number of lanes.  The flowcell size determines the number of total reads it will produce.  Typically one Flowcell is used to run one Library Pool across all lanes.  Multiple pools can be run on a single flowcell as long as the pools are partitioned onto separate lanes of the flowcell.  Each lane from a flowcell will produce fastq files for all Library Aliquots within the Library Pool applied to a given lane.</p>
+</div>
+
+<div id="library-pool-alignment-status" class="field-detail">
+<h5><code>library pool alignment status</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>1b163e8d-fb02-4f95-be76-f72f8fae0a04</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Whether the Library Pool is approved for alignment or not</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-pool-sequencing-instrument" class="field-detail">
+<h5><code>library pool sequencing instrument</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>26b2d0c6-6e01-4238-8992-e138a8d9970c</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Pool Sequencing Instrument</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-pool-flowcell-type" class="field-detail">
+<h5><code>library pool flowcell type</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>4b17b73a-ab3c-46c2-81ff-d32da499bccd</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Pool Flowcell Type</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-pool-fastq-submission-id" class="field-detail">
+<h5><code>library pool fastq submission ID</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>a314a71c-d68a-4da0-9829-0d64c5087b89</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>Library Pool FASTQ Submission ID</p>
+</div>
+
+<div id="library-pool-projects" class="field-detail">
+<h5><code>library pool projects</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>b13d9d14-d825-4b50-b20f-716c88ae03ee</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Pool Projects</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="library-pool-labs" class="field-detail">
+<h5><code>library pool labs</code> <em>(required)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>24b59a2a-d841-48b3-b251-4e6210417c4a</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+</ul>
+<p>Library Pool Labs</p>
+<p><strong>Permissible values:</strong> <code>Yes</code></p>
+</div>
+
+<div id="nemo-pool-bucket" class="field-detail">
+<h5><code>NeMO pool bucket</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>eb042898-2e7a-49d8-8378-6fe87aceb80c</code></li>
+<li><strong>Data Type:</strong> <code>text</code></li>
+</ul>
+<p>Nemo Pool Bucket</p>
+</div>
+
+<h4 id="the-linkml-class-or-data-entity-eg-purple-or-orange-box-in-the-workflow-diagram-with-which-this-metadata-field-is-associated_1">The LINKML class or data entity (e.g. purple or orange box in the workflow diagram) with which this metadata field is associated</h4>
+<div id="name-of-metadata-field" class="field-detail">
+<h5><code>Name of metadata field</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>UUID of field in BICAN Ecosystem</code></li>
+<li><strong>Data Type:</strong> <code>Type of values in this field (integer; float; text; date)</code></li>
+<li><strong>Aliases:</strong> Aliases for this metadata element in other schemas/resources</li>
+<li><strong>Subsets:</strong> Data use subset for this field</li>
+<li><strong>Range:</strong> For measurements if applicable – For measurements if applicable For measurements if applicable</li>
+</ul>
+<p>A detailed definition for this field</p>
+<p><strong>Permissible values:</strong> <code>For fields that have values from a limited set; see Controlled Values table for entries</code></p>
+</div>
+
+<!-- schema-properties-end -->
+
+<h2 id="changelog">Changelog</h2>
+<h3 id="version-121">Version 1.2.1</h3>
+<ul>
+<li>1.2.1 Added 'pass' as a value to library QC result.</li>
+</ul>
+<h3 id="version-12">Version 1.2</h3>
+<h4 id="added">Added</h4>
+<ul>
+<li>1.2 patched cell structure</li>
+</ul>
+<h3 id="version-111">Version 1.1.1</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li>1.1.1 Changed fastq file alignment status value set (Pass to Pass-Flag)</li>
+</ul>
+<h3 id="version-11">Version 1.1</h3>
+<h4 id="added_1">Added</h4>
+<ul>
+<li>1.1 dissociated_cell_sample_preparation_date</li>
+<li>1.1 dissociated_cell_sample_cell_label_barcode</li>
+<li>1.1 enriched_cell_sample_cell_label_barcode</li>
+<li>1.1 enriched_cell_sample_preparation_date</li>
+<li>1.1 histone_modification_marker</li>
+<li>1.1 library_pool_preparation_date</li>
+<li>1.1 flowcell</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Institutional-Certification/">
+      
+      
+        <link rel="prev" href="../Developing-Tissue-Metadata/">
+      
+      
+        <link rel="next" href="../Macaque-Metadata/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Institutional Certification - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bican-institutional-certification-metadata-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Institutional Certification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-local-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Local Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-effective-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Effective Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Identifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donor-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Donor Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donor-local-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Local Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-local-name-donor-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Local Name (donor certification)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cohort-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cohort Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ic-donor-data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Donor Data Use Limitation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IC Donor Data Use Limitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donor-local-name-data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Local Name (data use limitation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Use Limitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disease Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irb-approval-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IRB Approval Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publication Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-for-profit-use-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not for Profit Use Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-study-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genetic Study Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-7-2025-version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 7, 2025 -- Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#february-2025-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        February 2025 (pre-release)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-local-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Local Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-effective-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Effective Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Identifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donor-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Donor Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donor-local-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Local Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ic-form-local-name-donor-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Form Local Name (donor certification)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cohort-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cohort Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ic-donor-data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IC Donor Data Use Limitation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IC Donor Data Use Limitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donor-local-name-data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Local Name (data use limitation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-use-limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Use Limitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disease Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irb-approval-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IRB Approval Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publication Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-for-profit-use-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not for Profit Use Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-study-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genetic Study Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-7-2025-version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 7, 2025 -- Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#february-2025-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        February 2025 (pre-release)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="bican-institutional-certification-metadata-schema">BICAN Institutional Certification Metadata Schema</h1>
+<p>Document Status: <em>Approved BICAN Standard</em></p>
+<p>Version: 1.0</p>
+<p>Owner: @lydiang</p>
+<p>Reviewers: @patrick-lloyd-ray, @rightbower, @carolth</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: 14-02-2025</p>
+<h2 id="background">Background</h2>
+<p>The Brain Research Through Advancing Innovative Neurotechnologies® (BRAIN) Initiative Cell Atlas Network (BICAN) aims to transform our understanding of brain cell types and the precise tools needed to access them, bringing us one step closer to unraveling the complex workings of the human brain.</p>
+<p>Building on findings from the BRAIN Initiative Cell Census Network (BICCN), BICAN takes the next step in mapping brain cells and circuits across multiple species, with an emphasis on humans. The aim of BICAN is to generate a complete reference atlas of cell types in the human brain across the lifespan, which can be shared and used throughout the research community. In addition to developing a “parts list” detailing the vast array of neurons and non-neuronal cells in the human brain, the project also aims to map cell interactions that underlie a wide range of brain disorders.</p>
+<p>To this end, BICAN aims to support the publication, sharing, and exploration of datasets generated in the course of the project. Creating a complete reference atlas from multiple datasets requires vast harmonization of metadata. In order to facilitate the harmonization of metadata, we require datasets include a small set of metadata available from data submitters.</p>
+<p>This document describes a schema, a type of contract, that BICAN requires of all donor to alignment datasets to enable searching, filtering, and integration of datasets.</p>
+<p>Note that the requirements in the schema are just the minimum required information. Datasets often have additional metadata, which is preserved in datasets submitted to the data archives.</p>
+<h2 id="overview">Overview</h2>
+<p>The BICAN Institutional Certification Metadata schema describes metadata associated with and produced from institutional certification forms and data in BICAN.</p>
+<p>This document has the following sections:</p>
+<ul>
+<li><a href="#bican-institutional-certification-metadata-schema">BICAN Institutional Certification Metadata Schema</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#general-requirements">General Requirements</a></li>
+<li><a href="#certification">Certification</a><ul>
+<li><a href="#ic-form-local-name">IC Form Local Name</a></li>
+<li><a href="#ic-form-effective-date">IC Form Effective Date</a></li>
+<li><a href="#project-identifier">Project Identifier</a></li>
+</ul>
+</li>
+<li><a href="#donor-certification">Donor Certification</a><ul>
+<li><a href="#donor-local-name">Donor Local Name</a></li>
+<li><a href="#ic-form-local-name-donor-certification">IC Form Local Name (donor certification)</a></li>
+<li><a href="#cohort-tag">Cohort Tag</a></li>
+</ul>
+</li>
+<li><a href="#ic-donor-data-use-limitation">IC Donor Data Use Limitation</a><ul>
+<li><a href="#donor-local-name-data-use-limitation">Donor Local Name (data use limitation)</a></li>
+<li><a href="#access-level">Access Level</a></li>
+<li><a href="#data-use-limitation">Data Use Limitation</a></li>
+<li><a href="#disease-specification">Disease Specification</a></li>
+<li><a href="#irb-approval-required">IRB Approval Required</a></li>
+<li><a href="#publication-required">Publication Required</a></li>
+<li><a href="#collaboration-required">Collaboration Required</a></li>
+<li><a href="#not-for-profit-use-only">Not for Profit Use Only</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#genetic-study-only">Genetic Study Only</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#august-7-2025----version-100">August 7, 2025 -- Version 1.0.0</a></li>
+<li><a href="#february-2025-pre-release">February 2025 (pre-release)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<p>The BICAN Institutional Certification Metadata is intended to be used by data submitters to provide information about institutional certification forms and data.</p>
+<p>The schema is designed to be flexible and extensible, allowing for the addition of new fields as needed. The schema is also designed to be compatible with existing metadata standards.</p>
+<h2 id="certification">Certification</h2>
+<p>The BICAN Institutional Certification Metadata schema includes fields for certification information, including the institution name, certification date, and certification type. The schema also includes fields for the certification form and data.</p>
+<h3 id="ic-form-local-name">IC Form Local Name</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>ic_form_local_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>donor local name</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ic-form-effective-date">IC Form Effective Date</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>ic_form_effective_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>6c0696fc-e6ec-45d2-9440-e61463228936</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>donor effective date</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The date when the institutional certification form becomes effective.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project-identifier">Project Identifier</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>project_identifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>c1d2e3f4-5678-90ab-cdef-1234567890ab</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>project id</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A unique identifier for the project associated with the institutional certification form.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="donor-certification">Donor Certification</h2>
+<p>The BICAN Institutional Certification Metadata schema includes fields for donor certification information, including the donor name, institutional certification name, and cohort tag.</p>
+<h3 id="donor-local-name">Donor Local Name</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>donor_local_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>donor local name</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ic-form-local-name-donor-certification">IC Form Local Name (donor certification)</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>ic_form_local_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>a220b50e-7691-4385-ba35-90ce760be3c3</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The name of IC form as it is used by a local entity.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cohort-tag">Cohort Tag</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>cohort_tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>783ec297-f361-4a23-b78d-801bdb1e3fd3</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>cohort tag</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that indicates a cohort grouping.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ic-donor-data-use-limitation">IC Donor Data Use Limitation</h2>
+<p>The BICAN Institutional Certification Metadata schema includes fields for donor data use limitation information, including access level, data use limitation, disease specification and IRB approval fields.</p>
+<h3 id="donor-local-name-data-use-limitation">Donor Local Name (data use limitation)</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>donor_local_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>donor local name</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access-level">Access Level</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>access_level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>9f800e73-0d96-45cf-8e92-303e22e80aaf</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>access level</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that is used to indicate the level of access of a dataset (unrestricted or controlled).</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>categorical, enum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-use-limitation">Data Use Limitation</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>data_use_limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>5a122436-5768-47eb-b028-6e2f6b5f1245</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>data use limitation</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>categorical, enum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disease-specification">Disease Specification</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>disease_specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>f76579b7-35b8-415f-ad2b-414f9ad555ac</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>disease specification</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The dataset can be used only for research on a specific disease or related condition.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>categorical, enum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="irb-approval-required">IRB Approval Required</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>irb_approval_required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>c1d2e3f4-5678-90ab-cdef-1234567890ab</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>irb approval required</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that indicates whether IRB approval is required for the use of the dataset.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="publication-required">Publication Required</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>publication_required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>432f1e56-7e1f-433d-aca4-5ac20afb4638</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>publication required</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must share their results with the larger scientific community.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collaboration-required">Collaboration Required</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>collaboration_required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>39ab79f3-6c21-423f-9670-4c5a4e9035ed</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>collaboration required</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must provide a letter of collaboration with the primary study investigators.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="not-for-profit-use-only">Not for Profit Use Only</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>not_for_profit_use_only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>dc4e4bf5-a221-4989-af64-b2f21b0c1dd8</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>not for profit use only</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that indicates whether or not the dataset can be used for non-profit purposes only.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>c5dfba12-4c1c-451e-b516-df95d5c9efd6</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>methods</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>The dataset can be used for methods research and development (e.g., development of statistical software or algorithms).</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="genetic-study-only">Genetic Study Only</h3>
+<table>
+<thead>
+<tr>
+<th>BICAN Field Name</th>
+<th>genetic_study_only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BICAN UUID</td>
+<td>0b3acf53-2643-46aa-9f45-f1ad9ecc9564</td>
+</tr>
+<tr>
+<td>Aliases</td>
+<td>genetic study only</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A data item that indicates whether or not the dataset can be used for genetic studies only.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<!-- schema-properties-start -->
+<h2 id="schema-properties">Schema properties</h2>
+<p><em>Auto-generated from CSV. Do not edit this section manually.</em></p>
+<p><strong>Status:</strong> Endorsed BICAN Standard &middot; <strong>Version:</strong> 1.0.0 &middot; <strong>Date:</strong> 2024-08-07</p>
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#local-donor-id"><code>local donor ID</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>donor_local_name | donor local name</td>
+<td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registe…</td>
+</tr>
+<tr>
+<td><a href="#access-level"><code>access level</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>access_level|consent status</td>
+<td>A data item that is used to indicate the level of access of a dataset (unrestricted or controlled).</td>
+</tr>
+<tr>
+<td><a href="#data-use-limitation"><code>data use limitation</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>data_use_limitation</td>
+<td>A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for …</td>
+</tr>
+<tr>
+<td><a href="#disease-specification"><code>disease specification</code></a></td>
+<td>categorical</td>
+<td>no</td>
+<td>disease_specification</td>
+<td>The dataset can be used only for research on a specific disease or related condition.</td>
+</tr>
+<tr>
+<td><a href="#irb-approval-required"><code>IRB approval required</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>irb_approval_required</td>
+<td>A data item that is used to indicate whether or not IRB approval is required.</td>
+</tr>
+<tr>
+<td><a href="#publication-required"><code>publication required</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>publication_required</td>
+<td>A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must chare …</td>
+</tr>
+<tr>
+<td><a href="#collaboration-required"><code>collaboration required</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>collaboration_required</td>
+<td>A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must privid…</td>
+</tr>
+<tr>
+<td><a href="#not-for-profit-use-only"><code>not for profit use only</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>not_for_profit_use_only</td>
+<td>A data item that is used to indicate whether a dataset is designated for non-profit use.</td>
+</tr>
+<tr>
+<td><a href="#methods"><code>methods</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>methods</td>
+<td>The dataset can be used for methods research and development (e.g., development of statistical software or algorithms).</td>
+</tr>
+<tr>
+<td><a href="#genetic-study-only"><code>genetic study only</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>genetic_study_only</td>
+<td>The dataset can only be used only for genetic studies.</td>
+</tr>
+<tr>
+<td><a href="#ic-form-local-name"><code>IC form local name</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>ic_form_local_name</td>
+<td>The name of IC form as it is used by a local entity.</td>
+</tr>
+<tr>
+<td><a href="#ic-form-effective-date"><code>IC form effective date</code></a></td>
+<td>datetime</td>
+<td>no</td>
+<td>ic_form_effective_date</td>
+<td>The data at which the IC form is effective.</td>
+</tr>
+<tr>
+<td><a href="#project-identifier"><code>project identifier</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>project_identifier</td>
+<td>The identifier that uniquely identifies a project.</td>
+</tr>
+<tr>
+<td><a href="#cohort-tag"><code>cohort tag</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>cohort_tag</td>
+<td>A data item that indicates a cohort grouping.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-details">Property Details</h3>
+<div id="local-donor-id" class="field-detail">
+<h5><code>local donor ID</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> donor_local_name | donor local name</li>
+</ul>
+<p>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</p>
+</div>
+
+<div id="access-level" class="field-detail">
+<h5><code>access level</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>9f800e73-0d96-45cf-8e92-303e22e80aaf</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> access_level|consent status</li>
+</ul>
+<p>A data item that is used to indicate the level of access of a dataset (unrestricted or controlled).</p>
+<p><strong>Permissible values:</strong> <code>unrestricted</code>, <code>controlled</code></p>
+</div>
+
+<div id="data-use-limitation" class="field-detail">
+<h5><code>data use limitation</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>5a122436-5768-47eb-b028-6e2f6b5f1245</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> data_use_limitation</li>
+</ul>
+<p>A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.</p>
+<p><strong>Permissible values:</strong> <code>No Restrictions</code>, <code>General Research Use</code>, <code>Health/Medical/Biomedical</code>, <code>Disease-specific</code></p>
+</div>
+
+<div id="disease-specification" class="field-detail">
+<h5><code>disease specification</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>f76579b7-35b8-415f-ad2b-414f9ad555ac</code></li>
+<li><strong>Data Type:</strong> <code>categorical</code></li>
+<li><strong>Aliases:</strong> disease_specification</li>
+</ul>
+<p>The dataset can be used only for research on a specific disease or related condition.</p>
+<p><strong>Permissible values:</strong> <code>[disease ValueSet]</code></p>
+</div>
+
+<div id="irb-approval-required" class="field-detail">
+<h5><code>IRB approval required</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>71a84ad6-44ba-44a3-a936-8267ac43a9d0</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> irb_approval_required</li>
+</ul>
+<p>A data item that is used to indicate whether or not IRB approval is required.</p>
+</div>
+
+<div id="publication-required" class="field-detail">
+<h5><code>publication required</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>432f1e56-7e1f-433d-aca4-5ac20afb4638</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> publication_required</li>
+</ul>
+<p>A data item that is used to indicate whether or not a publication is required -- i.e., whether the requestor must chare their results with the larger scientific community.</p>
+</div>
+
+<div id="collaboration-required" class="field-detail">
+<h5><code>collaboration required</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>39ab79f3-6c21-423f-9670-4c5a4e9035ed</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> collaboration_required</li>
+</ul>
+<p>A data item that is used to indicate whether or not collaboration is required -- i.e., whether the requestor must privide a letter of collaboration with the primary study investigators.</p>
+</div>
+
+<div id="not-for-profit-use-only" class="field-detail">
+<h5><code>not for profit use only</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>dc4e4bf5-a221-4989-af64-b2f21b0c1dd8</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> not_for_profit_use_only</li>
+</ul>
+<p>A data item that is used to indicate whether a dataset is designated for non-profit use.</p>
+</div>
+
+<div id="methods" class="field-detail">
+<h5><code>methods</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>c5dfba12-4c1c-451e-b516-df95d5c9efd6</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> methods</li>
+</ul>
+<p>The dataset can be used for methods research and development (e.g., development of statistical software or algorithms).</p>
+</div>
+
+<div id="genetic-study-only" class="field-detail">
+<h5><code>genetic study only</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>0b3acf53-2643-46aa-9f45-f1ad9ecc9564</code></li>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Aliases:</strong> genetic_study_only</li>
+</ul>
+<p>The dataset can only be used only for genetic studies.</p>
+</div>
+
+<div id="ic-form-local-name" class="field-detail">
+<h5><code>IC form local name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>a220b50e-7691-4385-ba35-90ce760be3c3</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> ic_form_local_name</li>
+</ul>
+<p>The name of IC form as it is used by a local entity.</p>
+</div>
+
+<div id="ic-form-effective-date" class="field-detail">
+<h5><code>IC form effective date</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>6c0696fc-e6ec-45d2-9440-e61463228936</code></li>
+<li><strong>Data Type:</strong> <code>datetime</code></li>
+<li><strong>Aliases:</strong> ic_form_effective_date</li>
+</ul>
+<p>The data at which the IC form is effective.</p>
+</div>
+
+<div id="project-identifier" class="field-detail">
+<h5><code>project identifier</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>abd4e1df-9c8e-4560-9077-ace8358b26de</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> project_identifier</li>
+</ul>
+<p>The identifier that uniquely identifies a project.</p>
+</div>
+
+<div id="cohort-tag" class="field-detail">
+<h5><code>cohort tag</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>BICAN UUID:</strong> <code>783ec297-f361-4a23-b78d-801bdb1e3fd3</code></li>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> cohort_tag</li>
+</ul>
+<p>A data item that indicates a cohort grouping.</p>
+</div>
+
+<!-- schema-properties-end -->
+
+<h2 id="changelog">Changelog</h2>
+<h3 id="august-7-2025-version-100">August 7, 2025 -- Version 1.0.0</h3>
+<ul>
+<li><strong>07-08-2025</strong>: Approved BICAN Standard version 1.0.0</li>
+</ul>
+<h3 id="february-2025-pre-release">February 2025 (pre-release)</h3>
+<ul>
+<li><strong>14-02-2025</strong>: Initial version created</li>
+<li><strong>15-02-2025</strong>: Added additional fields for donor data use limitation</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

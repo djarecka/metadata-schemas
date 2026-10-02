@@ -1,0 +1,3727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Marmoset-Metadata/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>BICAN Marmoset Metadata Schema - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bican-marmoset-metadata-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BICAN Marmoset Metadata Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-omics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial Omics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spatial Omics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-donor-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Donor ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-donor-id_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Donor ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donor-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donor Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sex-at-birth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sex at Birth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age-value-years" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Age Value (Years)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year-of-death" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Year of Death
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manner-of-death" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manner of Death
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mating-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mating Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-records-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medical Records Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hemisphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hemisphere
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-mortem-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post Mortem Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-hemisphere-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left Hemisphere Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-hemisphere-preparation-specify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left Hemisphere Preparation Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-hemisphere-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Right Hemisphere Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-hemisphere-preparation-specify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Right Hemisphere Preparation Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rin-tissue-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIN Tissue Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rin-testing-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIN Testing Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RINe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rine-tissue-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RINe Tissue Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rine-testing-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RINe Testing Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-tissue-weighed-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Tissue Weighed Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-anterior-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Anterior-Posterior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-medial-lateral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Medial-Lateral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-dorsal-ventral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Dorsal-Ventral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-unit-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Unit Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histological-stains-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histological Stains Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histological-stain-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histological Stain Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photo-2d-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photo 2D Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-brain-tissue-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Brain Tissue Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue Type Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-history-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family History Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-type-specify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Type Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postmortem-mri-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Postmortem MRI Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postmortem-mri-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Postmortem MRI Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#species" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Species
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premortem-perfusion-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premortem perfusion done
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premortem-perfusion-buffer-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premortem perfusion buffer type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slab type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-thickness-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slab thickness (mm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-freeze-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Freeze Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#population" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Population
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Population">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-donor-id_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Donor ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sex-at-birth_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sex at Birth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age-value-years_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Age Value (Years)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year-of-death_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Year of Death
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manner-of-death_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manner of Death
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mating-status_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mating Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-records-available_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medical Records Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hemisphere_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hemisphere
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-mortem-interval_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post Mortem Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-hemisphere-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left Hemisphere Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-hemisphere-preparation-specify_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left Hemisphere Preparation Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-hemisphere-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Right Hemisphere Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-hemisphere-preparation-specify_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Right Hemisphere Preparation Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rin_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rine_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RINe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ph_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-weight-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Weight Measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-tissue-weighed-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Tissue Weighed Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-anterior-posterior_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Anterior-Posterior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-medial-lateral_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Medial-Lateral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-dorsal-ventral_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Dorsal-Ventral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-size-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Size Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histological-stains-available_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histological Stains Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histological-stain-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histological Stain Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photo-2d-available_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photo 2D Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antemortem-mri-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antemortem MRI Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antemortem-mri-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antemortem MRI Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-brain-tissue-available_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Brain Tissue Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type-details_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue Type Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-history-available_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family History Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-type-specify_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Type Specify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#species_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Species
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premortem-perfusion-done_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premortem perfusion done
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premortem-perfusion-buffer-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premortem perfusion buffer type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-type_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slab type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-thickness-mm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slab thickness (mm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-freeze-method_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Freeze Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="bican-marmoset-metadata-schema">BICAN Marmoset Metadata Schema</h1>
+<p>Document Status: <em>Under MOWG Review</em></p>
+<p>Version: 1.0</p>
+<p>Owner: HMBA</p>
+<p>Reviewers: @djarecka, @rightbower, @nsuvarnaiari</p>
+<p>License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+<p>Date Created: 08-07-2024</p>
+<h2 id="background">Background</h2>
+<p>The Brain Research Through Advancing Innovative Neurotechnologies® (BRAIN) Initiative Cell Atlas Network (BICAN) aims to transform our understanding of brain cell types and the precise tools needed to access them, bringing us one step closer to unraveling the complex workings of the human brain.</p>
+<p>Building on findings from the BRAIN Initiative Cell Census Network (BICCN), BICAN takes the next step in mapping brain cells and circuits across multiple species, with an emphasis on humans. The aim of BICAN is to generate a complete reference atlas of cell types in the human brain across the lifespan, which can be shared and used throughout the research community. In addition to developing a “parts list” detailing the vast array of neurons and non-neuronal cells in the human brain, the project also aims to map cell interactions that underlie a wide range of brain disorders.</p>
+<p>To this end, BICAN aims to support the publication, sharing, and exploration of datasets generated in the course of the project. Creating a complete reference atlas from multiple datasets requires vast harmonization of metadata. In order to facilitate the harmonization of metadata, we require datasets include a small set of metadata available from data submitters.</p>
+<p>This document describes a schema, a type of contract, that BICAN requires of all donor to alignment datasets to enable searching, filtering, and integration of datasets.</p>
+<p>Note that the requirements in the schema are just the minimum required information. Datasets often have additional metadata, which is preserved in datasets submitted to the data archives.</p>
+<h2 id="overview">Overview</h2>
+<p>The BICAN Marmoset Metadata schema describes metadata associated with and produced from the preparation of marmoset donor and tissue in the HMBA and BICAN. [more detail needed here]</p>
+<p>This document has the following sections:</p>
+<ul>
+<li><a href="#general-requirements">General Requirements</a></li>
+<li><a href="#spatial-omics">Spatial Omics</a>, which describe the metadata required for spatial omics experiements.</li>
+<li><a href="#population">Population</a>, which describe the metadata required for marmoset population studies.</li>
+<li><a href="#appendix">Appendix</a></li>
+</ul>
+<h2 id="general-requirements">General Requirements</h2>
+<p><strong>Organisms</strong>. Data must be from a Metazoan organism and defined in the NCBI organismal classification.</p>
+<p><strong>Redundant Metadata</strong>. It is STRONGLY RECOMMENDED to avoid multiple metadata fields containing identical or similar information.</p>
+<h2 id="spatial-omics">Spatial Omics</h2>
+<p>The data in Spatial Omics is the metadata essential for marmoset spatial omics experiments.</p>
+<p>The following tables describe the spatial omics metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond the ones listed above.</p>
+<p>Curators must annotate the following columns:</p>
+<h3 id="local-donor-id">Local Donor ID</h3>
+<h3 id="local-donor-id_1">Local Donor ID</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>local donor ID</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>subject_id</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="donor-source">Donor Source</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>donor source</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0d0cf732-0f76-409d-9a73-7a96d829d3d3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The origin of the donor/subject in this experiment.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>donor_source</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>inclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="sex-at-birth">Sex at Birth</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>sex at birth</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c819b9d5-2fde-40b2-bf0d-e07b56f96ac9</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to differentiate the individuals or types involved.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>sex</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="age-value-years">Age Value (Years)</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>age value (years)</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>14eb923a-161d-45e2-889d-81fea7b632b6</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>A time quality inhering in a bearer by virtue of how long the bearer has existed.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>age_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="year-of-death">Year of Death</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>year of death</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>60445046-d9d8-4f00-959e-9a4c42613e5e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The year wherein the subject or donor has ceased to exist.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>year_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>date</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="manner-of-death">Manner of Death</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>manner of death</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>36eeb35b-5020-4a9e-a74b-6e1104415e0e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (natural, accident, suicide, homicide, and undetermined).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>manner_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="mating-status">Mating Status</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>mating status</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>dd2ea811-b424-4b85-a572-16707a6612f3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The mating status of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>mating_status</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="medical-records-available">Medical Records Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>medical records available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ee2c9223-f7d1-4c64-a1da-cd7408309955</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of the medical records of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>medical_records_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="hemisphere">Hemisphere</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>hemisphere</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>68b7a28b-d695-4ec9-800b-6a27ca206081</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>hemisphere</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="post-mortem-interval">Post Mortem Interval</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>post mortem interval</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6fd5c5ac-b128-4a4a-ae98-09eaeba22f92</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>post_mortem_interval</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="left-hemisphere-preparation">Left Hemisphere Preparation</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>left hemisphere preparation</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>57d5378f-a451-4bf5-a472-cc88d0d29586</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of preparation method used for the left hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>left_hemisphere_preparation</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="left-hemisphere-preparation-specify">Left Hemisphere Preparation Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>left hemisphere preparation specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>002e915e-01c3-4570-a1f3-76680dcb2c33</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>Specific details about the type of preparation method used for the left hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>left_hemisphere_preparation_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="right-hemisphere-preparation">Right Hemisphere Preparation</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>right hemisphere preparation</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>477c2600-f979-43c5-9c61-ab61fd771584</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of preparation method used for the right hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>right_hemisphere_preparation</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="right-hemisphere-preparation-specify">Right Hemisphere Preparation Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>right hemisphere preparation specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>efd50be4-f7cf-4146-a08e-28f25680728c</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>Specific details about the type of preparation method used for the right hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>right_hemisphere_preparation_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rin">RIN</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RIN</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>cd472c0d-0b64-45c9-a38e-e54d15cea953</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The RNA integrity number value of a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rin</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rin-tissue-source">RIN Tissue Source</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RIN tissue source</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>d547ee51-9ec3-489c-8e49-7d8cd94080a8</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The tissue sample location or identifier that is used for calculating the RNA integrity number.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rin_tissue_source</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rin-testing-organization">RIN Testing Organization</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RIN testing organization</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>cfed831e-9a62-4a32-bf92-532873420eb3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The organization that determines the RNA integrity number of a sample/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rin_testing_organization</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rine">RINe</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RINe</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1210148d-d8fb-45aa-b51a-4b19b6d09bec</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rine</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rine-tissue-source">RINe Tissue Source</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RINe tissue source</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>7d5fd9af-82a1-4bdb-a3c6-9225d1717c53</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The tissue sample location or identifier that is used for calculating the RINe number.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rine_tissue_source</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rine-testing-organization">RINe Testing Organization</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RINe testing organization</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>15a6d162-a3ca-4852-b626-a911c37c04c9</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The organization that determines the RINe number.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rine_testing_organization</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="ph">pH</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>pH</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>9e67af02-c081-43e1-a42c-bf9603cae616</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>ph</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-weight">Brain Weight</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain weight measurement</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>546fc32d-f8a2-4c00-924a-8c4730f11f51</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The weight of a brain specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_weight</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-tissue-weighed-type">Brain Tissue Weighed Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain tissue weighed type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a7463e3f-0c61-4718-a7d0-60fd2116908a</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>weighed_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-anterior-posterior">Brain Size Anterior-Posterior</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size anterior-posterior</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0830564a-26ba-41eb-888a-33d0c39ead8f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the anterior-posterior axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_anterior_posterior</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-medial-lateral">Brain Size Medial-Lateral</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size medial-lateral</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4722f739-71f6-4001-9784-afef8f9f2d0e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the medial-lateral axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_medial_lateral</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-dorsal-ventral">Brain Size Dorsal-Ventral</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size dorsal-ventral</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e683f5ee-696f-4baf-a9bf-2f12226ceb4a</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the dorsal-ventral axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_dorsal_ventral</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-unit-type">Brain Size Unit Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size unit</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4d0c44c6-e620-455d-989e-126c3c81ec91</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The unit that the brain size measurements are recorded.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_unit_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="histological-stains-available">Histological Stains Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>histological stains available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4b868ba6-dba8-45e3-a43e-88e421625cab</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of histological stainings of a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>histological_stains_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="histological-stain-type">Histological Stain Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>histological stains type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6723e756-e4c1-42c7-bf2d-ee2e300b88ff</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of histological stains available for a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>histological_stain_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="photo-2d-available">Photo 2D Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>photo 2d available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>611beda8-1ac6-4183-a284-04a30bb474f3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>photo_2d_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="non-brain-tissue-available">Non-Brain Tissue Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>non-brain tissue available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3a064c96-a956-4cf3-8b77-056b8e392f99</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (yes, no) of whether non-brain tissue from this organism is available.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>non_brain_tissue_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="tissue-type">Tissue Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>tissue type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>33ccbc85-ae35-44d6-8bc6-c2fb91116cf7</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of tissue (non-brain) that is available from this organism. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>tissue_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="tissue-type-details">Tissue Type Details</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>tissue type details</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f551cf87-2c6e-4b92-888d-6310e6a500d8</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The details of the non-brain tissue that is available from this organism.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>tissue_type_details</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="family-history-available">Family History Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>family history available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c88bf4dc-5a7c-4f70-a773-e6bbb5a12ec9</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of the family history of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>family_history_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="relative-type">Relative Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>relative type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1adef34c-bb96-4dd0-bc87-51868f2ddc3f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The familial relation to the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>relative_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="relative-type-specify">Relative Type Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>relative type specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>094064a1-362c-4b75-8556-6b874c843fdb</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The specifici familial relation to the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>relative_type_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="postmortem-mri-available">Postmortem MRI Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>postmortem MRI available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0badd072-0c25-48c6-9357-44d5b5bc0818</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of postmortem MRI images of a subject/donor/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>postmortem_mri_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="postmortem-mri-type">Postmortem MRI Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>postmortem MRI type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>64a607a9-21e6-4c73-8f2e-2d67b0dc51c8</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of postmortem MRI that is available (cadeveric, fresh ex vivo, fixed ex vivo).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>postmortem_mri_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="species">Species</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>species</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>d11fb2ce-bfdb-4735-9b17-b6ba606520b1</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The species of a subject/donor/sample/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>species</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="premortem-perfusion-done">Premortem perfusion done</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>premortem perfusion done</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1fc487d8-2403-4d7c-952f-7e502d5f8359</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status of premortem perfusion (done, not done).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>perfusion</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="premortem-perfusion-buffer-type">Premortem perfusion buffer type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>premortem perfusion buffer type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>78d62e29-4323-4927-aec8-6fc8dc59a889</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of premortem perfusion buffer that was used for premortem perfusion. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>perfusate_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="slab-type">Slab type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>slab type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>95d12973-310b-4631-87ea-94d698ef8030</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of brain slab specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>slab_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="slab-thickness-mm">Slab thickness (mm)</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>slab thickness (mm)</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ba931b4b-ba49-4789-bf8d-d1b37aca5702</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The thickness (in mm) of the brain slab specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>slab_thickness_mm</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-freeze-method">Brain Freeze Method</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain freeze method</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>71237def-9b50-481f-a01d-65dc99e3493f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The method used for freezing the brain specimen. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_freeze_method</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="population">Population</h2>
+<p>The data in population is the metadata essential for marmoset population studies.</p>
+<p>The following tables describe the population metadata. If an entry in the table is empty, the schema does not have any other requirements on data in those layers beyond the ones listed above.</p>
+<p>Curators must annotate the following columns:</p>
+<h3 id="local-donor-id_2">Local Donor ID</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>local donor ID</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f8af20f7-e8b8-47b5-8a68-9ec1f913ffdf</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>An identifier that uniquely denotes objects only within the scope of a specific object aggregate and that is not registered in an identifier registry.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>subject_id</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="sex-at-birth_1">Sex at Birth</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>sex at birth</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c819b9d5-2fde-40b2-bf0d-e07b56f96ac9</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to differentiate the individuals or types involved.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>sex</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="age-value-years_1">Age Value (Years)</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>age value (years)</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>14eb923a-161d-45e2-889d-81fea7b632b6</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>A time quality inhering in a bearer by virtue of how long the bearer has existed.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>age_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="year-of-death_1">Year of Death</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>year of death</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>60445046-d9d8-4f00-959e-9a4c42613e5e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The year wherein the subject or donor has ceased to exist.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>year_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>date</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="manner-of-death_1">Manner of Death</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>manner of death</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>36eeb35b-5020-4a9e-a74b-6e1104415e0e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The manner of death is the determination of how the injury or disease leads to death.  There are five manners of death (natural, accident, suicide, homicide, and undetermined).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>manner_of_death</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="mating-status_1">Mating Status</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>mating status</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>dd2ea811-b424-4b85-a572-16707a6612f3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The mating status of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>mating_status</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="medical-records-available_1">Medical Records Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>medical records available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ee2c9223-f7d1-4c64-a1da-cd7408309955</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of the medical records of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>medical_records_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="hemisphere_1">Hemisphere</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>hemisphere</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>68b7a28b-d695-4ec9-800b-6a27ca206081</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>hemisphere</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="post-mortem-interval_1">Post Mortem Interval</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>post mortem interval</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6fd5c5ac-b128-4a4a-ae98-09eaeba22f92</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The length of the temporal interval between the time of death of the subject/donor and the time at which the specimen is made.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>post_mortem_interval</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="left-hemisphere-preparation_1">Left Hemisphere Preparation</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>left hemisphere preparation</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>57d5378f-a451-4bf5-a472-cc88d0d29586</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of preparation method used for the left hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>left_hemisphere_preparation</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="left-hemisphere-preparation-specify_1">Left Hemisphere Preparation Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>left hemisphere preparation specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>002e915e-01c3-4570-a1f3-76680dcb2c33</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>Specific details about the type of preparation method used for the left hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>left_hemisphere_preparation_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="right-hemisphere-preparation_1">Right Hemisphere Preparation</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>right hemisphere preparation</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>477c2600-f979-43c5-9c61-ab61fd771584</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of preparation method used for the right hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>right_hemisphere_preparation</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="right-hemisphere-preparation-specify_1">Right Hemisphere Preparation Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>right hemisphere preparation specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>efd50be4-f7cf-4146-a08e-28f25680728c</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>Specific details about the type of preparation method used for the right hemisphere.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>right_hemisphere_preparation_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rin_1">RIN</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RIN</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>cd472c0d-0b64-45c9-a38e-e54d15cea953</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The RNA integrity number value of a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rin</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="rine_1">RINe</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>RINe</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1210148d-d8fb-45aa-b51a-4b19b6d09bec</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>A type of RIN (RNA integrity number) value that represents the relative ratio of the signal in the fast zone to the 18S peak signal fpr a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>rine</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="ph_1">pH</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>pH</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>9e67af02-c081-43e1-a42c-bf9603cae616</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The value of a measurement of acidity or basicity of a tissue, sample, or specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>ph</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-weight-measurement">Brain Weight Measurement</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain weight measurement</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>546fc32d-f8a2-4c00-924a-8c4730f11f51</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The weight of a brain specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_weight</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-tissue-weighed-type_1">Brain Tissue Weighed Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain tissue weighed type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>a7463e3f-0c61-4718-a7d0-60fd2116908a</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The state of a brain specimen when it is weighed (fresh, frozen, fixed).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>weighed_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-anterior-posterior_1">Brain Size Anterior-Posterior</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size anterior-posterior</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>0830564a-26ba-41eb-888a-33d0c39ead8f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the anterior-posterior axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_anterior_posterior</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-medial-lateral_1">Brain Size Medial-Lateral</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size medial-lateral</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4722f739-71f6-4001-9784-afef8f9f2d0e</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the medial-lateral axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_medial_lateral</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-dorsal-ventral_1">Brain Size Dorsal-Ventral</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size dorsal-ventral</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>e683f5ee-696f-4baf-a9bf-2f12226ceb4a</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The size of the brain specimen in the dorsal-ventral axis.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_dorsal_ventral</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-size-unit">Brain Size Unit</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain size unit</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4d0c44c6-e620-455d-989e-126c3c81ec91</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The unit that the brain size measurements are recorded.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_size_unit_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="histological-stains-available_1">Histological Stains Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>histological stains available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>4b868ba6-dba8-45e3-a43e-88e421625cab</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of histological stainings of a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>histological_stains_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="histological-stain-type_1">Histological Stain Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>histological stains type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>6723e756-e4c1-42c7-bf2d-ee2e300b88ff</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of histological stains available for a specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>histological_stain_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="photo-2d-available_1">Photo 2D Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>photo 2d available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>611beda8-1ac6-4183-a284-04a30bb474f3</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of two-dimensional photos of a subject/donor/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>photo_2d_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="antemortem-mri-available">Antemortem MRI Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>antemortem MRI available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>43a04caa-4f28-47ac-8a9d-74c40f10776f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of antemortem MRI images of a subject/donor/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>antemortem_mri_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="antemortem-mri-type">Antemortem MRI Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>antemortem MRI type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>05ce0a33-16e7-4580-96b2-701c0ed4fbd2</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The specific type of antemortem MRI that is available.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>antemortem_MRI_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="non-brain-tissue-available_1">Non-Brain Tissue Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>non-brain tissue available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>3a064c96-a956-4cf3-8b77-056b8e392f99</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (yes, no) of whether non-brain tissue from this organism is available.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>non_brain_tissue_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="tissue-type_1">Tissue Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>tissue type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>33ccbc85-ae35-44d6-8bc6-c2fb91116cf7</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of tissue (non-brain) that is available from this organism. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>tissue_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="tissue-type-details_1">Tissue Type Details</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>tissue type details</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>f551cf87-2c6e-4b92-888d-6310e6a500d8</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The details of the non-brain tissue that is available from this organism.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>tissue_type_details</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="family-history-available_1">Family History Available</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>family history available</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>c88bf4dc-5a7c-4f70-a773-e6bbb5a12ec9</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status (available, unavailable) of the family history of the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>family_history_available</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="relative-type_1">Relative Type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>relative type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1adef34c-bb96-4dd0-bc87-51868f2ddc3f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The familial relation to the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>relative_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="relative-type-specify_1">Relative Type Specify</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>relative type specify</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>094064a1-362c-4b75-8556-6b874c843fdb</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The specifici familial relation to the subject/donor.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>relative_type_specify</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="species_1">Species</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>species</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>d11fb2ce-bfdb-4735-9b17-b6ba606520b1</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The species of a subject/donor/sample/specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>species</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="premortem-perfusion-done_1">Premortem perfusion done</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>premortem perfusion done</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>1fc487d8-2403-4d7c-952f-7e502d5f8359</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The status of premortem perfusion (done, not done).</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>perfusion</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="premortem-perfusion-buffer-type_1">Premortem perfusion buffer type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>premortem perfusion buffer type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>78d62e29-4323-4927-aec8-6fc8dc59a889</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of premortem perfusion buffer that was used for premortem perfusion. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>perfusate_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>text</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="slab-type_1">Slab type</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>slab type</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>95d12973-310b-4631-87ea-94d698ef8030</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The type of brain slab specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>slab_type</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="slab-thickness-mm_1">Slab thickness (mm)</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>slab thickness (mm)</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>ba931b4b-ba49-4789-bf8d-d1b37aca5702</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The thickness (in mm) of the brain slab specimen.</td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>slab_thickness_mm</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>numeric</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h3 id="brain-freeze-method_1">Brain Freeze Method</h3>
+<table><tbody>
+    <tr>
+      <th>BICAN Field Name</th>
+      <td>brain freeze method</td>
+    </tr>
+    <tr>
+      <th>BICAN UUID</th>
+      <td>71237def-9b50-481f-a01d-65dc99e3493f</td>
+    </tr>
+    <tr>
+      <th>Definition</th>
+      <td>The method used for freezing the brain specimen. </td>
+    </tr>
+    <tr>
+      <th>Aliases</th>
+      <td>brain_freeze_method</td>
+    </tr>
+    <tr>
+      <th>Data Type</th>
+      <td>exclusive_categorical</td>
+    </tr>
+</tbody></table>
+<p><br></p>
+<h2 id="appendix">Appendix</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

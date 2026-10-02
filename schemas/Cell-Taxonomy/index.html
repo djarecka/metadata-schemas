@@ -1,0 +1,2496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://djarecka.github.io/metadata-schemas/schemas/Cell-Taxonomy/">
+      
+      
+        <link rel="prev" href="../Macaque-Metadata/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cell Taxonomy (LinkML slots) - BICAN Metadata Schemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#schema-properties" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-header__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BICAN Metadata Schemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cell Taxonomy (LinkML slots)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BICAN Metadata Schemas" class="md-nav__button md-logo" aria-label="BICAN Metadata Schemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BICAN Metadata Schemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/djarecka/metadata-schemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metadata-schemas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cell-Annotation-and-Taxonomy/Cell%20Annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library-Minimal-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Minimal Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donor-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Donor Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Human-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Human Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-NHP-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing NHP Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-Tissue-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Institutional-Certification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Institutional Certification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macaque-Metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HMBA Macaque Donor and Tissue Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Taxonomy (LinkML slots)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abbreviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypeset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorpalette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColorPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaycolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisplayColor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionMatrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abbreviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypeset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxon_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxonomy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorpalette_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColorPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaycolor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisplayColor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionmatrix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionMatrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abbreviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypeset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorpalette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColorPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaycolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisplayColor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionMatrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abbreviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypeset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxon_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celltypetaxonomy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CellTypeTaxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorpalette_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColorPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaycolor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisplayColor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionmatrix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionMatrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Cell Taxonomy (LinkML slots)</h1>
+
+<!-- schema-properties-start -->
+<h2 id="schema-properties">Schema properties</h2>
+<p><em>Auto-generated from CSV. Do not edit this section manually.</em></p>
+<p><strong>Related LinkML model:</strong> <a href="https://brain-bican.github.io/models/index_cell_taxonomy/">Cell Taxonomy Model</a></p>
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#accession_id"><code>accession_id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>A provider-assigned accession identifier for a given entity.</td>
+</tr>
+<tr>
+<td><a href="#order"><code>order</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>The priority or display order of an entity among all other entities of the same type.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="abbreviation">Abbreviation</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this abbreviation entry.</td>
+</tr>
+<tr>
+<td><a href="#term"><code>term</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>An abbreviation term as it appears in a cell type or cell set name.</td>
+</tr>
+<tr>
+<td><a href="#meaning"><code>meaning</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>The decoded meaning of the abbreviation term.</td>
+</tr>
+<tr>
+<td><a href="#entity_type"><code>entity_type</code></a></td>
+<td>AbbreviationEntityType</td>
+<td>yes</td>
+<td>—</td>
+<td>The entity type which the abbreviation term denotes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cell">Cell</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for each individual cell.</td>
+</tr>
+<tr>
+<td><a href="#cluster_id"><code>cluster_id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Human-readable cluster label for the cluster assigned to this cell at a given annotation level.</td>
+</tr>
+<tr>
+<td><a href="#load_id"><code>load_id</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Identifier for the sequencing library from which molecular measurements were derived.</td>
+</tr>
+<tr>
+<td><a href="#assay"><code>assay</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Human-readable sequencing modality (e.g. 10x 3&#x27; v3).</td>
+</tr>
+<tr>
+<td><a href="#assay_ontology_term_id"><code>assay_ontology_term_id</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>EFO ontology term for assay (e.g. EFO:0009922 for 10x 3&#x27; v3).</td>
+</tr>
+<tr>
+<td><a href="#anatomical_region"><code>anatomical_region</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Human-readable name for the anatomical region from which the cell was collected.</td>
+</tr>
+<tr>
+<td><a href="#anatomical_region_ontology_term_id"><code>anatomical_region_ontology_term_id</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>UBERON ontology term for anatomical region (e.g. UBERON:0000955 for brain).</td>
+</tr>
+<tr>
+<td><a href="#brain_region_ontology_term_id"><code>brain_region_ontology_term_id</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Brain atlas region ID from DHBA/HBA/MBA for the anatomical region.</td>
+</tr>
+<tr>
+<td><a href="#suspension_type"><code>suspension_type</code></a></td>
+<td>SuspensionType</td>
+<td>yes</td>
+<td>—</td>
+<td>Whether the measurement was performed on intact cells, nuclei, or is not applicable.</td>
+</tr>
+<tr>
+<td><a href="#is_primary_data"><code>is_primary_data</code></a></td>
+<td>boolean</td>
+<td>yes</td>
+<td>—</td>
+<td>True if this is the canonical instance of this cellular observation; False for reanalysis or secondary views.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="celltypeset">CellTypeSet</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this annotation level.</td>
+</tr>
+<tr>
+<td><a href="#name"><code>name</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Name of this annotation level used as column header in obs (e.g. Class, Subclass).</td>
+</tr>
+<tr>
+<td><a href="#order"><code>order</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>Integer rank of this annotation level in the hierarchy; lower values are broader types.</td>
+</tr>
+<tr>
+<td><a href="#cell_type_set_type"><code>cell_type_set_type</code></a></td>
+<td>CellTypeSetType</td>
+<td>yes</td>
+<td>—</td>
+<td>A tag denoting whether this grouping represents a taxonomic level or neighborhood.</td>
+</tr>
+<tr>
+<td><a href="#has_abbreviation"><code>has_abbreviation</code></a></td>
+<td>Abbreviation</td>
+<td>no</td>
+<td>—</td>
+<td>One of potentially many abbreviations that are part of the cell type set name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="celltypetaxon">CellTypeTaxon</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this cell type taxon.</td>
+</tr>
+<tr>
+<td><a href="#name"><code>name</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Human-readable label for this cell type taxon at the given annotation level (e.g. Glutamatergic).</td>
+</tr>
+<tr>
+<td><a href="#accession_id"><code>accession_id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Stable cross-version identifier for this cell type taxon (e.g. CS20230722_CLAS_11).</td>
+</tr>
+<tr>
+<td><a href="#order"><code>order</code></a></td>
+<td>integer</td>
+<td>no</td>
+<td>—</td>
+<td>The priority or display order of this taxon among all taxons in the taxonomy.</td>
+</tr>
+<tr>
+<td><a href="#cell_type_ontology_term"><code>cell_type_ontology_term</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>cell_type_ontology_term_id</td>
+<td>CL ontology term for this cell type; use CL:0000003 for native cell if unknown.</td>
+</tr>
+<tr>
+<td><a href="#number_of_cells"><code>number_of_cells</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>The aggregated number of cells that defines this cell type taxon.</td>
+</tr>
+<tr>
+<td><a href="#has_abbreviation"><code>has_abbreviation</code></a></td>
+<td>Abbreviation</td>
+<td>no</td>
+<td>—</td>
+<td>One of potentially many abbreviations that are part of the cell type taxon name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="celltypetaxonomy">CellTypeTaxonomy</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this taxonomy.</td>
+</tr>
+<tr>
+<td><a href="#title"><code>title</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>name</td>
+<td>Description differentiating this taxonomy from others in the same collection; should be unique within a collection.</td>
+</tr>
+<tr>
+<td><a href="#accession_id"><code>accession_id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Provider-assigned accession identifier for this taxonomy (e.g. CCN20230722).</td>
+</tr>
+<tr>
+<td><a href="#schema_version"><code>schema_version</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Version of the AIT schema used to produce this file (e.g. 1.0.0).</td>
+</tr>
+<tr>
+<td><a href="#content_url"><code>content_url</code></a></td>
+<td>uri</td>
+<td>no</td>
+<td>dataset_purl</td>
+<td>Permanent URL to molecular data if the expression matrix is not embedded in the file.</td>
+</tr>
+<tr>
+<td><a href="#batch_condition"><code>batch_condition</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Cell metadata key(s) in obs that define batches for normalization or integration.</td>
+</tr>
+<tr>
+<td><a href="#dendrogram"><code>dendrogram</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>JSON-formatted hierarchical clustering dendrogram encoding the taxonomy hierarchy.</td>
+</tr>
+<tr>
+<td><a href="#hierarchy"><code>hierarchy</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Ordered mapping of annotation level names to integer ranks; lower rank means broader type.</td>
+</tr>
+<tr>
+<td><a href="#mode"><code>mode</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Active taxonomy mode controlling which subset of cells and analysis components to use.</td>
+</tr>
+<tr>
+<td><a href="#filter"><code>filter</code></a></td>
+<td>boolean</td>
+<td>no</td>
+<td>—</td>
+<td>Per-mode boolean flags indicating cells to exclude (True means exclude).</td>
+</tr>
+<tr>
+<td><a href="#cluster_algorithm"><code>cluster_algorithm</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Full description of clustering algorithm and parameters used to produce cluster assignments.</td>
+</tr>
+<tr>
+<td><a href="#cluster_info"><code>cluster_info</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Summary table of cluster-level metadata including cluster sizes and representative metadata.</td>
+</tr>
+<tr>
+<td><a href="#default_embedding"><code>default_embedding</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Key in obsm of the embedding to display by default; must match an X_-prefixed entry.</td>
+</tr>
+<tr>
+<td><a href="#cellannotation_schema"><code>cellannotation_schema</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>CAS annotation schema stored as JSON encoding labelset and annotation metadata.</td>
+</tr>
+<tr>
+<td><a href="#quality_control_markers"><code>quality_control_markers</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>quality_control_markers</td>
+<td>Marker gene expression data for patchseq quality control analysis.</td>
+</tr>
+<tr>
+<td><a href="#reference_genome"><code>reference_genome</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Reference genome assembly used to align the molecular measurements.</td>
+</tr>
+<tr>
+<td><a href="#gene_annotation_version"><code>gene_annotation_version</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Genome annotation version used during alignment.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cluster">Cluster</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this cluster.</td>
+</tr>
+<tr>
+<td><a href="#name"><code>name</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Human-readable label for this cluster; corresponds to cluster_id values in obs.</td>
+</tr>
+<tr>
+<td><a href="#number_of_observations"><code>number_of_observations</code></a></td>
+<td>integer</td>
+<td>yes</td>
+<td>—</td>
+<td>Number of cells assigned to this cluster.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clusterset">ClusterSet</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this cluster set.</td>
+</tr>
+<tr>
+<td><a href="#name"><code>name</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Human-readable name for this cluster set (e.g. the name of the clustering run).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="colorpalette">ColorPalette</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this color palette.</td>
+</tr>
+<tr>
+<td><a href="#name"><code>name</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Name of the color palette.</td>
+</tr>
+<tr>
+<td><a href="#description"><code>description</code></a></td>
+<td>string</td>
+<td>no</td>
+<td>—</td>
+<td>Description of the color palette.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="displaycolor">DisplayColor</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this display color entry.</td>
+</tr>
+<tr>
+<td><a href="#color_hex_triplet"><code>color_hex_triplet</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>A hex string representing the display color for an associated entity.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="embedding">Embedding</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this embedding.</td>
+</tr>
+<tr>
+<td><a href="#embedding_key"><code>embedding_key</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Key used to store the embedding in obsm; must be prefixed with X_ (e.g. X_umap, X_pca).</td>
+</tr>
+<tr>
+<td><a href="#embedding_matrix"><code>embedding_matrix</code></a></td>
+<td>float</td>
+<td>yes</td>
+<td>—</td>
+<td>N-dimensional matrix of shape n_cells × n_dims representing the low-dimensional projection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expressionmatrix">ExpressionMatrix</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td>string</td>
+<td>yes</td>
+<td>—</td>
+<td>Unique identifier for this expression matrix.</td>
+</tr>
+<tr>
+<td><a href="#matrix_type"><code>matrix_type</code></a></td>
+<td>ExpressionMatrixType</td>
+<td>yes</td>
+<td>—</td>
+<td>Whether this matrix contains normalized expression values or raw counts.</td>
+</tr>
+<tr>
+<td><a href="#content_url"><code>content_url</code></a></td>
+<td>uri</td>
+<td>no</td>
+<td>dataset_purl</td>
+<td>URL to the matrix file if the matrix is not embedded directly in the h5ad file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-details">Property Details</h3>
+<div id="accession_id" class="field-detail">
+<h5><code>accession_id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns</li>
+</ul>
+<p>A provider-assigned accession identifier for a given entity.</p>
+</div>
+
+<div id="order" class="field-detail">
+<h5><code>order</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> uns</li>
+</ul>
+<p>The priority or display order of an entity among all other entities of the same type.</p>
+</div>
+
+<h4 id="abbreviation_1">Abbreviation</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Unique identifier for this abbreviation entry.</p>
+</div>
+
+<div id="term" class="field-detail">
+<h5><code>term</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>An abbreviation term as it appears in a cell type or cell set name.</p>
+</div>
+
+<div id="meaning" class="field-detail">
+<h5><code>meaning</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>The decoded meaning of the abbreviation term.</p>
+</div>
+
+<div id="entity_type" class="field-detail">
+<h5><code>entity_type</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>AbbreviationEntityType</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>The entity type which the abbreviation term denotes.</p>
+<p><strong>Permissible values:</strong> <code>cell_type</code>, <code>gene</code>, <code>anatomical</code></p>
+</div>
+
+<h4 id="cell_1">Cell</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Unique identifier for each individual cell.</p>
+</div>
+
+<div id="cluster_id" class="field-detail">
+<h5><code>cluster_id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|annotations</li>
+</ul>
+<p>Human-readable cluster label for the cluster assigned to this cell at a given annotation level.</p>
+</div>
+
+<div id="load_id" class="field-detail">
+<h5><code>load_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Identifier for the sequencing library from which molecular measurements were derived.</p>
+</div>
+
+<div id="assay" class="field-detail">
+<h5><code>assay</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Human-readable sequencing modality (e.g. 10x 3&#x27; v3).</p>
+</div>
+
+<div id="assay_ontology_term_id" class="field-detail">
+<h5><code>assay_ontology_term_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>EFO ontology term for assay (e.g. EFO:0009922 for 10x 3&#x27; v3).</p>
+</div>
+
+<div id="anatomical_region" class="field-detail">
+<h5><code>anatomical_region</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Human-readable name for the anatomical region from which the cell was collected.</p>
+</div>
+
+<div id="anatomical_region_ontology_term_id" class="field-detail">
+<h5><code>anatomical_region_ontology_term_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>UBERON ontology term for anatomical region (e.g. UBERON:0000955 for brain).</p>
+</div>
+
+<div id="brain_region_ontology_term_id" class="field-detail">
+<h5><code>brain_region_ontology_term_id</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Brain atlas region ID from DHBA/HBA/MBA for the anatomical region.</p>
+</div>
+
+<div id="suspension_type" class="field-detail">
+<h5><code>suspension_type</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>SuspensionType</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>Whether the measurement was performed on intact cells, nuclei, or is not applicable.</p>
+<p><strong>Permissible values:</strong> <code>cell</code>, <code>nucleus</code>, <code>na</code></p>
+</div>
+
+<div id="is_primary_data" class="field-detail">
+<h5><code>is_primary_data</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Subsets:</strong> obs|assigned_metadata</li>
+</ul>
+<p>True if this is the canonical instance of this cellular observation; False for reanalysis or secondary views.</p>
+</div>
+
+<h4 id="celltypeset_1">CellTypeSet</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Unique identifier for this annotation level.</p>
+</div>
+
+<div id="name" class="field-detail">
+<h5><code>name</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|uns|annotations</li>
+</ul>
+<p>Name of this annotation level used as column header in obs (e.g. Class, Subclass).</p>
+</div>
+
+<div id="order" class="field-detail">
+<h5><code>order</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Integer rank of this annotation level in the hierarchy; lower values are broader types.</p>
+</div>
+
+<div id="cell_type_set_type" class="field-detail">
+<h5><code>cell_type_set_type</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>CellTypeSetType</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>A tag denoting whether this grouping represents a taxonomic level or neighborhood.</p>
+<p><strong>Permissible values:</strong> <code>taxonomic_level</code>, <code>neighborhood</code></p>
+</div>
+
+<div id="has_abbreviation" class="field-detail">
+<h5><code>has_abbreviation</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>Abbreviation</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>One of potentially many abbreviations that are part of the cell type set name.</p>
+</div>
+
+<h4 id="celltypetaxon_1">CellTypeTaxon</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>Unique identifier for this cell type taxon.</p>
+</div>
+
+<div id="name" class="field-detail">
+<h5><code>name</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|annotations</li>
+</ul>
+<p>Human-readable label for this cell type taxon at the given annotation level (e.g. Glutamatergic).</p>
+</div>
+
+<div id="accession_id" class="field-detail">
+<h5><code>accession_id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Stable cross-version identifier for this cell type taxon (e.g. CS20230722_CLAS_11).</p>
+</div>
+
+<div id="order" class="field-detail">
+<h5><code>order</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>The priority or display order of this taxon among all taxons in the taxonomy.</p>
+</div>
+
+<div id="cell_type_ontology_term" class="field-detail">
+<h5><code>cell_type_ontology_term</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> cell_type_ontology_term_id</li>
+<li><strong>Subsets:</strong> obs|annotations</li>
+</ul>
+<p>CL ontology term for this cell type; use CL:0000003 for native cell if unknown.</p>
+</div>
+
+<div id="number_of_cells" class="field-detail">
+<h5><code>number_of_cells</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>The aggregated number of cells that defines this cell type taxon.</p>
+</div>
+
+<div id="has_abbreviation" class="field-detail">
+<h5><code>has_abbreviation</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>Abbreviation</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>One of potentially many abbreviations that are part of the cell type taxon name.</p>
+</div>
+
+<h4 id="celltypetaxonomy_1">CellTypeTaxonomy</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>Unique identifier for this taxonomy.</p>
+</div>
+
+<div id="title" class="field-detail">
+<h5><code>title</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> name</li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Description differentiating this taxonomy from others in the same collection; should be unique within a collection.</p>
+</div>
+
+<div id="accession_id" class="field-detail">
+<h5><code>accession_id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>Provider-assigned accession identifier for this taxonomy (e.g. CCN20230722).</p>
+</div>
+
+<div id="schema_version" class="field-detail">
+<h5><code>schema_version</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Version of the AIT schema used to produce this file (e.g. 1.0.0).</p>
+</div>
+
+<div id="content_url" class="field-detail">
+<h5><code>content_url</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>uri</code></li>
+<li><strong>Aliases:</strong> dataset_purl</li>
+<li><strong>Subsets:</strong> uns|data</li>
+</ul>
+<p>Permanent URL to molecular data if the expression matrix is not embedded in the file.</p>
+</div>
+
+<div id="batch_condition" class="field-detail">
+<h5><code>batch_condition</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Cell metadata key(s) in obs that define batches for normalization or integration.</p>
+</div>
+
+<div id="dendrogram" class="field-detail">
+<h5><code>dendrogram</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>JSON-formatted hierarchical clustering dendrogram encoding the taxonomy hierarchy.</p>
+</div>
+
+<div id="hierarchy" class="field-detail">
+<h5><code>hierarchy</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Ordered mapping of annotation level names to integer ranks; lower rank means broader type.</p>
+</div>
+
+<div id="mode" class="field-detail">
+<h5><code>mode</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Active taxonomy mode controlling which subset of cells and analysis components to use.</p>
+</div>
+
+<div id="filter" class="field-detail">
+<h5><code>filter</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>boolean</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Per-mode boolean flags indicating cells to exclude (True means exclude).</p>
+</div>
+
+<div id="cluster_algorithm" class="field-detail">
+<h5><code>cluster_algorithm</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Full description of clustering algorithm and parameters used to produce cluster assignments.</p>
+</div>
+
+<div id="cluster_info" class="field-detail">
+<h5><code>cluster_info</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Summary table of cluster-level metadata including cluster sizes and representative metadata.</p>
+</div>
+
+<div id="default_embedding" class="field-detail">
+<h5><code>default_embedding</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Key in obsm of the embedding to display by default; must match an X_-prefixed entry.</p>
+</div>
+
+<div id="cellannotation_schema" class="field-detail">
+<h5><code>cellannotation_schema</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>CAS annotation schema stored as JSON encoding labelset and annotation metadata.</p>
+</div>
+
+<div id="quality_control_markers" class="field-detail">
+<h5><code>quality_control_markers</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Aliases:</strong> quality_control_markers</li>
+<li><strong>Subsets:</strong> uns|analysis</li>
+</ul>
+<p>Marker gene expression data for patchseq quality control analysis.</p>
+</div>
+
+<div id="reference_genome" class="field-detail">
+<h5><code>reference_genome</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|assigned_metadata</li>
+</ul>
+<p>Reference genome assembly used to align the molecular measurements.</p>
+</div>
+
+<div id="gene_annotation_version" class="field-detail">
+<h5><code>gene_annotation_version</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|assigned_metadata</li>
+</ul>
+<p>Genome annotation version used during alignment.</p>
+</div>
+
+<h4 id="cluster_1">Cluster</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|uns|annotations</li>
+</ul>
+<p>Unique identifier for this cluster.</p>
+</div>
+
+<div id="name" class="field-detail">
+<h5><code>name</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obs|uns|annotations</li>
+</ul>
+<p>Human-readable label for this cluster; corresponds to cluster_id values in obs.</p>
+</div>
+
+<div id="number_of_observations" class="field-detail">
+<h5><code>number_of_observations</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>integer</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Number of cells assigned to this cluster.</p>
+</div>
+
+<h4 id="clusterset_1">ClusterSet</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Unique identifier for this cluster set.</p>
+</div>
+
+<div id="name" class="field-detail">
+<h5><code>name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|annotations</li>
+</ul>
+<p>Human-readable name for this cluster set (e.g. the name of the clustering run).</p>
+</div>
+
+<h4 id="colorpalette_1">ColorPalette</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Unique identifier for this color palette.</p>
+</div>
+
+<div id="name" class="field-detail">
+<h5><code>name</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Name of the color palette.</p>
+</div>
+
+<div id="description" class="field-detail">
+<h5><code>description</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Description of the color palette.</p>
+</div>
+
+<h4 id="displaycolor_1">DisplayColor</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>Unique identifier for this display color entry.</p>
+</div>
+
+<div id="color_hex_triplet" class="field-detail">
+<h5><code>color_hex_triplet</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> uns|tooling</li>
+</ul>
+<p>A hex string representing the display color for an associated entity.</p>
+</div>
+
+<h4 id="embedding_1">Embedding</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>Unique identifier for this embedding.</p>
+</div>
+
+<div id="embedding_key" class="field-detail">
+<h5><code>embedding_key</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+<li><strong>Subsets:</strong> obsm|analysis</li>
+</ul>
+<p>Key used to store the embedding in obsm; must be prefixed with X_ (e.g. X_umap, X_pca).</p>
+</div>
+
+<div id="embedding_matrix" class="field-detail">
+<h5><code>embedding_matrix</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>float</code></li>
+<li><strong>Subsets:</strong> obsm|analysis</li>
+</ul>
+<p>N-dimensional matrix of shape n_cells × n_dims representing the low-dimensional projection.</p>
+</div>
+
+<h4 id="expressionmatrix_1">ExpressionMatrix</h4>
+<div id="id" class="field-detail">
+<h5><code>id</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>string</code></li>
+</ul>
+<p>Unique identifier for this expression matrix.</p>
+</div>
+
+<div id="matrix_type" class="field-detail">
+<h5><code>matrix_type</code> <em>(required)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>ExpressionMatrixType</code></li>
+<li><strong>Subsets:</strong> X|raw|data</li>
+</ul>
+<p>Whether this matrix contains normalized expression values or raw counts.</p>
+<p><strong>Permissible values:</strong> <code>normalized</code>, <code>raw_count</code></p>
+</div>
+
+<div id="content_url" class="field-detail">
+<h5><code>content_url</code> <em>(optional)</em></h5>
+<ul>
+<li><strong>Data Type:</strong> <code>uri</code></li>
+<li><strong>Aliases:</strong> dataset_purl</li>
+<li><strong>Subsets:</strong> uns|data</li>
+</ul>
+<p>URL to the matrix file if the matrix is not embedded directly in the h5ad file.</p>
+</div>
+
+<!-- schema-properties-end -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
