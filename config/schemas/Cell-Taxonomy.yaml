@@ -1,0 +1,20 @@
+# Cell Taxonomy schema table, pulled from the merged AIT/BKE spreadsheet.
+#
+# The same sheet backs the LinkML model in brain-bican/models
+# (linkml-schema/source_cell_taxonomy/gsheet.yaml), so the two stay in step.
+#
+# Bump `version` to force a refresh when the sheet changed but this file
+# otherwise would not.
+
+schema_name: Cell-Taxonomy
+gsheet_id: "1AC-jtCCnS78dc1futBW8mwyiixUyEbCOZ0mPfoKAffA"
+
+tab:
+  name: Slots
+  gid: "2096406242"
+
+# Defaults to <schema_name>.csv; set explicitly when a schema directory holds
+# more than one table, or when the docs tooling expects a particular name.
+output: Cell-Taxonomy.csv
+
+version: "2026-10-02"
